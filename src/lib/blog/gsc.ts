@@ -1,0 +1,64 @@
+// src/lib/blog/gsc.ts
+import { google } from 'googleapis';
+import { getNextSeedKeyword } from './seed-keywords';
+
+// ⚙️ CONFIGURAR: domínio verificado no GSC
+// Formato sc-domain: para propriedade de domínio
+// Formato https:// para propriedade de URL prefix
+const SITE_URL = 'sc-domain:seudominio.com.br';
+
+// Mínimo de keywords elegíveis no GSC para não usar fallback de seeds
+const MIN_ELIGIBLE = 5;
+
+function getDayOfYear(): number {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  return Math.floor((now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+}
+
+export async function fetchTopKeyword(existingKeywords: string[]): Promise<string> {
+  try {
+    const auth = new google.auth.OAuth2(
+      process.env.GOOGLE_CLIENT_ID,
+      process.env.GOOGLE_CLIENT_SECRET,
+    );
+    auth.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH_TOKEN });
+
+    const searchconsole = google.searchconsole({ version: 'v1', auth });
+    const endDate = new Date().toISOString().split('T')[0];
+    const startDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000)
+      .toISOString().split('T')[0];
+
+    const res = await searchconsole.searchanalytics.query({
+      siteUrl: SITE_URL,
+      requestBody: {
+        startDate,
+        endDate,
+        dimensions: ['query'],
+        rowLimit: 200,
+        // ATENÇÃO: position NÃO é filtrável via dimensionFilterGroups
+        // É uma métrica de row, não uma dimensão. Filtrar no código abaixo.
+      },
+    });
+
+    const rows = res.data.rows ?? [];
+    const existingSet = new Set(existingKeywords.map(k => k.toLowerCase()));
+
+    const eligible = rows
+      .filter(r => {
+        const position = r.position ?? 0;
+        if (position < 4 || position > 30) return false;
+        const query = r.keys?.[0] ?? '';
+        return !existingSet.has(query.toLowerCase());
+      })
+      .sort((a, b) => (b.impressions ?? 0) - (a.impressions ?? 0));
+
+    if (eligible.length >= MIN_ELIGIBLE) {
+      return eligible[0].keys![0];
+    }
+  } catch (err) {
+    console.warn('[gsc] GSC falhou, usando seed fallback:', err);
+  }
+
+  return getNextSeedKeyword(getDayOfYear());
+}
