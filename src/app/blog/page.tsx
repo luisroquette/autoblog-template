@@ -2,7 +2,6 @@
 import type { Metadata } from 'next';
 import { getAllArticles } from '@/lib/blog/supabase-blog';
 import type { Article } from '@/lib/blog/supabase-blog';
-import ArticleCard from '@/components/blog/ArticleCard';
 import BlogPagination from '@/components/blog/BlogPagination';
 import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 

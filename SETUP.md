@@ -59,11 +59,15 @@ integração somente depois de configurar a variável correspondente na sua cont
 ## 7. Testar
 
 ```bash
-# Deploy e testar:
+# Validar antes do deploy:
+npm run lint
+npm run build
+
+# Após o deploy e com DEEPSEEK_API_KEY configurada, testar:
 curl -H "Authorization: Bearer $CRON_SECRET" https://seudominio.com.br/api/blog/generate
 
 # Deve retornar: {"success":true,"slug":"..."}
-# Tempo esperado: 30–90s (DeepSeek ~5s, gpt-image-1 ~30–60s)
+# A duração varia conforme as integrações de texto e imagem habilitadas.
 ```
 
 ## Antes de publicar

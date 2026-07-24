@@ -54,7 +54,7 @@ Depois:
 2. Crie um projeto Supabase novo e aplique
    [`supabase/migrations/001_autoblog.sql`](./supabase/migrations/001_autoblog.sql).
 3. Configure as variáveis da sua instalação.
-4. Rode `npm run build`.
+4. Rode `npm run lint` e `npm run build`.
 5. Siga o [guia completo](./SETUP.md) antes de ativar o cron.
 
 ## O que você configura
