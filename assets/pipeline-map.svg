@@ -1,0 +1,60 @@
+<svg width="1200" height="480" viewBox="0 0 1200 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Mapa do pipeline Auto-blog</title>
+  <desc id="desc">Keywords e contexto editorial passam pela geração opcional, validação do banco e publicação no blog.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101719"/>
+      <stop offset="1" stop-color="#16252A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F3B85A"/>
+      <stop offset="1" stop-color="#59D3CF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="480" rx="28" fill="url(#background)"/>
+  <g opacity=".18" stroke="#80E9DF">
+    <path d="M40 90H1160M40 170H1160M40 250H1160M40 330H1160M40 410H1160"/>
+    <path d="M120 40V440M280 40V440M440 40V440M600 40V440M760 40V440M920 40V440M1080 40V440"/>
+  </g>
+  <text x="56" y="78" fill="#E8F3F2" font-family="Arial, sans-serif" font-size="28" font-weight="700">O ciclo de um artigo</text>
+  <text x="56" y="110" fill="#91AAA9" font-family="Arial, sans-serif" font-size="16">Configuração própria, integrações opt-in e publicação no seu domínio.</text>
+  <g stroke="url(#accent)" stroke-width="3" filter="url(#glow)">
+    <path d="M256 264H340"/><path d="M540 264H624"/><path d="M824 264H908"/>
+  </g>
+  <g fill="url(#accent)">
+    <path d="M340 264L327 256V272L340 264Z"/><path d="M624 264L611 256V272L624 264Z"/><path d="M908 264L895 256V272L908 264Z"/>
+  </g>
+  <g>
+    <rect x="56" y="190" width="200" height="148" rx="18" fill="#192427" stroke="#385153"/>
+    <circle cx="90" cy="226" r="12" fill="#F3B85A"/>
+    <text x="114" y="232" fill="#EEF8F7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Pauta</text>
+    <text x="80" y="272" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">keywords</text>
+    <text x="80" y="298" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">tom e links internos</text>
+  </g>
+  <g>
+    <rect x="340" y="190" width="200" height="148" rx="18" fill="#192427" stroke="#385153"/>
+    <circle cx="374" cy="226" r="12" fill="#59D3CF"/>
+    <text x="398" y="232" fill="#EEF8F7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Produção</text>
+    <text x="364" y="272" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">texto opcional</text>
+    <text x="364" y="298" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">SEO e capa opcional</text>
+  </g>
+  <g>
+    <rect x="624" y="190" width="200" height="148" rx="18" fill="#192427" stroke="#385153"/>
+    <circle cx="658" cy="226" r="12" fill="#F3B85A"/>
+    <text x="682" y="232" fill="#EEF8F7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Controle</text>
+    <text x="648" y="272" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">claim diário</text>
+    <text x="648" y="298" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">RLS e status publicado</text>
+  </g>
+  <g>
+    <rect x="908" y="190" width="236" height="148" rx="18" fill="#192427" stroke="#385153"/>
+    <circle cx="942" cy="226" r="12" fill="#59D3CF"/>
+    <text x="966" y="232" fill="#EEF8F7" font-family="Arial, sans-serif" font-size="20" font-weight="700">Seu blog</text>
+    <text x="932" y="272" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">página SEO + schema</text>
+    <text x="932" y="298" fill="#A9C1BF" font-family="Arial, sans-serif" font-size="15">no seu Next.js</text>
+  </g>
+  <text x="56" y="414" fill="#91AAA9" font-family="Arial, sans-serif" font-size="14">Você controla domínio, banco, credenciais, frequência e publicação.</text>
+</svg>

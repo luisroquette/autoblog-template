@@ -1,101 +1,195 @@
-# Auto-blog Template
+<p align="center">
+  <img src="./assets/autoblog-hero.png" alt="Pipeline editorial: pautas, produção, artigo publicado e métricas" width="100%" />
+</p>
 
-Seu site já tem um blog vazio. Este template resolve a parte chata: pauta,
-produção, capa, publicação e páginas SEO, com uma configuração por empresa.
+<h1 align="center">Auto-blog Template</h1>
 
-Você fica com o domínio, banco, credenciais e controle editorial. O template
-não compartilha dados entre instalações e começa com integrações pagas
-desligadas.
+<p align="center">
+  Um blog SEO próprio que sai da pauta, passa por um pipeline controlado e chega ao seu domínio.
+</p>
 
-> Um template de infraestrutura editorial: você adapta a estratégia, aprova o
-> que fizer sentido e opera tudo na sua própria conta.
+<p align="center">
+  <a href="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/licença-MIT-F3B85A" alt="Licença MIT" /></a>
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.2-111827" alt="Next.js 16.2" /></a>
+  <a href="https://supabase.com/"><img src="https://img.shields.io/badge/banco-Supabase-3ECF8E" alt="Supabase" /></a>
+</p>
+
+<p align="center">
+  <a href="#comece-em-10-minutos">Começar</a>
+  · <a href="#o-ciclo-de-um-artigo">Como funciona</a>
+  · <a href="#o-que-vem-no-repositório">Arquitetura</a>
+  · <a href="./SETUP.md">Setup completo</a>
+  · <a href="./SECURITY.md">Segurança</a>
+</p>
+
+---
+
+Você já tem um site. O blog continua vazio porque cada pauta vira uma tarefa
+nova: escolher assunto, escrever, criar capa, publicar, acertar SEO e repetir.
+
+Este template entrega a infraestrutura dessa rotina. Você configura empresa,
+tom, CTA, links internos e keywords em um perfil. O projeto cuida do ciclo de
+conteúdo no seu Next.js, no seu Supabase e com as credenciais da sua operação.
+
+## Sumário
+
+- [O ciclo de um artigo](#o-ciclo-de-um-artigo)
+- [O que você controla](#o-que-você-controla)
+- [Comece em 10 minutos](#comece-em-10-minutos)
+- [O que vem no repositório](#o-que-vem-no-repositório)
+- [Integrações e custos](#integrações-e-custos)
+- [Segurança operacional](#segurança-operacional)
+- [Onde ele encaixa](#onde-ele-encaixa)
+- [Limites honestos](#limites-honestos)
+- [Contribuir](#contribuir)
+
+## O ciclo de um artigo
+
+<p align="center">
+  <img src="./assets/pipeline-map.svg" alt="Mapa do pipeline: pauta, produção, controle e blog" width="100%" />
+</p>
 
 ```mermaid
-flowchart LR
-  A[Keywords do seu nicho] --> B[Pipeline diário]
-  B --> C[Artigo + SEO]
-  C --> D[Supabase]
-  D --> E[/blog no seu domínio]
+sequenceDiagram
+  participant C as Vercel Cron
+  participant P as Perfil editorial
+  participant G as Geração opcional
+  participant S as Supabase
+  participant B as /blog
+
+  C->>S: reserva a execução do dia
+  P->>G: pauta, tom, links e CTA
+  G->>S: artigo, metadados e capa opcional
+  S->>B: entrega somente status publicado
 ```
 
-## Por que usar
+O cron só avança após reservar a execução do dia. Isso evita duas publicações
+quando uma chamada manual e o agendamento chegam juntas. Se uma execução ficar
+presa, ela pode ser recuperada. O acesso público lê apenas conteúdo publicado.
 
-- Configure marca, tom, CTA, links e keywords em um arquivo.
-- Publique no seu próprio Next.js, Supabase e Vercel.
-- Use IA, GSC e imagem só quando quiser e com suas próprias contas.
-- Evite duplicidade de cron com claim atômico e recuperação de execução parada.
-- Exponha ao público somente artigos publicados, protegidos por RLS.
+## O que você controla
 
-O objetivo é simples: tirar um blog próprio do zero sem transformar cada novo
-artigo em uma tarefa manual.
+Tudo que precisa ter a cara da empresa está concentrado em
+[`src/lib/autoblog-profile.ts`](./src/lib/autoblog-profile.ts):
 
-## Para quem serve
+```ts
+export const AUTOBLOG_PROFILE = {
+  brand: { name: 'Sua Empresa', siteUrl: 'https://seudominio.com.br' },
+  editorial: {
+    audience: 'quem você quer alcançar',
+    tone: 'como a empresa fala',
+    seedKeywords: ['assunto 1', 'assunto 2'],
+    internalLinks: [],
+  },
+  cta: { buttonLabel: 'Falar com a equipe', url: 'https://...' },
+  integrations: {
+    googleSearchConsoleEnabled: false,
+    imageGenerationEnabled: false,
+  },
+};
+```
 
-Funciona especialmente bem para SaaS B2B, consultorias, serviços técnicos,
-agências e empresas locais com um produto ou serviço que precisa de contexto
-antes da compra.
+| Você define | O template executa |
+| --- | --- |
+| Marca, domínio, narrativa e CTA | Página de listagem, artigo e metadados SEO |
+| Keywords, pauta e links internos | Seleção de pauta e prompt editorial |
+| Frequência do cron | Controle de idempotência da execução |
+| Provedores e limites | Persistência no Supabase e publicação em `/blog` |
 
-Não é indicado, sem uma camada editorial e de compliance própria, para saúde,
-jurídico, investimentos, seguros, apostas ou instruções que possam colocar
-alguém em risco.
-
-## Comece em poucos passos
+## Comece em 10 minutos
 
 ```bash
-git clone <seu-fork>
+# 1. Faça um fork e clone a sua cópia
+git clone https://github.com/SEU-USUARIO/autoblog-template.git
 cd autoblog-template
+
+# 2. Instale e crie sua configuração local
 npm install
 cp .env.example .env.local
+
+# 3. Confirme que a base está saudável
+npm run lint
+npm run build
 ```
 
-Depois:
+Depois, siga esta ordem:
 
-1. Edite [`src/lib/autoblog-profile.ts`](./src/lib/autoblog-profile.ts).
-2. Crie um projeto Supabase novo e aplique
-   [`supabase/migrations/001_autoblog.sql`](./supabase/migrations/001_autoblog.sql).
-3. Configure as variáveis da sua instalação.
-4. Rode `npm run lint` e `npm run build`.
-5. Siga o [guia completo](./SETUP.md) antes de ativar o cron.
+1. Edite o [perfil editorial](./src/lib/autoblog-profile.ts).
+2. Crie um projeto Supabase seu e aplique a
+   [migration](./supabase/migrations/001_autoblog.sql).
+3. Preencha as variáveis de `.env.local` com credenciais criadas para essa
+   instalação.
+4. Faça o primeiro deploy sem provedores de IA ou GSC.
+5. Valide leitura pública, cron autenticado e banco. Só então habilite as
+   integrações que fizerem sentido.
 
-## O que você configura
+O [guia de setup](./SETUP.md) detalha variáveis, Supabase, Vercel e o teste
+manual do cron.
 
-| Área | Onde |
+## O que vem no repositório
+
+| Área | Arquivo | Para que serve |
+| --- | --- | --- |
+| Perfil da empresa | [`autoblog-profile.ts`](./src/lib/autoblog-profile.ts) | Centraliza marca, editorial, CTA e chaves de ativação |
+| Pipeline | [`/api/blog/generate`](./src/app/api/blog/generate/route.ts) | Autentica, reserva a execução e orquestra a publicação |
+| Banco e regras | [`001_autoblog.sql`](./supabase/migrations/001_autoblog.sql) | Cria tabelas, índices e RLS |
+| Blog público | [`src/app/blog`](./src/app/blog) | Lista artigos e gera páginas SEO com schema |
+| Automação | [`vercel.json`](./vercel.json) | Agenda a execução diária |
+| Qualidade | [CI](./.github/workflows/ci.yml) | Instala, roda lint e gera build em cada push e PR |
+
+## Integrações e custos
+
+O clone não executa chamadas de provedores por conta própria. Você escolhe o
+que ativar e usa as contas da sua empresa.
+
+| Integração | Estado inicial | Quando habilitar |
+| --- | --- | --- |
+| Pautas por keywords locais | Ativa | Já funciona com o perfil editorial |
+| Geração de texto | Depende de `DEEPSEEK_API_KEY` | Depois de revisar o prompt e o orçamento |
+| Google Search Console | Desligada | Quando o domínio estiver verificado e as credenciais prontas |
+| Geração de capas | Desligada | Quando houver uma conta de imagem e uma política visual |
+
+As variáveis possíveis estão em [`.env.example`](./.env.example). Nenhuma
+credencial de outro projeto deve ser copiada para cá.
+
+## Segurança operacional
+
+| Proteção | Como funciona |
 | --- | --- |
-| Marca, domínio e SEO | `src/lib/autoblog-profile.ts` |
-| Tom, público, links e keywords | `src/lib/autoblog-profile.ts` |
-| CTA final | `src/lib/autoblog-profile.ts` |
-| Banco e RLS | `supabase/migrations/001_autoblog.sql` |
-| Frequência | `vercel.json` |
+| Cron autenticado | O endpoint exige `Authorization: Bearer $CRON_SECRET` |
+| Chaves sensíveis | Service role e credenciais ficam no servidor, fora do Git |
+| Leitura pública | RLS permite somente artigos com status `published` |
+| Logs internos | Não recebem política de leitura pública |
+| Execução duplicada | Claim diário bloqueia concorrência e recupera execução parada |
+| Dependências | CI roda lint e build; o repositório passa `npm audit` sem vulnerabilidades conhecidas |
 
-## O que acontece em uma execução
+Leia a [política de segurança](./SECURITY.md) antes de abrir issue sobre
+vulnerabilidade.
 
-1. O cron autenticado reserva a execução do dia.
-2. O sistema seleciona uma pauta a partir das keywords configuradas.
-3. Com a integração de texto habilitada, gera o artigo e os metadados SEO.
-4. O artigo é salvo e aparece em `/blog` somente quando estiver publicado.
+## Onde ele encaixa
 
-Sem credenciais válidas de geração, a execução não publica conteúdo. Sem
-`CRON_SECRET` válido, o endpoint recusa a execução.
+Funciona bem para SaaS B2B, consultorias, serviços técnicos, agências e
+empresas locais que precisam explicar um produto antes da venda.
 
-## Segurança e operação
+Também serve como base para um time editorial que quer manter a publicação no
+próprio repositório, em vez de depender de um CMS fechado.
 
-O cron exige `CRON_SECRET`. A chave service-role fica só no servidor. GSC e
-imagem começam desligados. A geração falha fechada quando não houver segredo
-de cron válido, e uma execução presa pode ser recuperada sem publicar duas
-vezes no mesmo dia.
+## Limites honestos
 
-Leia [SECURITY.md](./SECURITY.md) e o [SETUP.md](./SETUP.md) antes de fazer o
-primeiro deploy.
-
-## Custos
-
-O repositório não chama nenhum provedor por padrão. Quando você habilitar
-texto, imagem ou GSC, os custos e limites passam a ser os da sua própria conta.
+- O template não substitui revisão editorial, conhecimento de mercado ou
+  compliance.
+- Saúde, jurídico, finanças, seguros, apostas e outros contextos sensíveis
+  precisam de regras próprias de aprovação antes de qualquer automação.
+- O conteúdo gerado depende do prompt, das pautas e do provedor escolhido.
+- A operação é sua: domínio, banco, chaves, custos e decisões de publicação
+  continuam sob seu controle.
 
 ## Contribuir
 
-Correções que tornam o template mais seguro, portátil ou simples de configurar
-são bem-vindas. Veja [CONTRIBUTING.md](./CONTRIBUTING.md).
+Issues e PRs que deixem o template mais portátil, seguro ou simples de adotar
+são bem-vindos. Veja [CONTRIBUTING.md](./CONTRIBUTING.md). Para falhas de
+segurança, siga [SECURITY.md](./SECURITY.md) e não publique credenciais.
 
 ## Licença
 
