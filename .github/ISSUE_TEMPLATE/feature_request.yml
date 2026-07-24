@@ -1,0 +1,23 @@
+name: Sugerir melhoria
+description: Proponha uma melhoria que mantenha o template portátil e seguro.
+title: "[Melhoria]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema isso resolve?
+      description: Explique o contexto, sem incluir dados privados.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Qual é a proposta?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas

@@ -1,11 +1,7 @@
 // src/lib/blog/gsc.ts
 import { google } from 'googleapis';
+import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 import { getNextSeedKeyword } from './seed-keywords';
-
-// ⚙️ CONFIGURAR: domínio verificado no GSC
-// Formato sc-domain: para propriedade de domínio
-// Formato https:// para propriedade de URL prefix
-const SITE_URL = 'sc-domain:seudominio.com.br';
 
 // Mínimo de keywords elegíveis no GSC para não usar fallback de seeds
 const MIN_ELIGIBLE = 5;
@@ -17,6 +13,10 @@ function getDayOfYear(): number {
 }
 
 export async function fetchTopKeyword(existingKeywords: string[]): Promise<string> {
+  if (!AUTOBLOG_PROFILE.integrations.googleSearchConsoleEnabled) {
+    return getNextSeedKeyword(getDayOfYear());
+  }
+
   try {
     const auth = new google.auth.OAuth2(
       process.env.GOOGLE_CLIENT_ID,
@@ -30,7 +30,7 @@ export async function fetchTopKeyword(existingKeywords: string[]): Promise<strin
       .toISOString().split('T')[0];
 
     const res = await searchconsole.searchanalytics.query({
-      siteUrl: SITE_URL,
+      siteUrl: `sc-domain:${new URL(AUTOBLOG_PROFILE.brand.siteUrl).hostname}`,
       requestBody: {
         startDate,
         endDate,

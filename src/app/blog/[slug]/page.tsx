@@ -1,23 +1,13 @@
 // src/app/blog/[slug]/page.tsx
-// ⚙️ CONFIGURAR: SITE_NAME, SITE_URL, LOGO_URL, CTA
-
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getArticleBySlug } from '@/lib/blog/supabase-blog';
 import ArticleBody from '@/components/blog/ArticleBody';
+import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 
 export const revalidate = 86400; // ISR 24h
 // dynamicParams: true é o default — novos slugs renderizados on-demand sem 404
-
-// ⚙️ CONFIGURAR
-const SITE_NAME = '[Nome do Site]';
-const SITE_URL = 'https://seudominio.com.br';
-const LOGO_URL = 'https://seudominio.com.br/logo.png';
-const CTA_TITLE = '[Título do CTA — ex: Quer saber mais?]';
-const CTA_SUBTITLE = '[Subtítulo — ex: Fale com um especialista sem compromisso.]';
-const CTA_BUTTON_TEXT = '[Texto do botão]';
-const CTA_URL = '[URL de contato — ex: https://wa.me/55...]';
 
 interface Props {
   params: Promise<{ slug: string }>; // Next.js 16: params é Promise
@@ -28,13 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await getArticleBySlug(slug);
   if (!article) return {};
   return {
-    title: `${article.title} | ${SITE_NAME}`,
+    title: `${article.title} | ${AUTOBLOG_PROFILE.brand.name}`,
     description: article.meta_desc ?? undefined,
-    alternates: { canonical: `${SITE_URL}/blog/${slug}` },
+    alternates: { canonical: `${AUTOBLOG_PROFILE.brand.siteUrl}/blog/${slug}` },
     openGraph: {
       title: article.title,
       description: article.meta_desc ?? undefined,
-      url: `${SITE_URL}/blog/${slug}`,
+      url: `${AUTOBLOG_PROFILE.brand.siteUrl}/blog/${slug}`,
       images: article.cover_url ? [{ url: article.cover_url, width: 1536, height: 1024 }] : [],
     },
   };
@@ -58,14 +48,14 @@ export default async function ArticlePage({ params }: Props) {
     image: article.cover_url,
     datePublished: publishedDate,
     dateModified: publishedDate,
-    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    author: { '@type': 'Organization', name: AUTOBLOG_PROFILE.brand.name, url: AUTOBLOG_PROFILE.brand.siteUrl },
     publisher: {
       '@type': 'Organization',
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: { '@type': 'ImageObject', url: LOGO_URL },
+      name: AUTOBLOG_PROFILE.brand.name,
+      url: AUTOBLOG_PROFILE.brand.siteUrl,
+      logo: { '@type': 'ImageObject', url: AUTOBLOG_PROFILE.brand.logoUrl },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${AUTOBLOG_PROFILE.brand.siteUrl}/blog/${slug}` },
   };
 
   return (
@@ -102,22 +92,22 @@ export default async function ArticlePage({ params }: Props) {
               {article.title}
             </h1>
             <p className="text-sm text-muted-foreground">
-              {SITE_NAME} · <time dateTime={publishedDate}>{readableDate}</time>
+              {AUTOBLOG_PROFILE.brand.name} · <time dateTime={publishedDate}>{readableDate}</time>
             </p>
           </header>
 
           <ArticleBody content={article.content} />
 
           <div className="mt-12 p-6 rounded-2xl border border-primary/30 bg-primary/5 text-center">
-            <p className="font-semibold text-foreground mb-2">{CTA_TITLE}</p>
-            <p className="text-sm text-muted-foreground mb-4">{CTA_SUBTITLE}</p>
+            <p className="font-semibold text-foreground mb-2">{AUTOBLOG_PROFILE.cta.title}</p>
+            <p className="text-sm text-muted-foreground mb-4">{AUTOBLOG_PROFILE.cta.subtitle}</p>
             <a
-              href={CTA_URL}
+              href={AUTOBLOG_PROFILE.cta.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-3 font-semibold text-sm transition-all"
             >
-              {CTA_BUTTON_TEXT}
+              {AUTOBLOG_PROFILE.cta.buttonLabel}
             </a>
           </div>
         </div>

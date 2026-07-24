@@ -27,21 +27,48 @@ export interface InsertArticleInput {
   keyword: string | null;
 }
 
-export async function hasSuccessRunToday(): Promise<boolean> {
+function getRunDate(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/** Claims today's run before generation, preventing concurrent cron duplicates. */
+export async function claimBlogRunToday(): Promise<boolean> {
   const supabase = getClient();
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD UTC
-  const { data } = await supabase
+  const runDate = getRunDate();
+  const { data: existing } = await supabase
     .from('blog_run_log')
-    .select('id')
-    .eq('run_date', today)
-    .eq('status', 'success')
+    .select('status, created_at')
+    .eq('run_date', runDate)
     .single();
-  return !!data;
+
+  if (existing?.status === 'success') return false;
+
+  const staleBefore = new Date(Date.now() - 10 * 60_000).toISOString();
+  if (existing?.status === 'running' && existing.created_at >= staleBefore) return false;
+
+  if (existing?.status === 'error' || existing?.status === 'running') {
+    let retry = supabase
+      .from('blog_run_log')
+      .update({ status: 'running', error: null })
+      .eq('run_date', runDate)
+      .eq('status', existing.status);
+    if (existing.status === 'running') retry = retry.lt('created_at', staleBefore);
+    const { data } = await retry.select('id').maybeSingle();
+    return !!data;
+  }
+
+  const { error } = await supabase
+    .from('blog_run_log')
+    .insert({ run_date: runDate, status: 'running' });
+  return !error;
 }
 
 export async function getPublishedKeywords(): Promise<string[]> {
   const supabase = getClient();
-  const { data } = await supabase.from('articles').select('keyword');
+  const { data } = await supabase
+    .from('articles')
+    .select('keyword')
+    .eq('status', 'published');
   return (data ?? []).map((r: { keyword: string | null }) => r.keyword ?? '').filter(Boolean);
 }
 
@@ -65,11 +92,11 @@ export async function insertRunLog(params: {
   error?: string;
 }): Promise<void> {
   const supabase = getClient();
-  const today = new Date().toISOString().slice(0, 10);
-  const { error } = await supabase.from('blog_run_log').upsert(
-    { run_date: today, ...params },
-    { onConflict: 'run_date' }
-  );
+  const { error } = await supabase
+    .from('blog_run_log')
+    .update(params)
+    .eq('run_date', getRunDate())
+    .eq('status', 'running');
   if (error) console.error('[insertRunLog] Supabase error:', error.message);
 }
 
@@ -78,6 +105,7 @@ export async function getAllArticles(): Promise<Article[]> {
   const { data } = await supabase
     .from('articles')
     .select('*')
+    .eq('status', 'published')
     .order('published_at', { ascending: false });
   return data ?? [];
 }
@@ -88,6 +116,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     .from('articles')
     .select('*')
     .eq('slug', slug)
+    .eq('status', 'published')
     .single();
   return data ?? null;
 }

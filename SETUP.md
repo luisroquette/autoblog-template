@@ -13,13 +13,14 @@ vercel.json            → mesclar com o existente (não sobrescrever)
 ## 2. Instalar dependências
 
 ```bash
-npm install openai googleapis react-markdown remark-gfm
+npm install
 ```
 
 ## 3. Configurar variáveis de ambiente
 
-Copiar `.env` deste diretório para `.env.local` do projeto.
-Substituir os 3 placeholders de Supabase e o CRON_SECRET.
+Copiar `.env.example` para `.env.local` do projeto.
+Preencher todas as variáveis com credenciais criadas para esta instalação.
+Nunca copiar `.env` de outro projeto e nunca versionar `.env.local`.
 
 ```bash
 # Gerar CRON_SECRET:
@@ -30,46 +31,30 @@ printf "%s" "SEU_CRON_SECRET" | vercel env add CRON_SECRET production
 printf "%s" "SUA_SUPABASE_URL" | vercel env add NEXT_PUBLIC_SUPABASE_URL production
 printf "%s" "SUA_ANON_KEY"     | vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY production
 printf "%s" "SUA_SERVICE_KEY"  | vercel env add SUPABASE_SERVICE_ROLE_KEY production
-# As demais (DEEPSEEK, OPENAI, GOOGLE_*) já estão no .env — copiar direto
+# Configure DEEPSEEK, OPENAI e GOOGLE_* somente se escolher usar essas integrações.
 ```
+
+A Vercel envia `Authorization: Bearer $CRON_SECRET` nas invocações de cron.
+O endpoint falha fechado quando a variável está ausente ou não corresponde.
 
 ## 4. Criar tabelas no Supabase
 
-```sql
-CREATE TABLE articles (
-  id           uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  slug         text UNIQUE NOT NULL,
-  title        text NOT NULL,
-  meta_desc    text,
-  content      text NOT NULL,
-  cover_url    text,
-  keyword      text,
-  published_at timestamptz NOT NULL DEFAULT now()
-);
-CREATE INDEX articles_published_at_idx ON articles (published_at DESC);
-
-CREATE TABLE blog_run_log (
-  id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  run_date   date UNIQUE NOT NULL,
-  keyword    text,
-  status     text NOT NULL,
-  error      text,
-  created_at timestamptz NOT NULL DEFAULT now()
-);
-```
+Aplicar `supabase/migrations/001_autoblog.sql` em um projeto Supabase novo.
+Ela cria as tabelas, índices e RLS. A leitura pública fica limitada a artigos
+com status `published`; logs de execução não têm leitura pública.
 
 ## 5. Criar bucket no Supabase Storage
 
 Nome: `blog-covers` | Visibilidade: **Public**
 
-## 6. Configurar os 4 pontos brand-specific
+## 6. Configurar o perfil público
 
-| Arquivo | O que configurar |
-|---------|-----------------|
-| `src/lib/blog/seed-keywords.ts` | Keywords do nicho (mín. 10) |
-| `src/lib/blog/gsc.ts` | `SITE_URL` com domínio do projeto |
-| `src/lib/blog/deepseek.ts` | `SYSTEM_PROMPT` com empresa, tom, links internos, CTA |
-| `src/app/blog/[slug]/page.tsx` | `SITE_NAME`, `SITE_URL`, `LOGO_URL`, `CTA_*` |
+Edite apenas `src/lib/autoblog-profile.ts`: marca, domínio, conteúdo do blog,
+tom, keywords, links internos e CTA. Não espalhe valores de marca pela lógica
+do pipeline.
+
+Por padrão, GSC e geração de imagem estão desligados no perfil. Habilite cada
+integração somente depois de configurar a variável correspondente na sua conta.
 
 ## 7. Testar
 
@@ -81,6 +66,8 @@ curl -H "Authorization: Bearer $CRON_SECRET" https://seudominio.com.br/api/blog/
 # Tempo esperado: 30–90s (DeepSeek ~5s, gpt-image-1 ~30–60s)
 ```
 
-## Referência completa
+## Antes de publicar
 
-Ver `docs/autoblog-whitelabel-plan.md` no repo gaussmob-nextjs.
+Revise perfil, migrations, variáveis de ambiente e `SECURITY.md`. Faça o
+primeiro deploy sem integrar provedores de IA ou GSC; valide leitura pública,
+cron autenticado e idempotência antes de habilitar automação.

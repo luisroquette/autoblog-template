@@ -1,7 +1,6 @@
 // src/lib/blog/deepseek.ts
-// ⚙️ CONFIGURAR: SYSTEM_PROMPT e buildUserPrompt com identidade do projeto
-
 import OpenAI from 'openai';
+import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 
 export interface ArticleContent {
   title: string;
@@ -11,13 +10,16 @@ export interface ArticleContent {
   content: string;
 }
 
-// ⚙️ CONFIGURAR COMPLETAMENTE — adaptar ao nicho, empresa, tom e links internos
-const SYSTEM_PROMPT = `Você redige blogposts para [NOME DA EMPRESA] ([dominio.com.br]),
-[DESCRIÇÃO: o que a empresa faz e para quem]. Escreva em português brasileiro.
+const { brand, editorial, cta } = AUTOBLOG_PROFILE;
+const internalLinks = editorial.internalLinks.length
+  ? editorial.internalLinks.map(link => `- [${link.label}](${link.url}) — ${link.description}`).join('\n')
+  : '- Nenhum link interno configurado; não invente URLs.';
+
+const SYSTEM_PROMPT = `Você redige blogposts para ${brand.name} (${brand.siteUrl}),
+${editorial.businessDescription}. Público: ${editorial.audience}. Escreva em português brasileiro.
 
 ## TOM DE VOZ
-[ex: profissional mas acessível, foco em educação do mercado B2B]
-[ex: direto, sem jargão corporativo]
+${editorial.tone}
 
 ## ESTRUTURA OBRIGATÓRIA
 1. H1 com keyword principal (máx 60 chars)
@@ -37,14 +39,11 @@ const SYSTEM_PROMPT = `Você redige blogposts para [NOME DA EMPRESA] ([dominio.c
   "de acordo com especialistas", "no contexto atual", "vários"/"alguns" sem número.
 
 ## LINKS INTERNOS OBRIGATÓRIOS (âncoras naturais, distribuídas pelo texto)
-- [TEXTO DA ÂNCORA 1](/pagina-1) — ex: "nossos produtos" → /produtos
-- [TEXTO DA ÂNCORA 2](/pagina-2)
-- [TEXTO DA ÂNCORA 3](/pagina-3)
-- [seja parceiro](/parceria) ou equivalente
+${internalLinks}
 
 ## TEMPLATE DO CTA FINAL
-Recapitular o problema em 1 frase. Mencionar que [EMPRESA] resolve [SOLUÇÃO].
-Convidar para ação de baixo atrito: "[TEXTO DO BOTÃO]" com link [URL DE CONTATO].`;
+Recapitular o problema em 1 frase. Mencionar que ${brand.name} pode ajudar dentro do seu escopo.
+Convidar para ação de baixo atrito: "${cta.buttonLabel}" com link ${cta.url}.`;
 
 function buildUserPrompt(keyword: string): string {
   return `Escreva um artigo SEO completo sobre "${keyword}" seguindo TODAS as regras do system prompt.

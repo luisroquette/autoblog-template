@@ -3,23 +3,23 @@ export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
-import { hasSuccessRunToday, insertArticle, insertRunLog, getPublishedKeywords } from '@/lib/blog/supabase-blog';
+import { claimBlogRunToday, insertArticle, insertRunLog, getPublishedKeywords } from '@/lib/blog/supabase-blog';
 import { fetchTopKeyword } from '@/lib/blog/gsc';
 import { generateArticle } from '@/lib/blog/deepseek';
 import { generateAndUploadCover } from '@/lib/blog/image-gen';
 
 export async function GET(request: NextRequest) {
-  // Auth: Vercel Cron injeta x-vercel-cron: 1
-  const isVercelCron = request.headers.get('x-vercel-cron') === '1';
   const authHeader = request.headers.get('authorization') ?? '';
-  const isManual = authHeader === `Bearer ${process.env.CRON_SECRET}`;
+  const cronSecret = process.env.CRON_SECRET;
+  const isAuthorized = !!cronSecret && authHeader === `Bearer ${cronSecret}`;
 
-  if (!isVercelCron && !isManual) {
+  if (!isAuthorized) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  // Idempotência: já rodou hoje com sucesso?
-  if (await hasSuccessRunToday()) {
+  // Claim atômico antes de qualquer chamada externa: evita publicação duplicada
+  // quando cron/manual chegam quase simultaneamente.
+  if (!(await claimBlogRunToday())) {
     return NextResponse.json({ message: 'already_run_today' }, { status: 200 });
   }
 

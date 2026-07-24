@@ -1,18 +1,17 @@
 // src/app/blog/page.tsx
-// ⚙️ CONFIGURAR: title, description, canonical, textos da página
-
 import type { Metadata } from 'next';
 import { getAllArticles } from '@/lib/blog/supabase-blog';
 import type { Article } from '@/lib/blog/supabase-blog';
 import ArticleCard from '@/components/blog/ArticleCard';
 import BlogPagination from '@/components/blog/BlogPagination';
+import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 
 export const revalidate = 3600; // ISR 1h
 
 export const metadata: Metadata = {
-  title: 'Blog — [Tópico Principal] | [Nome do Site]',
-  description: '[Descrição do blog em 1–2 frases com keywords do nicho].',
-  alternates: { canonical: 'https://seudominio.com.br/blog' },
+  title: AUTOBLOG_PROFILE.blog.title,
+  description: AUTOBLOG_PROFILE.blog.description,
+  alternates: { canonical: `${AUTOBLOG_PROFILE.brand.siteUrl}/blog` },
 };
 
 const PAGE_SIZE = 12;
@@ -30,10 +29,10 @@ export default async function BlogPage() {
       <div className="container max-w-6xl mx-auto px-4 py-16">
         <header className="mb-12 text-center">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground">
-            Blog {/* ⚙️ CONFIGURAR */}
+            {AUTOBLOG_PROFILE.blog.heading}
           </h1>
           <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
-            [Descrição do blog em 1–2 frases] {/* ⚙️ CONFIGURAR */}
+            {AUTOBLOG_PROFILE.blog.intro}
           </p>
         </header>
 

@@ -2,11 +2,14 @@
 import OpenAI from 'openai';
 import type { ImagesResponse } from 'openai/resources/images';
 import { uploadCoverImage } from './supabase-blog';
+import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
 
 export async function generateAndUploadCover(
   prompt: string,
   slug: string,
 ): Promise<string | null> {
+  if (!AUTOBLOG_PROFILE.integrations.imageGenerationEnabled) return null;
+
   try {
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 

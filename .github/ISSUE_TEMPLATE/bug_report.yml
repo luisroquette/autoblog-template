@@ -1,0 +1,38 @@
+name: Relatar um problema
+description: Ajude a tornar o template mais confiável.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Não inclua chaves, URLs privadas, dados de clientes ou conteúdo de arquivos de ambiente.
+  - type: textarea
+    id: problem
+    attributes:
+      label: O que aconteceu?
+      description: Descreva o comportamento observado.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão do Node.js
+      placeholder: "ex.: 22.0.0"
