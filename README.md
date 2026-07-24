@@ -5,7 +5,7 @@
 <h1 align="center">Auto-blog Template</h1>
 
 <p align="center">
-  Um blog SEO próprio que sai da pauta, passa por um pipeline controlado e chega ao seu domínio.
+  Infraestrutura open source para transformar pauta em artigo publicado no seu domínio.
 </p>
 
 <p align="center">
@@ -25,19 +25,20 @@
 
 ---
 
-Você já tem um site. O blog continua vazio porque cada pauta vira uma tarefa
-nova: escolher assunto, escrever, criar capa, publicar, acertar SEO e repetir.
+Um blog exige mais do que um editor de texto. Tem pauta, contexto da empresa,
+links internos, banco, SEO, publicação e uma rotina que não pode disparar duas
+vezes no mesmo dia.
 
-Este template entrega a infraestrutura dessa rotina. Você configura empresa,
-tom, CTA, links internos e keywords em um perfil. O projeto cuida do ciclo de
-conteúdo no seu Next.js, no seu Supabase e com as credenciais da sua operação.
+O Auto-blog reúne essa parte em um repositório que você controla. A empresa
+aparece em um único perfil; o pipeline roda no seu Next.js e grava no seu
+Supabase. As contas de IA, Search Console e Vercel continuam sendo suas.
 
 ## Sumário
 
 - [O ciclo de um artigo](#o-ciclo-de-um-artigo)
 - [Demonstração do fluxo](#demonstração-do-fluxo)
 - [O que você controla](#o-que-você-controla)
-- [Comece em 10 minutos](#comece-em-10-minutos)
+- [Faça uma instalação limpa](#faça-uma-instalação-limpa)
 - [O que vem no repositório](#o-que-vem-no-repositório)
 - [Integrações e custos](#integrações-e-custos)
 - [Segurança operacional](#segurança-operacional)
@@ -106,15 +107,15 @@ export const AUTOBLOG_PROFILE = {
 | Frequência do cron | Controle de idempotência da execução |
 | Provedores e limites | Persistência no Supabase e publicação em `/blog` |
 
-## Comece em 10 minutos
+## Faça uma instalação limpa
 
 ```bash
 # 1. Faça um fork e clone a sua cópia
 git clone https://github.com/SEU-USUARIO/autoblog-template.git
 cd autoblog-template
 
-# 2. Instale e crie sua configuração local
-npm install
+# 2. Instale exatamente as dependências do lockfile
+npm ci
 cp .env.example .env.local
 
 # 3. Confirme que a base está saudável
@@ -122,16 +123,18 @@ npm run lint
 npm run build
 ```
 
-Depois, siga esta ordem:
+Uma instalação completa também pede um projeto Supabase e um deploy. A ordem
+segura é esta:
 
 1. Edite o [perfil editorial](./src/lib/autoblog-profile.ts).
 2. Crie um projeto Supabase seu e aplique a
    [migration](./supabase/migrations/001_autoblog.sql).
 3. Preencha as variáveis de `.env.local` com credenciais criadas para essa
    instalação.
-4. Faça o primeiro deploy sem provedores de IA ou GSC.
-5. Valide leitura pública, cron autenticado e banco. Só então habilite as
-   integrações que fizerem sentido.
+4. Faça o primeiro deploy sem GSC nem geração de imagem.
+5. Valide leitura pública, cron autenticado e banco.
+6. Habilite texto, imagem ou GSC somente quando as credenciais e o orçamento
+   estiverem definidos.
 
 O [guia de setup](./SETUP.md) detalha variáveis, Supabase, Vercel e o teste
 manual do cron.
@@ -149,13 +152,13 @@ manual do cron.
 
 ## Integrações e custos
 
-O clone não executa chamadas de provedores por conta própria. Você escolhe o
-que ativar e usa as contas da sua empresa.
+Clonar o repositório não aciona provedores. Cada integração depende de uma
+credencial criada na sua conta e de uma decisão explícita no perfil.
 
 | Integração | Estado inicial | Quando habilitar |
 | --- | --- | --- |
 | Pautas por keywords locais | Ativa | Já funciona com o perfil editorial |
-| Geração de texto | Depende de `DEEPSEEK_API_KEY` | Depois de revisar o prompt e o orçamento |
+| Geração de texto | Não configurada | Depois de revisar prompt e orçamento |
 | Google Search Console | Desligada | Quando o domínio estiver verificado e as credenciais prontas |
 | Geração de capas | Desligada | Quando houver uma conta de imagem e uma política visual |
 
@@ -171,7 +174,7 @@ credencial de outro projeto deve ser copiada para cá.
 | Leitura pública | RLS permite somente artigos com status `published` |
 | Logs internos | Não recebem política de leitura pública |
 | Execução duplicada | Claim diário bloqueia concorrência e recupera execução parada |
-| Dependências | CI roda lint e build; o repositório passa `npm audit` sem vulnerabilidades conhecidas |
+| Dependências | A CI instala, roda lint e gera build; rode `npm audit` antes de atualizar pacotes |
 
 Leia a [política de segurança](./SECURITY.md) antes de abrir issue sobre
 vulnerabilidade.

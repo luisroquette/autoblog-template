@@ -1,77 +1,111 @@
-# Autoblog White-Label — Setup Rápido
+# Coloque o Auto-blog no ar
 
-## 1. Copiar arquivos para o projeto
+Este guia parte de uma cópia nova do template. Cada instalação deve ter seu
+próprio projeto Supabase, domínio e variáveis de ambiente.
 
-```
-src/lib/blog/          → copiar pasta inteira
-src/app/api/blog/      → copiar pasta inteira
-src/app/blog/          → copiar pasta inteira
-src/components/blog/   → copiar pasta inteira
-vercel.json            → mesclar com o existente (não sobrescrever)
-```
+## 1. Crie a sua cópia
 
-## 2. Instalar dependências
+Use o botão **Fork** no GitHub e clone o repositório que ficou na sua conta:
 
 ```bash
-npm install
+git clone https://github.com/SEU-USUARIO/autoblog-template.git
+cd autoblog-template
+npm ci
+cp .env.example .env.local
 ```
 
-## 3. Configurar variáveis de ambiente
+`npm ci` usa exatamente o `package-lock.json`. Ele é a escolha certa para uma
+instalação nova ou para CI.
 
-Copiar `.env.example` para `.env.local` do projeto.
-Preencher todas as variáveis com credenciais criadas para esta instalação.
-Nunca copiar `.env` de outro projeto e nunca versionar `.env.local`.
+## 2. Defina a empresa antes de ligar automações
+
+Edite [`src/lib/autoblog-profile.ts`](./src/lib/autoblog-profile.ts). É ali que
+ficam marca, domínio, descrição do negócio, público, tom, keywords, links
+internos e CTA.
+
+O objetivo é manter dados da empresa fora da lógica do pipeline. Não espalhe
+nome, URL ou texto de CTA por componentes e prompts.
+
+## 3. Crie o banco da instalação
+
+Crie um projeto Supabase novo. No SQL Editor, execute
+[`supabase/migrations/001_autoblog.sql`](./supabase/migrations/001_autoblog.sql).
+Ela cria `articles`, `blog_run_log`, os índices e as regras de RLS.
+
+Depois, crie um bucket chamado `blog-covers` com visibilidade **Public**. Ele
+só é necessário se você decidir habilitar capas geradas.
+
+## 4. Preencha as variáveis locais
+
+Abra `.env.local`. As quatro variáveis abaixo são a base da instalação:
+
+| Variável | De onde vem | Onde pode ficar |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | Configurações do projeto Supabase | Cliente e servidor |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Configurações do projeto Supabase | Cliente e servidor |
+| `SUPABASE_SERVICE_ROLE_KEY` | Configurações do projeto Supabase | Somente servidor |
+| `CRON_SECRET` | Gerado por você | Somente servidor |
+
+Gere o segredo do cron localmente:
 
 ```bash
-# Gerar CRON_SECRET:
 openssl rand -hex 32
-
-# Adicionar na Vercel (usar printf, não echo):
-printf "%s" "SEU_CRON_SECRET" | vercel env add CRON_SECRET production
-printf "%s" "SUA_SUPABASE_URL" | vercel env add NEXT_PUBLIC_SUPABASE_URL production
-printf "%s" "SUA_ANON_KEY"     | vercel env add NEXT_PUBLIC_SUPABASE_ANON_KEY production
-printf "%s" "SUA_SERVICE_KEY"  | vercel env add SUPABASE_SERVICE_ROLE_KEY production
-# Configure DEEPSEEK, OPENAI e GOOGLE_* somente se escolher usar essas integrações.
 ```
 
-A Vercel envia `Authorization: Bearer $CRON_SECRET` nas invocações de cron.
-O endpoint falha fechado quando a variável está ausente ou não corresponde.
+Nunca versione `.env.local`. Também não reutilize arquivo de ambiente de outro
+projeto, mesmo que as variáveis tenham o mesmo nome.
 
-## 4. Criar tabelas no Supabase
+As outras variáveis são opt-in:
 
-Aplicar `supabase/migrations/001_autoblog.sql` em um projeto Supabase novo.
-Ela cria as tabelas, índices e RLS. A leitura pública fica limitada a artigos
-com status `published`; logs de execução não têm leitura pública.
+| Variável | Necessária quando |
+| --- | --- |
+| `DEEPSEEK_API_KEY` | Você quiser gerar artigos pelo endpoint diário |
+| `OPENAI_API_KEY` | `imageGenerationEnabled` estiver como `true` |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` | `googleSearchConsoleEnabled` estiver como `true` |
 
-## 5. Criar bucket no Supabase Storage
-
-Nome: `blog-covers` | Visibilidade: **Public**
-
-## 6. Configurar o perfil público
-
-Edite apenas `src/lib/autoblog-profile.ts`: marca, domínio, conteúdo do blog,
-tom, keywords, links internos e CTA. Não espalhe valores de marca pela lógica
-do pipeline.
-
-Por padrão, GSC e geração de imagem estão desligados no perfil. Habilite cada
-integração somente depois de configurar a variável correspondente na sua conta.
-
-## 7. Testar
+## 5. Valide antes do deploy
 
 ```bash
-# Validar antes do deploy:
 npm run lint
+npm audit
 npm run build
-
-# Após o deploy e com DEEPSEEK_API_KEY configurada, testar:
-curl -H "Authorization: Bearer $CRON_SECRET" https://seudominio.com.br/api/blog/generate
-
-# Deve retornar: {"success":true,"slug":"..."}
-# A duração varia conforme as integrações de texto e imagem habilitadas.
 ```
 
-## Antes de publicar
+O build precisa terminar sem depender de credenciais de provedores externos.
 
-Revise perfil, migrations, variáveis de ambiente e `SECURITY.md`. Faça o
-primeiro deploy sem integrar provedores de IA ou GSC; valide leitura pública,
-cron autenticado e idempotência antes de habilitar automação.
+## 6. Faça o deploy
+
+Suba a aplicação na Vercel ou em uma plataforma compatível com Next.js. Cadastre
+as mesmas variáveis de ambiente do `.env.local`, mas mantenha a service role e
+o `CRON_SECRET` apenas no ambiente de servidor.
+
+O [`vercel.json`](./vercel.json) agenda `/api/blog/generate` diariamente às
+09:00 UTC. A Vercel envia o segredo em `Authorization: Bearer $CRON_SECRET`.
+Altere o agendamento se esse horário não servir para a operação.
+
+## 7. Teste o pipeline de propósito
+
+Depois do deploy, com `DEEPSEEK_API_KEY` configurada, dispare uma execução
+manual:
+
+```bash
+curl -H "Authorization: Bearer $CRON_SECRET" \
+  https://seudominio.com.br/api/blog/generate
+```
+
+Uma execução bem-sucedida retorna `{ "success": true, "slug": "..." }`.
+Confira o artigo em `/blog`, a linha de execução em `blog_run_log` e o acesso
+anônimo no navegador. Um segundo disparo no mesmo dia deve retornar
+`already_run_today`.
+
+## Antes da primeira publicação automática
+
+- [ ] Perfil editorial revisado por quem entende da empresa.
+- [ ] Migrations aplicadas no projeto Supabase correto.
+- [ ] Leitura pública testada sem expor logs internos.
+- [ ] `CRON_SECRET` presente na plataforma de deploy.
+- [ ] Custo, limite e responsável por cada integração definidos.
+- [ ] Rota manual testada antes de deixar o cron rodar sozinho.
+
+Para relatar uma vulnerabilidade, siga [SECURITY.md](./SECURITY.md) e não abra
+issue com chaves, logs sensíveis ou dados de clientes.
