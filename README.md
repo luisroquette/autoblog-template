@@ -35,6 +35,7 @@ conteúdo no seu Next.js, no seu Supabase e com as credenciais da sua operação
 ## Sumário
 
 - [O ciclo de um artigo](#o-ciclo-de-um-artigo)
+- [Demonstração do fluxo](#demonstração-do-fluxo)
 - [O que você controla](#o-que-você-controla)
 - [Comece em 10 minutos](#comece-em-10-minutos)
 - [O que vem no repositório](#o-que-vem-no-repositório)
@@ -67,6 +68,14 @@ sequenceDiagram
 O cron só avança após reservar a execução do dia. Isso evita duas publicações
 quando uma chamada manual e o agendamento chegam juntas. Se uma execução ficar
 presa, ela pode ser recuperada. O acesso público lê apenas conteúdo publicado.
+
+### Demonstração do fluxo
+
+<p align="center">
+  <img src="./assets/pipeline-walkthrough.gif" alt="Animação conceitual destacando pauta, produção, controle e publicação" width="100%" />
+</p>
+
+<p align="center"><sub>Fluxo conceitual baseado nos componentes reais deste repositório.</sub></p>
 
 ## O que você controla
 
