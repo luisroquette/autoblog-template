@@ -22,14 +22,21 @@ ${editorial.businessDescription}. Público: ${editorial.audience}. Escreva em po
 ${editorial.tone}
 
 ## ESTRUTURA OBRIGATÓRIA
-1. H1 com keyword principal (máx 60 chars)
+1. H1 com a keyword nas PRIMEIRAS palavras (máx 60 chars). Promessa concreta, não
+   rótulo genérico — "Guia sobre X" é fraco, "Como Resolver X sem Y" é forte.
 2. LEAD em exatamente 3 parágrafos:
-   - Parágrafo 1: dor ou dado surpreendente (NÃO começar com "Neste artigo…")
+   - Parágrafo 1: a keyword aparece já na primeira frase. Abrir com dor ou dado
+     surpreendente (NÃO começar com "Neste artigo…")
    - Parágrafo 2: por que o problema importa AGORA (mercado, regulação, tendência)
    - Parágrafo 3: promessa explícita do artigo
-3. 4 a 6 H2s com keyword/variações semânticas em ≥ 2 deles
+3. 4 a 6 H2s com keyword/variações semânticas em ≥ 2 deles. HIERARQUIA: H2 é um
+   bloco novo de assunto; se dentro dele houver subdivisão, use H3 (e H4 se o H3
+   subdividir de novo); ao abrir um bloco novo não relacionado, volte para H2 —
+   nunca gere tudo como H2 plano quando o conteúdo tem subitens naturais.
 4. Parágrafos máx 4 linhas. Uma ideia por parágrafo.
-5. CTA final específico com link de contato.
+5. Ao menos 1 link externo para uma fonte real e reconhecível (nunca inventar
+   URL — se não tiver certeza de que o domínio/artigo existe, omita).
+6. CTA final específico com link de contato.
 
 ## REGRAS
 - Mínimo 2 sinais de E-E-A-T: experiência prática, dado de mercado com fonte,
@@ -50,22 +57,26 @@ function buildUserPrompt(keyword: string): string {
 
 Retorne SOMENTE um JSON válido (sem markdown ao redor, sem texto antes ou depois):
 {
-  "title": "Título H1/SEO com keyword principal (máx 60 chars)",
-  "slug": "slug-kebab-case-max-6-palavras-sem-artigos",
+  "title": "Título H1/SEO com a keyword nas primeiras palavras (máx 60 chars)",
+  "slug": "slug-kebab-case-com-a-keyword-max-6-palavras-sem-artigos",
   "meta_desc": "Keyword + resultado específico que o artigo entrega (máx 155 chars, sem ponto final)",
   "image_prompt": "Cena fotorrealista em inglês para o tema, sem texto na imagem, sem logos, high quality, 4k",
   "content": "Artigo completo em markdown (1500–2500 palavras)"
 }
 
 CHECKLIST interno antes de gerar (valide cada item):
+- [ ] H1 ≤ 60 chars, keyword nas primeiras palavras, promessa concreta (não rótulo genérico)
+- [ ] Primeira frase do lead contém a keyword
 - [ ] Lead: exatamente 3 parágrafos (dor → contexto → promessa)
-- [ ] H1 ≤ 60 chars com keyword
+- [ ] Slug contém a keyword
 - [ ] Meta description ≤ 155 chars com keyword, sem ponto final
 - [ ] 4 a 6 H2s, keyword ou variação semântica em ≥ 2 deles
+- [ ] Hierarquia de headers correta: H3 só dentro de um H2 que ele subdivide, H4 só dentro do H3; bloco novo e não relacionado volta para H2
 - [ ] Parágrafos máx 4 linhas
 - [ ] Mínimo 2 sinais de E-E-A-T presentes
 - [ ] Nenhuma palavra do vocabulário proibido
 - [ ] Links internos com âncoras naturais distribuídos no texto
+- [ ] Ao menos 1 link externo real e relevante (nunca URL inventada; se não tiver certeza, omitir)
 - [ ] CTA final com link de contato específico
 - [ ] ZERO markdown de imagem no content (sem ![]() )`;
 }
