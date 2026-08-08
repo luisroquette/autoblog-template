@@ -109,6 +109,17 @@ export const AUTOBLOG_PROFILE = {
 | Frequência do cron | Controle de idempotência da execução |
 | Provedores e limites | Persistência no Supabase e publicação em `/blog` |
 
+### Qualidade do conteúdo gerado
+
+O prompt padrão ([`deepseek.ts`](./src/lib/blog/deepseek.ts)) já aplica um
+checklist de SEO on-page para cada artigo:
+
+- Keyword nas primeiras palavras do título, na URL e já na primeira frase
+- Título com promessa concreta, não rótulo genérico
+- Hierarquia real de headers (H2 por bloco de assunto, H3/H4 para subdivisões)
+- Ao menos um link externo real e relevante — nunca uma URL inventada
+- Mínimo de sinais de E-E-A-T e vocabulário de IA banido
+
 ## Faça uma instalação limpa
 
 ```bash
