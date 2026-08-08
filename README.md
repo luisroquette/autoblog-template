@@ -10,6 +10,8 @@
 
 <p align="center">
   <a href="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://github.com/luisroquette/RocketLabs"><img src="https://img.shields.io/badge/RocketLabs-open%20system-7C5CFC" alt="Parte do RocketLabs" /></a>
+  <a href="https://github.com/luisroquette/autoblog-template/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/autoblog-template?color=F3B85A" alt="Última release" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/licença-MIT-F3B85A" alt="Licença MIT" /></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.2-111827" alt="Next.js 16.2" /></a>
   <a href="https://supabase.com/"><img src="https://img.shields.io/badge/banco-Supabase-3ECF8E" alt="Supabase" /></a>
@@ -121,6 +123,7 @@ cp .env.example .env.local
 # 3. Confirme que a base está saudável
 npm run lint
 npm run build
+npm run audit:runtime
 ```
 
 Uma instalação completa também pede um projeto Supabase e um deploy. A ordem
@@ -206,3 +209,10 @@ segurança, siga [SECURITY.md](./SECURITY.md) e não publique credenciais.
 ## Licença
 
 [MIT](./LICENSE) © 2026 Luis Roquette.
+
+---
+
+<p align="center">
+  <strong>Auto-blog Template faz parte do <a href="https://github.com/luisroquette/RocketLabs">RocketLabs</a>.</strong><br />
+  <sub>Explore outros sistemas de IA aplicada e playbooks open source reutilizáveis.</sub>
+</p>
