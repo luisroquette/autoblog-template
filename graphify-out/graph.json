@@ -57,7 +57,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 14,
+      "community": 15,
       "norm_label": "article content pipeline walkthrough",
       "_origin": "semantic",
       "id": "assets_pipeline_walkthrough_entity"
@@ -68,9 +68,9 @@
       "source_file": "eslint.config.mjs",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "eslint_config",
-      "community": 15,
-      "norm_label": "eslint.config.mjs"
+      "community": 16,
+      "norm_label": "eslint.config.mjs",
+      "id": "eslint_config"
     },
     {
       "label": "next.config.ts",
@@ -78,9 +78,9 @@
       "source_file": "next.config.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "next_config",
-      "community": 12,
-      "norm_label": "next.config.ts"
+      "community": 13,
+      "norm_label": "next.config.ts",
+      "id": "next_config"
     },
     {
       "label": "nextConfig",
@@ -88,9 +88,9 @@
       "source_file": "next.config.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "next_config_nextconfig",
-      "community": 12,
-      "norm_label": "nextconfig"
+      "community": 13,
+      "norm_label": "nextconfig",
+      "id": "next_config_nextconfig"
     },
     {
       "label": "package.json",
@@ -98,9 +98,9 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "package",
-      "community": 3,
-      "norm_label": "package.json"
+      "community": 4,
+      "norm_label": "package.json",
+      "id": "package"
     },
     {
       "label": "name",
@@ -108,9 +108,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "package_name",
-      "community": 3,
-      "norm_label": "name"
+      "community": 4,
+      "norm_label": "name",
+      "id": "package_name"
     },
     {
       "label": "version",
@@ -118,9 +118,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "package_version",
-      "community": 3,
-      "norm_label": "version"
+      "community": 4,
+      "norm_label": "version",
+      "id": "package_version"
     },
     {
       "label": "private",
@@ -128,9 +128,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "package_private",
-      "community": 3,
-      "norm_label": "private"
+      "community": 4,
+      "norm_label": "private",
+      "id": "package_private"
     },
     {
       "label": "license",
@@ -138,9 +138,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "package_license",
-      "community": 3,
-      "norm_label": "license"
+      "community": 4,
+      "norm_label": "license",
+      "id": "package_license"
     },
     {
       "label": "scripts",
@@ -148,9 +148,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "package_scripts",
-      "community": 3,
-      "norm_label": "scripts"
+      "community": 4,
+      "norm_label": "scripts",
+      "id": "package_scripts"
     },
     {
       "label": "dev",
@@ -158,9 +158,9 @@
       "source_file": "package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "package_scripts_dev",
-      "community": 3,
-      "norm_label": "dev"
+      "community": 4,
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
     },
     {
       "label": "build",
@@ -168,9 +168,9 @@
       "source_file": "package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "package_scripts_build",
-      "community": 3,
-      "norm_label": "build"
+      "community": 4,
+      "norm_label": "build",
+      "id": "package_scripts_build"
     },
     {
       "label": "start",
@@ -178,9 +178,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "package_scripts_start",
-      "community": 3,
-      "norm_label": "start"
+      "community": 4,
+      "norm_label": "start",
+      "id": "package_scripts_start"
     },
     {
       "label": "lint",
@@ -188,9 +188,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "package_scripts_lint",
-      "community": 3,
-      "norm_label": "lint"
+      "community": 4,
+      "norm_label": "lint",
+      "id": "package_scripts_lint"
     },
     {
       "label": "audit:runtime",
@@ -198,9 +198,9 @@
       "source_file": "package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "package_scripts_audit_runtime",
-      "community": 3,
-      "norm_label": "audit:runtime"
+      "community": 4,
+      "norm_label": "audit:runtime",
+      "id": "package_scripts_audit_runtime"
     },
     {
       "label": "dependencies",
@@ -208,9 +208,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "package_dependencies",
       "community": 2,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
     },
     {
       "label": "@supabase/supabase-js",
@@ -218,9 +218,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "package_dependencies_supabase_supabase_js",
       "community": 2,
-      "norm_label": "@supabase/supabase-js"
+      "norm_label": "@supabase/supabase-js",
+      "id": "package_dependencies_supabase_supabase_js"
     },
     {
       "label": "@supabase/supabase-js",
@@ -228,9 +228,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "supabase_supabase_js",
       "community": 2,
-      "norm_label": "@supabase/supabase-js"
+      "norm_label": "@supabase/supabase-js",
+      "id": "supabase_supabase_js"
     },
     {
       "label": "googleapis",
@@ -238,9 +238,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "package_dependencies_googleapis",
       "community": 2,
-      "norm_label": "googleapis"
+      "norm_label": "googleapis",
+      "id": "package_dependencies_googleapis"
     },
     {
       "label": "googleapis",
@@ -248,9 +248,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "googleapis",
       "community": 2,
-      "norm_label": "googleapis"
+      "norm_label": "googleapis",
+      "id": "googleapis"
     },
     {
       "label": "next",
@@ -258,9 +258,9 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "package_dependencies_next",
       "community": 2,
-      "norm_label": "next"
+      "norm_label": "next",
+      "id": "package_dependencies_next"
     },
     {
       "label": "next",
@@ -268,9 +268,9 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "next",
       "community": 2,
-      "norm_label": "next"
+      "norm_label": "next",
+      "id": "next"
     },
     {
       "label": "openai",
@@ -278,9 +278,9 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "package_dependencies_openai",
       "community": 2,
-      "norm_label": "openai"
+      "norm_label": "openai",
+      "id": "package_dependencies_openai"
     },
     {
       "label": "openai",
@@ -288,9 +288,9 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "openai",
       "community": 2,
-      "norm_label": "openai"
+      "norm_label": "openai",
+      "id": "openai"
     },
     {
       "label": "react",
@@ -298,9 +298,9 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "package_dependencies_react",
       "community": 2,
-      "norm_label": "react"
+      "norm_label": "react",
+      "id": "package_dependencies_react"
     },
     {
       "label": "react",
@@ -308,9 +308,9 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "react",
       "community": 2,
-      "norm_label": "react"
+      "norm_label": "react",
+      "id": "react"
     },
     {
       "label": "react-dom",
@@ -318,9 +318,9 @@
       "source_file": "package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "package_dependencies_react_dom",
       "community": 2,
-      "norm_label": "react-dom"
+      "norm_label": "react-dom",
+      "id": "package_dependencies_react_dom"
     },
     {
       "label": "react-dom",
@@ -328,9 +328,9 @@
       "source_file": "package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "react_dom",
       "community": 2,
-      "norm_label": "react-dom"
+      "norm_label": "react-dom",
+      "id": "react_dom"
     },
     {
       "label": "react-markdown",
@@ -338,9 +338,9 @@
       "source_file": "package.json",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "package_dependencies_react_markdown",
       "community": 2,
-      "norm_label": "react-markdown"
+      "norm_label": "react-markdown",
+      "id": "package_dependencies_react_markdown"
     },
     {
       "label": "react-markdown",
@@ -348,9 +348,9 @@
       "source_file": "package.json",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "react_markdown",
       "community": 2,
-      "norm_label": "react-markdown"
+      "norm_label": "react-markdown",
+      "id": "react_markdown"
     },
     {
       "label": "remark-gfm",
@@ -358,9 +358,9 @@
       "source_file": "package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "package_dependencies_remark_gfm",
       "community": 2,
-      "norm_label": "remark-gfm"
+      "norm_label": "remark-gfm",
+      "id": "package_dependencies_remark_gfm"
     },
     {
       "label": "remark-gfm",
@@ -368,9 +368,9 @@
       "source_file": "package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "remark_gfm",
       "community": 2,
-      "norm_label": "remark-gfm"
+      "norm_label": "remark-gfm",
+      "id": "remark_gfm"
     },
     {
       "label": "overrides",
@@ -378,9 +378,9 @@
       "source_file": "package.json",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "package_overrides",
-      "community": 3,
-      "norm_label": "overrides"
+      "community": 4,
+      "norm_label": "overrides",
+      "id": "package_overrides"
     },
     {
       "label": "gaxios",
@@ -388,9 +388,9 @@
       "source_file": "package.json",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "package_overrides_gaxios",
-      "community": 3,
-      "norm_label": "gaxios"
+      "community": 4,
+      "norm_label": "gaxios",
+      "id": "package_overrides_gaxios"
     },
     {
       "label": "postcss",
@@ -398,9 +398,9 @@
       "source_file": "package.json",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "package_overrides_postcss",
-      "community": 3,
-      "norm_label": "postcss"
+      "community": 4,
+      "norm_label": "postcss",
+      "id": "package_overrides_postcss"
     },
     {
       "label": "sharp",
@@ -408,9 +408,9 @@
       "source_file": "package.json",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "package_overrides_sharp",
-      "community": 3,
-      "norm_label": "sharp"
+      "community": 4,
+      "norm_label": "sharp",
+      "id": "package_overrides_sharp"
     },
     {
       "label": "devDependencies",
@@ -418,9 +418,9 @@
       "source_file": "package.json",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "package_devdependencies",
       "community": 6,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "package_devdependencies"
     },
     {
       "label": "@types/node",
@@ -428,9 +428,9 @@
       "source_file": "package.json",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "package_devdependencies_types_node",
       "community": 6,
-      "norm_label": "@types/node"
+      "norm_label": "@types/node",
+      "id": "package_devdependencies_types_node"
     },
     {
       "label": "@types/node",
@@ -438,9 +438,9 @@
       "source_file": "package.json",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "types_node",
       "community": 6,
-      "norm_label": "@types/node"
+      "norm_label": "@types/node",
+      "id": "types_node"
     },
     {
       "label": "@types/react",
@@ -448,9 +448,9 @@
       "source_file": "package.json",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "package_devdependencies_types_react",
       "community": 6,
-      "norm_label": "@types/react"
+      "norm_label": "@types/react",
+      "id": "package_devdependencies_types_react"
     },
     {
       "label": "@types/react",
@@ -458,9 +458,9 @@
       "source_file": "package.json",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "types_react",
       "community": 6,
-      "norm_label": "@types/react"
+      "norm_label": "@types/react",
+      "id": "types_react"
     },
     {
       "label": "@types/react-dom",
@@ -468,9 +468,9 @@
       "source_file": "package.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "package_devdependencies_types_react_dom",
       "community": 6,
-      "norm_label": "@types/react-dom"
+      "norm_label": "@types/react-dom",
+      "id": "package_devdependencies_types_react_dom"
     },
     {
       "label": "@types/react-dom",
@@ -478,9 +478,9 @@
       "source_file": "package.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "types_react_dom",
       "community": 6,
-      "norm_label": "@types/react-dom"
+      "norm_label": "@types/react-dom",
+      "id": "types_react_dom"
     },
     {
       "label": "eslint",
@@ -488,9 +488,9 @@
       "source_file": "package.json",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "package_devdependencies_eslint",
       "community": 6,
-      "norm_label": "eslint"
+      "norm_label": "eslint",
+      "id": "package_devdependencies_eslint"
     },
     {
       "label": "eslint",
@@ -498,9 +498,9 @@
       "source_file": "package.json",
       "source_location": "L32",
       "_origin": "ast",
-      "id": "eslint",
       "community": 6,
-      "norm_label": "eslint"
+      "norm_label": "eslint",
+      "id": "eslint"
     },
     {
       "label": "eslint-config-next",
@@ -508,9 +508,9 @@
       "source_file": "package.json",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "package_devdependencies_eslint_config_next",
       "community": 6,
-      "norm_label": "eslint-config-next"
+      "norm_label": "eslint-config-next",
+      "id": "package_devdependencies_eslint_config_next"
     },
     {
       "label": "eslint-config-next",
@@ -518,9 +518,9 @@
       "source_file": "package.json",
       "source_location": "L33",
       "_origin": "ast",
-      "id": "eslint_config_next",
       "community": 6,
-      "norm_label": "eslint-config-next"
+      "norm_label": "eslint-config-next",
+      "id": "eslint_config_next"
     },
     {
       "label": "typescript",
@@ -528,9 +528,9 @@
       "source_file": "package.json",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "package_devdependencies_typescript",
       "community": 6,
-      "norm_label": "typescript"
+      "norm_label": "typescript",
+      "id": "package_devdependencies_typescript"
     },
     {
       "label": "typescript",
@@ -538,9 +538,9 @@
       "source_file": "package.json",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "typescript",
       "community": 6,
-      "norm_label": "typescript"
+      "norm_label": "typescript",
+      "id": "typescript"
     },
     {
       "label": "route.ts",
@@ -548,9 +548,9 @@
       "source_file": "src/app/api/blog/generate/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_api_blog_generate_route",
-      "community": 4,
-      "norm_label": "route.ts"
+      "community": 1,
+      "norm_label": "route.ts",
+      "id": "src_app_api_blog_generate_route"
     },
     {
       "label": "maxDuration",
@@ -558,9 +558,9 @@
       "source_file": "src/app/api/blog/generate/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_api_blog_generate_route_maxduration",
-      "community": 4,
-      "norm_label": "maxduration"
+      "community": 1,
+      "norm_label": "maxduration",
+      "id": "src_app_api_blog_generate_route_maxduration"
     },
     {
       "label": "dynamic",
@@ -568,9 +568,9 @@
       "source_file": "src/app/api/blog/generate/route.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "src_app_api_blog_generate_route_dynamic",
-      "community": 4,
-      "norm_label": "dynamic"
+      "community": 1,
+      "norm_label": "dynamic",
+      "id": "src_app_api_blog_generate_route_dynamic"
     },
     {
       "label": "GET()",
@@ -579,9 +579,9 @@
       "source_location": "L11",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_api_blog_generate_route_get",
-      "community": 4,
-      "norm_label": "get()"
+      "community": 1,
+      "norm_label": "get()",
+      "id": "src_app_api_blog_generate_route_get"
     },
     {
       "label": "[slug]/page.tsx",
@@ -589,9 +589,9 @@
       "source_file": "src/app/blog/[slug]/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_blog_slug_page",
-      "community": 8,
-      "norm_label": "[slug]/page.tsx"
+      "community": 9,
+      "norm_label": "[slug]/page.tsx",
+      "id": "src_app_blog_slug_page"
     },
     {
       "label": "revalidate",
@@ -599,9 +599,9 @@
       "source_file": "src/app/blog/[slug]/page.tsx",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "src_app_blog_slug_page_revalidate",
-      "community": 8,
-      "norm_label": "revalidate"
+      "community": 9,
+      "norm_label": "revalidate",
+      "id": "src_app_blog_slug_page_revalidate"
     },
     {
       "label": "Props",
@@ -611,9 +611,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_app_blog_slug_page_props",
-      "community": 8,
-      "norm_label": "props"
+      "community": 9,
+      "norm_label": "props",
+      "id": "src_app_blog_slug_page_props"
     },
     {
       "label": "generateMetadata()",
@@ -622,9 +622,9 @@
       "source_location": "L16",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_blog_slug_page_generatemetadata",
-      "community": 8,
-      "norm_label": "generatemetadata()"
+      "community": 9,
+      "norm_label": "generatemetadata()",
+      "id": "src_app_blog_slug_page_generatemetadata"
     },
     {
       "label": "ArticlePage()",
@@ -633,9 +633,9 @@
       "source_location": "L33",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_blog_slug_page_articlepage",
-      "community": 8,
-      "norm_label": "articlepage()"
+      "community": 9,
+      "norm_label": "articlepage()",
+      "id": "src_app_blog_slug_page_articlepage"
     },
     {
       "label": "blog/page.tsx",
@@ -643,9 +643,9 @@
       "source_file": "src/app/blog/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_blog_page",
       "community": 5,
-      "norm_label": "blog/page.tsx"
+      "norm_label": "blog/page.tsx",
+      "id": "src_app_blog_page"
     },
     {
       "label": "revalidate",
@@ -653,9 +653,9 @@
       "source_file": "src/app/blog/page.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_app_blog_page_revalidate",
       "community": 5,
-      "norm_label": "revalidate"
+      "norm_label": "revalidate",
+      "id": "src_app_blog_page_revalidate"
     },
     {
       "label": "metadata",
@@ -663,9 +663,9 @@
       "source_file": "src/app/blog/page.tsx",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "src_app_blog_page_metadata",
       "community": 5,
-      "norm_label": "metadata"
+      "norm_label": "metadata",
+      "id": "src_app_blog_page_metadata"
     },
     {
       "label": "BlogPage()",
@@ -674,9 +674,9 @@
       "source_location": "L18",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_blog_page_blogpage",
       "community": 5,
-      "norm_label": "blogpage()"
+      "norm_label": "blogpage()",
+      "id": "src_app_blog_page_blogpage"
     },
     {
       "label": "layout.tsx",
@@ -684,9 +684,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_layout",
-      "community": 10,
-      "norm_label": "layout.tsx"
+      "community": 12,
+      "norm_label": "layout.tsx",
+      "id": "src_app_layout"
     },
     {
       "label": "metadata",
@@ -694,9 +694,9 @@
       "source_file": "src/app/layout.tsx",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "src_app_layout_metadata",
-      "community": 10,
-      "norm_label": "metadata"
+      "community": 12,
+      "norm_label": "metadata",
+      "id": "src_app_layout_metadata"
     },
     {
       "label": "RootLayout()",
@@ -705,9 +705,9 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_layout_rootlayout",
-      "community": 10,
-      "norm_label": "rootlayout()"
+      "community": 12,
+      "norm_label": "rootlayout()",
+      "id": "src_app_layout_rootlayout"
     },
     {
       "label": "app/page.tsx",
@@ -715,9 +715,9 @@
       "source_file": "src/app/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_app_page",
-      "community": 13,
-      "norm_label": "app/page.tsx"
+      "community": 14,
+      "norm_label": "app/page.tsx",
+      "id": "src_app_page"
     },
     {
       "label": "HomePage()",
@@ -726,9 +726,9 @@
       "source_location": "L3",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_app_page_homepage",
-      "community": 13,
-      "norm_label": "homepage()"
+      "community": 14,
+      "norm_label": "homepage()",
+      "id": "src_app_page_homepage"
     },
     {
       "label": "ArticleBody.tsx",
@@ -736,9 +736,9 @@
       "source_file": "src/components/blog/ArticleBody.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_blog_articlebody",
-      "community": 8,
-      "norm_label": "articlebody.tsx"
+      "community": 9,
+      "norm_label": "articlebody.tsx",
+      "id": "src_components_blog_articlebody"
     },
     {
       "label": "ArticleBodyProps",
@@ -748,9 +748,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_blog_articlebody_articlebodyprops",
-      "community": 8,
-      "norm_label": "articlebodyprops"
+      "community": 9,
+      "norm_label": "articlebodyprops",
+      "id": "src_components_blog_articlebody_articlebodyprops"
     },
     {
       "label": "ArticleBody()",
@@ -759,9 +759,9 @@
       "source_location": "L10",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_blog_articlebody_articlebody",
-      "community": 8,
-      "norm_label": "articlebody()"
+      "community": 9,
+      "norm_label": "articlebody()",
+      "id": "src_components_blog_articlebody_articlebody"
     },
     {
       "label": "ArticleCard.tsx",
@@ -769,9 +769,9 @@
       "source_file": "src/components/blog/ArticleCard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_blog_articlecard",
       "community": 5,
-      "norm_label": "articlecard.tsx"
+      "norm_label": "articlecard.tsx",
+      "id": "src_components_blog_articlecard"
     },
     {
       "label": "ArticleCardProps",
@@ -781,9 +781,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_blog_articlecard_articlecardprops",
       "community": 5,
-      "norm_label": "articlecardprops"
+      "norm_label": "articlecardprops",
+      "id": "src_components_blog_articlecard_articlecardprops"
     },
     {
       "label": "ArticleCard()",
@@ -792,9 +792,9 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_blog_articlecard_articlecard",
       "community": 5,
-      "norm_label": "articlecard()"
+      "norm_label": "articlecard()",
+      "id": "src_components_blog_articlecard_articlecard"
     },
     {
       "label": "BlogPagination.tsx",
@@ -802,9 +802,9 @@
       "source_file": "src/components/blog/BlogPagination.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_blog_blogpagination",
       "community": 5,
-      "norm_label": "blogpagination.tsx"
+      "norm_label": "blogpagination.tsx",
+      "id": "src_components_blog_blogpagination"
     },
     {
       "label": "BlogPaginationProps",
@@ -814,9 +814,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_blog_blogpagination_blogpaginationprops",
       "community": 5,
-      "norm_label": "blogpaginationprops"
+      "norm_label": "blogpaginationprops",
+      "id": "src_components_blog_blogpagination_blogpaginationprops"
     },
     {
       "label": "BlogPagination()",
@@ -825,9 +825,9 @@
       "source_location": "L12",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_blog_blogpagination_blogpagination",
       "community": 5,
-      "norm_label": "blogpagination()"
+      "norm_label": "blogpagination()",
+      "id": "src_components_blog_blogpagination_blogpagination"
     },
     {
       "label": "HomeBlogSection.tsx",
@@ -835,9 +835,9 @@
       "source_file": "src/components/blog/HomeBlogSection.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_blog_homeblogsection",
       "community": 5,
-      "norm_label": "homeblogsection.tsx"
+      "norm_label": "homeblogsection.tsx",
+      "id": "src_components_blog_homeblogsection"
     },
     {
       "label": "HomeBlogSectionProps",
@@ -847,9 +847,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_components_blog_homeblogsection_homeblogsectionprops",
       "community": 5,
-      "norm_label": "homeblogsectionprops"
+      "norm_label": "homeblogsectionprops",
+      "id": "src_components_blog_homeblogsection_homeblogsectionprops"
     },
     {
       "label": "HomeBlogSection()",
@@ -858,9 +858,9 @@
       "source_location": "L10",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_blog_homeblogsection_homeblogsection",
       "community": 5,
-      "norm_label": "homeblogsection()"
+      "norm_label": "homeblogsection()",
+      "id": "src_components_blog_homeblogsection_homeblogsection"
     },
     {
       "label": "autoblog-profile.ts",
@@ -868,9 +868,9 @@
       "source_file": "src/lib/autoblog-profile.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_autoblog_profile",
-      "community": 7,
-      "norm_label": "autoblog-profile.ts"
+      "community": 10,
+      "norm_label": "autoblog-profile.ts",
+      "id": "src_lib_autoblog_profile"
     },
     {
       "label": "AUTOBLOG_PROFILE",
@@ -878,9 +878,9 @@
       "source_file": "src/lib/autoblog-profile.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "src_lib_autoblog_profile_autoblog_profile",
-      "community": 7,
-      "norm_label": "autoblog_profile"
+      "community": 10,
+      "norm_label": "autoblog_profile",
+      "id": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "label": "deepseek.ts",
@@ -888,9 +888,9 @@
       "source_file": "src/lib/blog/deepseek.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_blog_deepseek",
       "community": 7,
-      "norm_label": "deepseek.ts"
+      "norm_label": "deepseek.ts",
+      "id": "src_lib_blog_deepseek"
     },
     {
       "label": "ArticleContent",
@@ -900,9 +900,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_lib_blog_deepseek_articlecontent",
       "community": 7,
-      "norm_label": "articlecontent"
+      "norm_label": "articlecontent",
+      "id": "src_lib_blog_deepseek_articlecontent"
     },
     {
       "label": "buildUserPrompt()",
@@ -911,9 +911,9 @@
       "source_location": "L55",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_deepseek_builduserprompt",
       "community": 7,
-      "norm_label": "builduserprompt()"
+      "norm_label": "builduserprompt()",
+      "id": "src_lib_blog_deepseek_builduserprompt"
     },
     {
       "label": "parseResponse()",
@@ -922,9 +922,9 @@
       "source_location": "L84",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_deepseek_parseresponse",
       "community": 7,
-      "norm_label": "parseresponse()"
+      "norm_label": "parseresponse()",
+      "id": "src_lib_blog_deepseek_parseresponse"
     },
     {
       "label": "generateArticle()",
@@ -933,9 +933,9 @@
       "source_location": "L98",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_deepseek_generatearticle",
       "community": 7,
-      "norm_label": "generatearticle()"
+      "norm_label": "generatearticle()",
+      "id": "src_lib_blog_deepseek_generatearticle"
     },
     {
       "label": "gsc.ts",
@@ -943,9 +943,9 @@
       "source_file": "src/lib/blog/gsc.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_blog_gsc",
-      "community": 7,
-      "norm_label": "gsc.ts"
+      "community": 10,
+      "norm_label": "gsc.ts",
+      "id": "src_lib_blog_gsc"
     },
     {
       "label": "getDayOfYear()",
@@ -954,9 +954,9 @@
       "source_location": "L9",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_gsc_getdayofyear",
-      "community": 7,
-      "norm_label": "getdayofyear()"
+      "community": 10,
+      "norm_label": "getdayofyear()",
+      "id": "src_lib_blog_gsc_getdayofyear"
     },
     {
       "label": "fetchTopKeyword()",
@@ -965,9 +965,9 @@
       "source_location": "L15",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_gsc_fetchtopkeyword",
-      "community": 7,
-      "norm_label": "fetchtopkeyword()"
+      "community": 10,
+      "norm_label": "fetchtopkeyword()",
+      "id": "src_lib_blog_gsc_fetchtopkeyword"
     },
     {
       "label": "image-gen.ts",
@@ -975,9 +975,9 @@
       "source_file": "src/lib/blog/image-gen.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_blog_image_gen",
-      "community": 4,
-      "norm_label": "image-gen.ts"
+      "community": 1,
+      "norm_label": "image-gen.ts",
+      "id": "src_lib_blog_image_gen"
     },
     {
       "label": "generateAndUploadCover()",
@@ -986,9 +986,9 @@
       "source_location": "L7",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_image_gen_generateanduploadcover",
-      "community": 4,
-      "norm_label": "generateanduploadcover()"
+      "community": 1,
+      "norm_label": "generateanduploadcover()",
+      "id": "src_lib_blog_image_gen_generateanduploadcover"
     },
     {
       "label": "seed-keywords.ts",
@@ -996,9 +996,9 @@
       "source_file": "src/lib/blog/seed-keywords.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_blog_seed_keywords",
-      "community": 7,
-      "norm_label": "seed-keywords.ts"
+      "community": 10,
+      "norm_label": "seed-keywords.ts",
+      "id": "src_lib_blog_seed_keywords"
     },
     {
       "label": "SEED_KEYWORDS",
@@ -1006,9 +1006,9 @@
       "source_file": "src/lib/blog/seed-keywords.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "src_lib_blog_seed_keywords_seed_keywords",
-      "community": 7,
-      "norm_label": "seed_keywords"
+      "community": 10,
+      "norm_label": "seed_keywords",
+      "id": "src_lib_blog_seed_keywords_seed_keywords"
     },
     {
       "label": "getNextSeedKeyword()",
@@ -1017,9 +1017,9 @@
       "source_location": "L6",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_seed_keywords_getnextseedkeyword",
-      "community": 7,
-      "norm_label": "getnextseedkeyword()"
+      "community": 10,
+      "norm_label": "getnextseedkeyword()",
+      "id": "src_lib_blog_seed_keywords_getnextseedkeyword"
     },
     {
       "label": "supabase-blog.ts",
@@ -1027,9 +1027,9 @@
       "source_file": "src/lib/blog/supabase-blog.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog",
-      "community": 4,
-      "norm_label": "supabase-blog.ts"
+      "community": 1,
+      "norm_label": "supabase-blog.ts",
+      "id": "src_lib_blog_supabase_blog"
     },
     {
       "label": "getClient()",
@@ -1038,9 +1038,9 @@
       "source_location": "L4",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_getclient",
-      "community": 4,
-      "norm_label": "getclient()"
+      "community": 1,
+      "norm_label": "getclient()",
+      "id": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "label": "Article",
@@ -1050,9 +1050,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_article",
       "community": 5,
-      "norm_label": "article"
+      "norm_label": "article",
+      "id": "src_lib_blog_supabase_blog_article"
     },
     {
       "label": "InsertArticleInput",
@@ -1062,9 +1062,9 @@
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_insertarticleinput",
-      "community": 4,
-      "norm_label": "insertarticleinput"
+      "community": 1,
+      "norm_label": "insertarticleinput",
+      "id": "src_lib_blog_supabase_blog_insertarticleinput"
     },
     {
       "label": "getRunDate()",
@@ -1073,9 +1073,9 @@
       "source_location": "L30",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_getrundate",
-      "community": 4,
-      "norm_label": "getrundate()"
+      "community": 1,
+      "norm_label": "getrundate()",
+      "id": "src_lib_blog_supabase_blog_getrundate"
     },
     {
       "label": "claimBlogRunToday()",
@@ -1084,9 +1084,9 @@
       "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_claimblogruntoday",
-      "community": 4,
-      "norm_label": "claimblogruntoday()"
+      "community": 1,
+      "norm_label": "claimblogruntoday()",
+      "id": "src_lib_blog_supabase_blog_claimblogruntoday"
     },
     {
       "label": "getPublishedKeywords()",
@@ -1095,9 +1095,9 @@
       "source_location": "L66",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_getpublishedkeywords",
-      "community": 4,
-      "norm_label": "getpublishedkeywords()"
+      "community": 1,
+      "norm_label": "getpublishedkeywords()",
+      "id": "src_lib_blog_supabase_blog_getpublishedkeywords"
     },
     {
       "label": "insertArticle()",
@@ -1106,9 +1106,9 @@
       "source_location": "L75",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_insertarticle",
-      "community": 4,
-      "norm_label": "insertarticle()"
+      "community": 1,
+      "norm_label": "insertarticle()",
+      "id": "src_lib_blog_supabase_blog_insertarticle"
     },
     {
       "label": "insertRunLog()",
@@ -1117,9 +1117,9 @@
       "source_location": "L89",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_insertrunlog",
-      "community": 4,
-      "norm_label": "insertrunlog()"
+      "community": 1,
+      "norm_label": "insertrunlog()",
+      "id": "src_lib_blog_supabase_blog_insertrunlog"
     },
     {
       "label": "getAllArticles()",
@@ -1128,9 +1128,9 @@
       "source_location": "L103",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_getallarticles",
-      "community": 5,
-      "norm_label": "getallarticles()"
+      "community": 1,
+      "norm_label": "getallarticles()",
+      "id": "src_lib_blog_supabase_blog_getallarticles"
     },
     {
       "label": "getArticleBySlug()",
@@ -1139,9 +1139,9 @@
       "source_location": "L113",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_getarticlebyslug",
-      "community": 8,
-      "norm_label": "getarticlebyslug()"
+      "community": 9,
+      "norm_label": "getarticlebyslug()",
+      "id": "src_lib_blog_supabase_blog_getarticlebyslug"
     },
     {
       "label": "uploadCoverImage()",
@@ -1150,9 +1150,9 @@
       "source_location": "L124",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_blog_supabase_blog_uploadcoverimage",
-      "community": 4,
-      "norm_label": "uploadcoverimage()"
+      "community": 1,
+      "norm_label": "uploadcoverimage()",
+      "id": "src_lib_blog_supabase_blog_uploadcoverimage"
     },
     {
       "label": "001_autoblog.sql",
@@ -1160,9 +1160,9 @@
       "source_file": "supabase/migrations/001_autoblog.sql",
       "source_location": null,
       "_origin": "ast",
-      "id": "supabase_migrations_001_autoblog",
-      "community": 11,
-      "norm_label": "001_autoblog.sql"
+      "community": 1,
+      "norm_label": "001_autoblog.sql",
+      "id": "supabase_migrations_001_autoblog"
     },
     {
       "label": "public.articles",
@@ -1170,9 +1170,9 @@
       "source_file": "supabase/migrations/001_autoblog.sql",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "supabase_migrations_001_autoblog_public_articles",
-      "community": 11,
-      "norm_label": "public.articles"
+      "community": 1,
+      "norm_label": "public.articles",
+      "id": "supabase_migrations_001_autoblog_public_articles"
     },
     {
       "label": "public.blog_run_log",
@@ -1180,9 +1180,9 @@
       "source_file": "supabase/migrations/001_autoblog.sql",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "supabase_migrations_001_autoblog_public_blog_run_log",
-      "community": 11,
-      "norm_label": "public.blog_run_log"
+      "community": 1,
+      "norm_label": "public.blog_run_log",
+      "id": "supabase_migrations_001_autoblog_public_blog_run_log"
     },
     {
       "label": "tsconfig.json",
@@ -1190,9 +1190,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tsconfig",
-      "community": 0,
-      "norm_label": "tsconfig.json"
+      "community": 8,
+      "norm_label": "tsconfig.json",
+      "id": "tsconfig"
     },
     {
       "label": "compilerOptions",
@@ -1200,9 +1200,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions",
       "community": 0,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "tsconfig_compileroptions"
     },
     {
       "label": "target",
@@ -1210,9 +1210,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_target",
       "community": 0,
-      "norm_label": "target"
+      "norm_label": "target",
+      "id": "tsconfig_compileroptions_target"
     },
     {
       "label": "lib",
@@ -1220,9 +1220,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_lib",
       "community": 0,
-      "norm_label": "lib"
+      "norm_label": "lib",
+      "id": "tsconfig_compileroptions_lib"
     },
     {
       "label": "dom",
@@ -1230,9 +1230,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "ref_dom",
       "community": 0,
-      "norm_label": "dom"
+      "norm_label": "dom",
+      "id": "ref_dom"
     },
     {
       "label": "dom.iterable",
@@ -1240,9 +1240,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "ref_dom_iterable",
       "community": 0,
-      "norm_label": "dom.iterable"
+      "norm_label": "dom.iterable",
+      "id": "ref_dom_iterable"
     },
     {
       "label": "esnext",
@@ -1250,9 +1250,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "ref_esnext",
       "community": 0,
-      "norm_label": "esnext"
+      "norm_label": "esnext",
+      "id": "ref_esnext"
     },
     {
       "label": "strict",
@@ -1260,9 +1260,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_strict",
       "community": 0,
-      "norm_label": "strict"
+      "norm_label": "strict",
+      "id": "tsconfig_compileroptions_strict"
     },
     {
       "label": "noEmit",
@@ -1270,9 +1270,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_noemit",
       "community": 0,
-      "norm_label": "noemit"
+      "norm_label": "noemit",
+      "id": "tsconfig_compileroptions_noemit"
     },
     {
       "label": "module",
@@ -1280,9 +1280,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_module",
       "community": 0,
-      "norm_label": "module"
+      "norm_label": "module",
+      "id": "tsconfig_compileroptions_module"
     },
     {
       "label": "moduleResolution",
@@ -1290,9 +1290,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_moduleresolution",
       "community": 0,
-      "norm_label": "moduleresolution"
+      "norm_label": "moduleresolution",
+      "id": "tsconfig_compileroptions_moduleresolution"
     },
     {
       "label": "resolveJsonModule",
@@ -1300,9 +1300,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_resolvejsonmodule",
       "community": 0,
-      "norm_label": "resolvejsonmodule"
+      "norm_label": "resolvejsonmodule",
+      "id": "tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "label": "isolatedModules",
@@ -1310,9 +1310,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_isolatedmodules",
       "community": 0,
-      "norm_label": "isolatedmodules"
+      "norm_label": "isolatedmodules",
+      "id": "tsconfig_compileroptions_isolatedmodules"
     },
     {
       "label": "jsx",
@@ -1320,9 +1320,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_jsx",
       "community": 0,
-      "norm_label": "jsx"
+      "norm_label": "jsx",
+      "id": "tsconfig_compileroptions_jsx"
     },
     {
       "label": "plugins",
@@ -1330,9 +1330,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_plugins",
       "community": 0,
-      "norm_label": "plugins"
+      "norm_label": "plugins",
+      "id": "tsconfig_compileroptions_plugins"
     },
     {
       "label": "paths",
@@ -1340,9 +1340,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_paths",
       "community": 0,
-      "norm_label": "paths"
+      "norm_label": "paths",
+      "id": "tsconfig_compileroptions_paths"
     },
     {
       "label": "allowJs",
@@ -1350,9 +1350,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_allowjs",
       "community": 0,
-      "norm_label": "allowjs"
+      "norm_label": "allowjs",
+      "id": "tsconfig_compileroptions_allowjs"
     },
     {
       "label": "skipLibCheck",
@@ -1360,9 +1360,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L27",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_skiplibcheck",
       "community": 0,
-      "norm_label": "skiplibcheck"
+      "norm_label": "skiplibcheck",
+      "id": "tsconfig_compileroptions_skiplibcheck"
     },
     {
       "label": "incremental",
@@ -1370,9 +1370,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L28",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_incremental",
       "community": 0,
-      "norm_label": "incremental"
+      "norm_label": "incremental",
+      "id": "tsconfig_compileroptions_incremental"
     },
     {
       "label": "esModuleInterop",
@@ -1380,9 +1380,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "tsconfig_compileroptions_esmoduleinterop",
       "community": 0,
-      "norm_label": "esmoduleinterop"
+      "norm_label": "esmoduleinterop",
+      "id": "tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "label": "include",
@@ -1390,9 +1390,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "tsconfig_include",
-      "community": 0,
-      "norm_label": "include"
+      "community": 8,
+      "norm_label": "include",
+      "id": "tsconfig_include"
     },
     {
       "label": "next-env.d.ts",
@@ -1400,9 +1400,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "ref_next_env_d_ts",
-      "community": 0,
-      "norm_label": "next-env.d.ts"
+      "community": 8,
+      "norm_label": "next-env.d.ts",
+      "id": "ref_next_env_d_ts"
     },
     {
       "label": "**/*.ts",
@@ -1410,9 +1410,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "ref_ts",
-      "community": 0,
-      "norm_label": "**/*.ts"
+      "community": 8,
+      "norm_label": "**/*.ts",
+      "id": "ref_ts"
     },
     {
       "label": "**/*.tsx",
@@ -1420,9 +1420,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "ref_tsx",
-      "community": 0,
-      "norm_label": "**/*.tsx"
+      "community": 8,
+      "norm_label": "**/*.tsx",
+      "id": "ref_tsx"
     },
     {
       "label": ".next/types/**/*.ts",
@@ -1430,9 +1430,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "ref_next_types_ts",
-      "community": 0,
-      "norm_label": ".next/types/**/*.ts"
+      "community": 8,
+      "norm_label": ".next/types/**/*.ts",
+      "id": "ref_next_types_ts"
     },
     {
       "label": ".next/dev/types/**/*.ts",
@@ -1440,9 +1440,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "ref_next_dev_types_ts",
-      "community": 0,
-      "norm_label": ".next/dev/types/**/*.ts"
+      "community": 8,
+      "norm_label": ".next/dev/types/**/*.ts",
+      "id": "ref_next_dev_types_ts"
     },
     {
       "label": "exclude",
@@ -1450,9 +1450,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "tsconfig_exclude",
-      "community": 0,
-      "norm_label": "exclude"
+      "community": 8,
+      "norm_label": "exclude",
+      "id": "tsconfig_exclude"
     },
     {
       "label": "node_modules",
@@ -1460,9 +1460,9 @@
       "source_file": "tsconfig.json",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "ref_node_modules",
-      "community": 0,
-      "norm_label": "node_modules"
+      "community": 8,
+      "norm_label": "node_modules",
+      "id": "ref_node_modules"
     },
     {
       "label": "vercel.json",
@@ -1470,9 +1470,9 @@
       "source_file": "vercel.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "vercel",
-      "community": 9,
-      "norm_label": "vercel.json"
+      "community": 11,
+      "norm_label": "vercel.json",
+      "id": "vercel"
     },
     {
       "label": "crons",
@@ -1480,9 +1480,9 @@
       "source_file": "vercel.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "vercel_crons",
-      "community": 9,
-      "norm_label": "crons"
+      "community": 11,
+      "norm_label": "crons",
+      "id": "vercel_crons"
     },
     {
       "label": "functions",
@@ -1490,9 +1490,9 @@
       "source_file": "vercel.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "vercel_functions",
-      "community": 9,
-      "norm_label": "functions"
+      "community": 11,
+      "norm_label": "functions",
+      "id": "vercel_functions"
     },
     {
       "label": "src/app/api/blog/generate/route.ts",
@@ -1500,9 +1500,9 @@
       "source_file": "vercel.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "vercel_functions_src_app_api_blog_generate_route_ts",
-      "community": 9,
-      "norm_label": "src/app/api/blog/generate/route.ts"
+      "community": 11,
+      "norm_label": "src/app/api/blog/generate/route.ts",
+      "id": "vercel_functions_src_app_api_blog_generate_route_ts"
     },
     {
       "label": "maxDuration",
@@ -1510,9 +1510,9 @@
       "source_file": "vercel.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "vercel_src_app_api_blog_generate_route_ts_maxduration",
-      "community": 9,
-      "norm_label": "maxduration"
+      "community": 11,
+      "norm_label": "maxduration",
+      "id": "vercel_src_app_api_blog_generate_route_ts_maxduration"
     },
     {
       "label": "memory",
@@ -1520,9 +1520,9 @@
       "source_file": "vercel.json",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "vercel_src_app_api_blog_generate_route_ts_memory",
-      "community": 9,
-      "norm_label": "memory"
+      "community": 11,
+      "norm_label": "memory",
+      "id": "vercel_src_app_api_blog_generate_route_ts_memory"
     },
     {
       "label": "Bug Report Issue Template",
@@ -1533,9 +1533,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_issue_template_bug_report_bugreportform",
-      "community": 1,
-      "norm_label": "bug report issue template"
+      "community": 3,
+      "norm_label": "bug report issue template",
+      "_origin": "semantic",
+      "id": "github_issue_template_bug_report_bugreportform"
     },
     {
       "label": "Feature Request Issue Template",
@@ -1546,9 +1547,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_issue_template_feature_request_featurerequestform",
-      "community": 1,
-      "norm_label": "feature request issue template"
+      "community": 3,
+      "norm_label": "feature request issue template",
+      "_origin": "semantic",
+      "id": "github_issue_template_feature_request_featurerequestform"
     },
     {
       "label": "Pull Request Template Checklist",
@@ -1559,9 +1561,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_pull_request_template_prtemplate",
-      "community": 1,
-      "norm_label": "pull request template checklist"
+      "community": 3,
+      "norm_label": "pull request template checklist",
+      "_origin": "semantic",
+      "id": "github_pull_request_template_prtemplate"
     },
     {
       "label": "CI Workflow (checkout, setup-node, npm ci, audit:runtime, lint, build)",
@@ -1572,9 +1575,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "github_workflows_ci_ciworkflow",
-      "community": 1,
-      "norm_label": "ci workflow (checkout, setup-node, npm ci, audit:runtime, lint, build)"
+      "community": 3,
+      "norm_label": "ci workflow (checkout, setup-node, npm ci, audit:runtime, lint, build)",
+      "_origin": "semantic",
+      "id": "github_workflows_ci_ciworkflow"
     },
     {
       "label": "Changelog Entry v0.2.0 (SEO checklist + nanoid fix)",
@@ -1585,9 +1589,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "changelog_v0_2_0",
-      "community": 1,
-      "norm_label": "changelog entry v0.2.0 (seo checklist + nanoid fix)"
+      "community": 7,
+      "norm_label": "changelog entry v0.2.0 (seo checklist + nanoid fix)",
+      "_origin": "semantic",
+      "id": "changelog_v0_2_0"
     },
     {
       "label": "Changelog Entry v0.1.0 (initial white-label template release)",
@@ -1598,9 +1603,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "changelog_v0_1_0",
-      "community": 1,
-      "norm_label": "changelog entry v0.1.0 (initial white-label template release)"
+      "community": 3,
+      "norm_label": "changelog entry v0.1.0 (initial white-label template release)",
+      "_origin": "semantic",
+      "id": "changelog_v0_1_0"
     },
     {
       "label": "SEO On-Page Checklist in Article Generation Prompt (deepseek.ts, Neil Patel-based)",
@@ -1611,9 +1617,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "changelog_seo_onpage_checklist_concept",
-      "community": 1,
-      "norm_label": "seo on-page checklist in article generation prompt (deepseek.ts, neil patel-based)"
+      "community": 7,
+      "norm_label": "seo on-page checklist in article generation prompt (deepseek.ts, neil patel-based)",
+      "_origin": "semantic",
+      "id": "changelog_seo_onpage_checklist_concept"
     },
     {
       "label": "GHSA-2v37-7h3g-55p8 nanoid Vulnerability",
@@ -1624,9 +1631,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "changelog_ghsa_2v37_7h3g_55p8",
-      "community": 1,
-      "norm_label": "ghsa-2v37-7h3g-55p8 nanoid vulnerability"
+      "community": 7,
+      "norm_label": "ghsa-2v37-7h3g-55p8 nanoid vulnerability",
+      "_origin": "semantic",
+      "id": "changelog_ghsa_2v37_7h3g_55p8"
     },
     {
       "label": "Contributing Guidelines",
@@ -1637,9 +1645,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "contributing_contributing_guidelines",
-      "community": 1,
-      "norm_label": "contributing guidelines"
+      "community": 3,
+      "norm_label": "contributing guidelines",
+      "_origin": "semantic",
+      "id": "contributing_contributing_guidelines"
     },
     {
       "label": "Auto-blog Template README Overview",
@@ -1650,9 +1659,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_readme",
-      "community": 1,
-      "norm_label": "auto-blog template readme overview"
+      "community": 3,
+      "norm_label": "auto-blog template readme overview",
+      "_origin": "semantic",
+      "id": "readme_readme"
     },
     {
       "label": "The Article Cycle (Cron -> Editorial Profile -> Generation -> Supabase -> /blog)",
@@ -1663,9 +1673,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_o_ciclo_de_um_artigo",
-      "community": 1,
-      "norm_label": "the article cycle (cron -> editorial profile -> generation -> supabase -> /blog)"
+      "community": 3,
+      "norm_label": "the article cycle (cron -> editorial profile -> generation -> supabase -> /blog)",
+      "_origin": "semantic",
+      "id": "readme_o_ciclo_de_um_artigo"
     },
     {
       "label": "What You Control (AUTOBLOG_PROFILE config)",
@@ -1676,9 +1687,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_o_que_voce_controla",
-      "community": 1,
-      "norm_label": "what you control (autoblog_profile config)"
+      "community": 3,
+      "norm_label": "what you control (autoblog_profile config)",
+      "_origin": "semantic",
+      "id": "readme_o_que_voce_controla"
     },
     {
       "label": "Generated Content Quality (SEO on-page checklist)",
@@ -1689,9 +1701,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_qualidade_do_conteudo_gerado",
-      "community": 1,
-      "norm_label": "generated content quality (seo on-page checklist)"
+      "community": 7,
+      "norm_label": "generated content quality (seo on-page checklist)",
+      "_origin": "semantic",
+      "id": "readme_qualidade_do_conteudo_gerado"
     },
     {
       "label": "Operational Security Table",
@@ -1702,9 +1715,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_seguranca_operacional",
-      "community": 1,
-      "norm_label": "operational security table"
+      "community": 3,
+      "norm_label": "operational security table",
+      "_origin": "semantic",
+      "id": "readme_seguranca_operacional"
     },
     {
       "label": "Integrations and Costs (opt-in providers)",
@@ -1715,9 +1729,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_integracoes_e_custos",
-      "community": 1,
-      "norm_label": "integrations and costs (opt-in providers)"
+      "community": 3,
+      "norm_label": "integrations and costs (opt-in providers)",
+      "_origin": "semantic",
+      "id": "readme_integracoes_e_custos"
     },
     {
       "label": "Honest Limits (no editorial/compliance substitute)",
@@ -1728,9 +1743,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_limites_honestos",
-      "community": 16,
-      "norm_label": "honest limits (no editorial/compliance substitute)"
+      "community": 17,
+      "norm_label": "honest limits (no editorial/compliance substitute)",
+      "_origin": "semantic",
+      "id": "readme_limites_honestos"
     },
     {
       "label": "Security Policy (secrets handling, private vulnerability reporting)",
@@ -1741,9 +1757,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "security_security_policy",
-      "community": 1,
-      "norm_label": "security policy (secrets handling, private vulnerability reporting)"
+      "community": 3,
+      "norm_label": "security policy (secrets handling, private vulnerability reporting)",
+      "_origin": "semantic",
+      "id": "security_security_policy"
     },
     {
       "label": "Setup Guide (fork, profile, Supabase, env vars, deploy, manual cron test)",
@@ -1754,9 +1771,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "setup_setup_guide",
-      "community": 1,
-      "norm_label": "setup guide (fork, profile, supabase, env vars, deploy, manual cron test)"
+      "community": 3,
+      "norm_label": "setup guide (fork, profile, supabase, env vars, deploy, manual cron test)",
+      "_origin": "semantic",
+      "id": "setup_setup_guide"
     },
     {
       "label": "Auto-blog Hero Illustration (pautas -> producao -> artigo -> metricas)",
@@ -1767,9 +1785,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_autoblog_hero_heroimage",
-      "community": 1,
-      "norm_label": "auto-blog hero illustration (pautas -> producao -> artigo -> metricas)"
+      "community": 3,
+      "norm_label": "auto-blog hero illustration (pautas -> producao -> artigo -> metricas)",
+      "_origin": "semantic",
+      "id": "assets_autoblog_hero_heroimage"
     },
     {
       "label": "Pipeline Map Diagram (Pauta -> Producao -> Controle -> Seu blog)",
@@ -1780,9 +1799,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "assets_pipeline_map_diagram",
-      "community": 1,
-      "norm_label": "pipeline map diagram (pauta -> producao -> controle -> seu blog)"
+      "community": 3,
+      "norm_label": "pipeline map diagram (pauta -> producao -> controle -> seu blog)",
+      "_origin": "semantic",
+      "id": "assets_pipeline_map_diagram"
     }
   ],
   "links": [
@@ -1793,9 +1813,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "next_config",
-      "target": "next_config_nextconfig",
-      "confidence_score": 1.0
+      "target": "next_config_nextconfig"
     },
     {
       "relation": "contains",
@@ -1804,9 +1824,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_dependencies",
-      "confidence_score": 1.0
+      "target": "package_dependencies"
     },
     {
       "relation": "contains",
@@ -1815,9 +1835,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_devdependencies",
-      "confidence_score": 1.0
+      "target": "package_devdependencies"
     },
     {
       "relation": "contains",
@@ -1826,9 +1846,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_license",
-      "confidence_score": 1.0
+      "target": "package_license"
     },
     {
       "relation": "contains",
@@ -1837,9 +1857,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_name",
-      "confidence_score": 1.0
+      "target": "package_name"
     },
     {
       "relation": "contains",
@@ -1848,9 +1868,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_overrides",
-      "confidence_score": 1.0
+      "target": "package_overrides"
     },
     {
       "relation": "contains",
@@ -1859,9 +1879,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_private",
-      "confidence_score": 1.0
+      "target": "package_private"
     },
     {
       "relation": "contains",
@@ -1870,9 +1890,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_scripts",
-      "confidence_score": 1.0
+      "target": "package_scripts"
     },
     {
       "relation": "contains",
@@ -1881,9 +1901,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_version",
-      "confidence_score": 1.0
+      "target": "package_version"
     },
     {
       "relation": "contains",
@@ -1892,9 +1912,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_audit_runtime",
-      "confidence_score": 1.0
+      "target": "package_scripts_audit_runtime"
     },
     {
       "relation": "contains",
@@ -1903,9 +1923,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_build",
-      "confidence_score": 1.0
+      "target": "package_scripts_build"
     },
     {
       "relation": "contains",
@@ -1914,9 +1934,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -1925,9 +1945,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_lint",
-      "confidence_score": 1.0
+      "target": "package_scripts_lint"
     },
     {
       "relation": "contains",
@@ -1936,9 +1956,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_start",
-      "confidence_score": 1.0
+      "target": "package_scripts_start"
     },
     {
       "relation": "contains",
@@ -1947,9 +1967,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_googleapis",
-      "confidence_score": 1.0
+      "target": "package_dependencies_googleapis"
     },
     {
       "relation": "contains",
@@ -1958,9 +1978,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_next",
-      "confidence_score": 1.0
+      "target": "package_dependencies_next"
     },
     {
       "relation": "contains",
@@ -1969,9 +1989,9 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_openai",
-      "confidence_score": 1.0
+      "target": "package_dependencies_openai"
     },
     {
       "relation": "contains",
@@ -1980,9 +2000,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -1991,9 +2011,9 @@
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -2002,9 +2022,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_react_markdown",
-      "confidence_score": 1.0
+      "target": "package_dependencies_react_markdown"
     },
     {
       "relation": "contains",
@@ -2013,9 +2033,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_remark_gfm",
-      "confidence_score": 1.0
+      "target": "package_dependencies_remark_gfm"
     },
     {
       "relation": "contains",
@@ -2024,9 +2044,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_supabase_supabase_js",
-      "confidence_score": 1.0
+      "target": "package_dependencies_supabase_supabase_js"
     },
     {
       "relation": "imports",
@@ -2036,9 +2056,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_supabase_supabase_js",
-      "target": "supabase_supabase_js",
-      "confidence_score": 1.0
+      "target": "supabase_supabase_js"
     },
     {
       "relation": "imports",
@@ -2048,9 +2068,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_googleapis",
-      "target": "googleapis",
-      "confidence_score": 1.0
+      "target": "googleapis"
     },
     {
       "relation": "imports",
@@ -2060,9 +2080,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_next",
-      "target": "next",
-      "confidence_score": 1.0
+      "target": "next"
     },
     {
       "relation": "imports",
@@ -2072,9 +2092,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_openai",
-      "target": "openai",
-      "confidence_score": 1.0
+      "target": "openai"
     },
     {
       "relation": "imports",
@@ -2084,9 +2104,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_react",
-      "target": "react",
-      "confidence_score": 1.0
+      "target": "react"
     },
     {
       "relation": "imports",
@@ -2096,9 +2116,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_react_dom",
-      "target": "react_dom",
-      "confidence_score": 1.0
+      "target": "react_dom"
     },
     {
       "relation": "imports",
@@ -2108,9 +2128,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_react_markdown",
-      "target": "react_markdown",
-      "confidence_score": 1.0
+      "target": "react_markdown"
     },
     {
       "relation": "imports",
@@ -2120,9 +2140,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_dependencies_remark_gfm",
-      "target": "remark_gfm",
-      "confidence_score": 1.0
+      "target": "remark_gfm"
     },
     {
       "relation": "contains",
@@ -2131,9 +2151,9 @@
       "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_overrides",
-      "target": "package_overrides_gaxios",
-      "confidence_score": 1.0
+      "target": "package_overrides_gaxios"
     },
     {
       "relation": "contains",
@@ -2142,9 +2162,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_overrides",
-      "target": "package_overrides_postcss",
-      "confidence_score": 1.0
+      "target": "package_overrides_postcss"
     },
     {
       "relation": "contains",
@@ -2153,9 +2173,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_overrides",
-      "target": "package_overrides_sharp",
-      "confidence_score": 1.0
+      "target": "package_overrides_sharp"
     },
     {
       "relation": "contains",
@@ -2164,9 +2184,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_eslint"
     },
     {
       "relation": "contains",
@@ -2175,9 +2195,9 @@
       "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_config_next",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_eslint_config_next"
     },
     {
       "relation": "contains",
@@ -2186,9 +2206,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_types_node"
     },
     {
       "relation": "contains",
@@ -2197,9 +2217,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -2208,9 +2228,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_types_react_dom"
     },
     {
       "relation": "contains",
@@ -2219,9 +2239,9 @@
       "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_typescript"
     },
     {
       "relation": "imports",
@@ -2231,9 +2251,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_types_node",
-      "target": "types_node",
-      "confidence_score": 1.0
+      "target": "types_node"
     },
     {
       "relation": "imports",
@@ -2243,9 +2263,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_types_react",
-      "target": "types_react",
-      "confidence_score": 1.0
+      "target": "types_react"
     },
     {
       "relation": "imports",
@@ -2255,9 +2275,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_types_react_dom",
-      "target": "types_react_dom",
-      "confidence_score": 1.0
+      "target": "types_react_dom"
     },
     {
       "relation": "imports",
@@ -2267,9 +2287,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_eslint",
-      "target": "eslint",
-      "confidence_score": 1.0
+      "target": "eslint"
     },
     {
       "relation": "imports",
@@ -2279,9 +2299,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_eslint_config_next",
-      "target": "eslint_config_next",
-      "confidence_score": 1.0
+      "target": "eslint_config_next"
     },
     {
       "relation": "imports",
@@ -2291,9 +2311,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "package_devdependencies_typescript",
-      "target": "typescript",
-      "confidence_score": 1.0
+      "target": "typescript"
     },
     {
       "relation": "contains",
@@ -2302,9 +2322,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_app_api_blog_generate_route_dynamic",
-      "confidence_score": 1.0
+      "target": "src_app_api_blog_generate_route_dynamic"
     },
     {
       "relation": "contains",
@@ -2313,9 +2333,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_app_api_blog_generate_route_get",
-      "confidence_score": 1.0
+      "target": "src_app_api_blog_generate_route_get"
     },
     {
       "relation": "contains",
@@ -2324,9 +2344,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_app_api_blog_generate_route_maxduration",
-      "confidence_score": 1.0
+      "target": "src_app_api_blog_generate_route_maxduration"
     },
     {
       "relation": "imports_from",
@@ -2336,9 +2356,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_deepseek",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek"
     },
     {
       "relation": "imports",
@@ -2348,9 +2368,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_deepseek_generatearticle",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_generatearticle"
     },
     {
       "relation": "imports_from",
@@ -2360,9 +2380,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_gsc",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_gsc"
     },
     {
       "relation": "imports",
@@ -2372,9 +2392,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_gsc_fetchtopkeyword",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_gsc_fetchtopkeyword"
     },
     {
       "relation": "imports_from",
@@ -2384,9 +2404,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_image_gen",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_image_gen"
     },
     {
       "relation": "imports",
@@ -2396,9 +2416,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_image_gen_generateanduploadcover",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_image_gen_generateanduploadcover"
     },
     {
       "relation": "imports_from",
@@ -2408,9 +2428,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -2420,9 +2440,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_supabase_blog_claimblogruntoday",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_claimblogruntoday"
     },
     {
       "relation": "imports",
@@ -2432,9 +2452,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_supabase_blog_getpublishedkeywords",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getpublishedkeywords"
     },
     {
       "relation": "imports",
@@ -2444,9 +2464,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_supabase_blog_insertarticle",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_insertarticle"
     },
     {
       "relation": "imports",
@@ -2456,9 +2476,19 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_api_blog_generate_route",
-      "target": "src_lib_blog_supabase_blog_insertrunlog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_insertrunlog"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_o_ciclo_de_um_artigo",
+      "target": "src_app_api_blog_generate_route_get"
     },
     {
       "relation": "calls",
@@ -2551,9 +2581,9 @@
       "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_app_blog_slug_page_articlepage",
-      "confidence_score": 1.0
+      "target": "src_app_blog_slug_page_articlepage"
     },
     {
       "relation": "contains",
@@ -2562,9 +2592,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_app_blog_slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "src_app_blog_slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -2573,9 +2603,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_app_blog_slug_page_props",
-      "confidence_score": 1.0
+      "target": "src_app_blog_slug_page_props"
     },
     {
       "relation": "contains",
@@ -2584,9 +2614,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_app_blog_slug_page_revalidate",
-      "confidence_score": 1.0
+      "target": "src_app_blog_slug_page_revalidate"
     },
     {
       "relation": "imports_from",
@@ -2596,9 +2626,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_components_blog_articlebody",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlebody"
     },
     {
       "relation": "imports",
@@ -2608,9 +2638,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_components_blog_articlebody_articlebody",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlebody_articlebody"
     },
     {
       "relation": "imports_from",
@@ -2620,9 +2650,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -2632,9 +2662,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -2644,9 +2674,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -2656,9 +2686,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_slug_page",
-      "target": "src_lib_blog_supabase_blog_getarticlebyslug",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getarticlebyslug"
     },
     {
       "relation": "calls",
@@ -2691,9 +2721,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_app_blog_page_blogpage",
-      "confidence_score": 1.0
+      "target": "src_app_blog_page_blogpage"
     },
     {
       "relation": "contains",
@@ -2702,9 +2732,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_app_blog_page_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_blog_page_metadata"
     },
     {
       "relation": "contains",
@@ -2713,9 +2743,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_app_blog_page_revalidate",
-      "confidence_score": 1.0
+      "target": "src_app_blog_page_revalidate"
     },
     {
       "relation": "imports_from",
@@ -2725,9 +2755,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_components_blog_blogpagination",
-      "confidence_score": 1.0
+      "target": "src_components_blog_blogpagination"
     },
     {
       "relation": "imports",
@@ -2737,9 +2767,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_components_blog_blogpagination_blogpagination",
-      "confidence_score": 1.0
+      "target": "src_components_blog_blogpagination_blogpagination"
     },
     {
       "relation": "imports_from",
@@ -2749,9 +2779,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -2761,9 +2791,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -2773,9 +2803,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -2785,9 +2815,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "imports",
@@ -2797,9 +2827,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_blog_page",
-      "target": "src_lib_blog_supabase_blog_getallarticles",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getallarticles"
     },
     {
       "relation": "calls",
@@ -2820,9 +2850,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_metadata",
-      "confidence_score": 1.0
+      "target": "src_app_layout_metadata"
     },
     {
       "relation": "contains",
@@ -2831,9 +2861,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_layout",
-      "target": "src_app_layout_rootlayout",
-      "confidence_score": 1.0
+      "target": "src_app_layout_rootlayout"
     },
     {
       "relation": "contains",
@@ -2842,9 +2872,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_app_page",
-      "target": "src_app_page_homepage",
-      "confidence_score": 1.0
+      "target": "src_app_page_homepage"
     },
     {
       "relation": "contains",
@@ -2853,9 +2883,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlebody",
-      "target": "src_components_blog_articlebody_articlebody",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlebody_articlebody"
     },
     {
       "relation": "contains",
@@ -2864,9 +2894,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlebody",
-      "target": "src_components_blog_articlebody_articlebodyprops",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlebody_articlebodyprops"
     },
     {
       "relation": "contains",
@@ -2875,9 +2905,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlecard",
-      "target": "src_components_blog_articlecard_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard_articlecard"
     },
     {
       "relation": "contains",
@@ -2886,9 +2916,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlecard",
-      "target": "src_components_blog_articlecard_articlecardprops",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard_articlecardprops"
     },
     {
       "relation": "imports_from",
@@ -2898,9 +2928,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlecard",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -2910,9 +2940,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlecard",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "imports_from",
@@ -2922,9 +2952,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_components_blog_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard"
     },
     {
       "relation": "imports_from",
@@ -2934,9 +2964,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_components_blog_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard"
     },
     {
       "relation": "references",
@@ -2946,9 +2976,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_articlecard_articlecardprops",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "imports",
@@ -2958,9 +2988,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_components_blog_articlecard_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard_articlecard"
     },
     {
       "relation": "imports",
@@ -2970,9 +3000,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_components_blog_articlecard_articlecard",
-      "confidence_score": 1.0
+      "target": "src_components_blog_articlecard_articlecard"
     },
     {
       "relation": "contains",
@@ -2981,9 +3011,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_components_blog_blogpagination_blogpagination",
-      "confidence_score": 1.0
+      "target": "src_components_blog_blogpagination_blogpagination"
     },
     {
       "relation": "contains",
@@ -2992,9 +3022,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_components_blog_blogpagination_blogpaginationprops",
-      "confidence_score": 1.0
+      "target": "src_components_blog_blogpagination_blogpaginationprops"
     },
     {
       "relation": "imports_from",
@@ -3004,9 +3034,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -3016,9 +3046,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "references",
@@ -3028,9 +3058,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_blogpagination_blogpaginationprops",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "contains",
@@ -3039,9 +3069,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_components_blog_homeblogsection_homeblogsection",
-      "confidence_score": 1.0
+      "target": "src_components_blog_homeblogsection_homeblogsection"
     },
     {
       "relation": "contains",
@@ -3050,9 +3080,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_components_blog_homeblogsection_homeblogsectionprops",
-      "confidence_score": 1.0
+      "target": "src_components_blog_homeblogsection_homeblogsectionprops"
     },
     {
       "relation": "imports_from",
@@ -3062,9 +3092,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -3074,9 +3104,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "references",
@@ -3086,9 +3116,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_blog_homeblogsection_homeblogsectionprops",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "contains",
@@ -3097,9 +3127,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_autoblog_profile",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -3109,9 +3139,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -3121,9 +3151,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -3133,9 +3163,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_image_gen",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
     },
     {
       "relation": "imports_from",
@@ -3145,9 +3175,19 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_seed_keywords",
-      "target": "src_lib_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_o_que_voce_controla",
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -3157,9 +3197,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -3169,9 +3209,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -3181,9 +3221,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_image_gen",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
     },
     {
       "relation": "imports",
@@ -3193,9 +3233,19 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_seed_keywords",
-      "target": "src_lib_autoblog_profile_autoblog_profile",
-      "confidence_score": 1.0
+      "target": "src_lib_autoblog_profile_autoblog_profile"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_qualidade_do_conteudo_gerado",
+      "target": "src_lib_blog_deepseek"
     },
     {
       "relation": "contains",
@@ -3204,9 +3254,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_blog_deepseek_articlecontent",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_articlecontent"
     },
     {
       "relation": "contains",
@@ -3215,9 +3265,9 @@
       "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_blog_deepseek_builduserprompt",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_builduserprompt"
     },
     {
       "relation": "contains",
@@ -3226,9 +3276,9 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_blog_deepseek_generatearticle",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_generatearticle"
     },
     {
       "relation": "contains",
@@ -3237,9 +3287,29 @@
       "source_location": "L84",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek",
-      "target": "src_lib_blog_deepseek_parseresponse",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_parseresponse"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/deepseek.ts",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "src_lib_blog_deepseek_generatearticle",
+      "target": "src_lib_blog_deepseek_articlecontent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/deepseek.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_lib_blog_deepseek_parseresponse",
+      "target": "src_lib_blog_deepseek_articlecontent"
     },
     {
       "relation": "calls",
@@ -3249,9 +3319,9 @@
       "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek_generatearticle",
-      "target": "src_lib_blog_deepseek_builduserprompt",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_builduserprompt"
     },
     {
       "relation": "calls",
@@ -3261,9 +3331,9 @@
       "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_deepseek_generatearticle",
-      "target": "src_lib_blog_deepseek_parseresponse",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_deepseek_parseresponse"
     },
     {
       "relation": "contains",
@@ -3272,9 +3342,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_blog_gsc_fetchtopkeyword",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_gsc_fetchtopkeyword"
     },
     {
       "relation": "contains",
@@ -3283,9 +3353,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_blog_gsc_getdayofyear",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_gsc_getdayofyear"
     },
     {
       "relation": "imports_from",
@@ -3295,9 +3365,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_blog_seed_keywords",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_seed_keywords"
     },
     {
       "relation": "imports",
@@ -3307,9 +3377,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc",
-      "target": "src_lib_blog_seed_keywords_getnextseedkeyword",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_seed_keywords_getnextseedkeyword"
     },
     {
       "relation": "calls",
@@ -3319,9 +3389,9 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_gsc_fetchtopkeyword",
-      "target": "src_lib_blog_gsc_getdayofyear",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_gsc_getdayofyear"
     },
     {
       "relation": "calls",
@@ -3342,9 +3412,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_image_gen",
-      "target": "src_lib_blog_image_gen_generateanduploadcover",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_image_gen_generateanduploadcover"
     },
     {
       "relation": "imports_from",
@@ -3354,9 +3424,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_image_gen",
-      "target": "src_lib_blog_supabase_blog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog"
     },
     {
       "relation": "imports",
@@ -3366,9 +3436,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_image_gen",
-      "target": "src_lib_blog_supabase_blog_uploadcoverimage",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_uploadcoverimage"
     },
     {
       "relation": "calls",
@@ -3389,9 +3459,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_seed_keywords",
-      "target": "src_lib_blog_seed_keywords_getnextseedkeyword",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_seed_keywords_getnextseedkeyword"
     },
     {
       "relation": "contains",
@@ -3400,9 +3470,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_seed_keywords",
-      "target": "src_lib_blog_seed_keywords_seed_keywords",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_seed_keywords_seed_keywords"
     },
     {
       "relation": "contains",
@@ -3411,9 +3481,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_article",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_article"
     },
     {
       "relation": "contains",
@@ -3422,9 +3492,9 @@
       "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_claimblogruntoday",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_claimblogruntoday"
     },
     {
       "relation": "contains",
@@ -3433,9 +3503,9 @@
       "source_location": "L103",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_getallarticles",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getallarticles"
     },
     {
       "relation": "contains",
@@ -3444,9 +3514,9 @@
       "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_getarticlebyslug",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getarticlebyslug"
     },
     {
       "relation": "contains",
@@ -3455,9 +3525,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "contains",
@@ -3466,9 +3536,9 @@
       "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_getpublishedkeywords",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getpublishedkeywords"
     },
     {
       "relation": "contains",
@@ -3477,9 +3547,9 @@
       "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_getrundate",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getrundate"
     },
     {
       "relation": "contains",
@@ -3488,9 +3558,9 @@
       "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_insertarticle",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_insertarticle"
     },
     {
       "relation": "contains",
@@ -3499,9 +3569,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_insertarticleinput",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_insertarticleinput"
     },
     {
       "relation": "contains",
@@ -3510,9 +3580,9 @@
       "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_insertrunlog",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_insertrunlog"
     },
     {
       "relation": "contains",
@@ -3521,9 +3591,9 @@
       "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog",
-      "target": "src_lib_blog_supabase_blog_uploadcoverimage",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_uploadcoverimage"
     },
     {
       "relation": "calls",
@@ -3533,9 +3603,9 @@
       "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_claimblogruntoday",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3545,9 +3615,9 @@
       "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_getallarticles",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3557,9 +3627,9 @@
       "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_getarticlebyslug",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3569,9 +3639,9 @@
       "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_getpublishedkeywords",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3581,9 +3651,9 @@
       "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_insertarticle",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3593,9 +3663,9 @@
       "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_insertrunlog",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3605,9 +3675,9 @@
       "source_location": "L128",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_uploadcoverimage",
-      "target": "src_lib_blog_supabase_blog_getclient",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getclient"
     },
     {
       "relation": "calls",
@@ -3617,9 +3687,9 @@
       "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_claimblogruntoday",
-      "target": "src_lib_blog_supabase_blog_getrundate",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getrundate"
     },
     {
       "relation": "calls",
@@ -3629,9 +3699,59 @@
       "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_lib_blog_supabase_blog_insertrunlog",
-      "target": "src_lib_blog_supabase_blog_getrundate",
-      "confidence_score": 1.0
+      "target": "src_lib_blog_supabase_blog_getrundate"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/supabase-blog.ts",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "src_lib_blog_supabase_blog_claimblogruntoday",
+      "target": "supabase_migrations_001_autoblog_public_blog_run_log"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/supabase-blog.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "src_lib_blog_supabase_blog_getpublishedkeywords",
+      "target": "supabase_migrations_001_autoblog_public_articles"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/supabase-blog.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "src_lib_blog_supabase_blog_insertarticle",
+      "target": "supabase_migrations_001_autoblog_public_articles"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/supabase-blog.ts",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "src_lib_blog_supabase_blog_getallarticles",
+      "target": "supabase_migrations_001_autoblog_public_articles"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/blog/supabase-blog.ts",
+      "source_location": "L116",
+      "weight": 1.0,
+      "source": "src_lib_blog_supabase_blog_getarticlebyslug",
+      "target": "supabase_migrations_001_autoblog_public_articles"
     },
     {
       "relation": "contains",
@@ -3640,9 +3760,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "supabase_migrations_001_autoblog",
-      "target": "supabase_migrations_001_autoblog_public_articles",
-      "confidence_score": 1.0
+      "target": "supabase_migrations_001_autoblog_public_articles"
     },
     {
       "relation": "contains",
@@ -3651,9 +3771,9 @@
       "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "supabase_migrations_001_autoblog",
-      "target": "supabase_migrations_001_autoblog_public_blog_run_log",
-      "confidence_score": 1.0
+      "target": "supabase_migrations_001_autoblog_public_blog_run_log"
     },
     {
       "relation": "contains",
@@ -3662,9 +3782,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig",
-      "target": "tsconfig_compileroptions",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions"
     },
     {
       "relation": "contains",
@@ -3673,9 +3793,9 @@
       "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig",
-      "target": "tsconfig_exclude",
-      "confidence_score": 1.0
+      "target": "tsconfig_exclude"
     },
     {
       "relation": "contains",
@@ -3684,9 +3804,9 @@
       "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig",
-      "target": "tsconfig_include",
-      "confidence_score": 1.0
+      "target": "tsconfig_include"
     },
     {
       "relation": "contains",
@@ -3695,9 +3815,9 @@
       "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_allowjs",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_allowjs"
     },
     {
       "relation": "contains",
@@ -3706,9 +3826,9 @@
       "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_esmoduleinterop",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "relation": "contains",
@@ -3717,9 +3837,9 @@
       "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_incremental",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_incremental"
     },
     {
       "relation": "contains",
@@ -3728,9 +3848,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_isolatedmodules",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_isolatedmodules"
     },
     {
       "relation": "contains",
@@ -3739,9 +3859,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_jsx",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_jsx"
     },
     {
       "relation": "contains",
@@ -3750,9 +3870,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_lib",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
@@ -3761,9 +3881,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_module",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
@@ -3772,9 +3892,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_moduleresolution",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_moduleresolution"
     },
     {
       "relation": "contains",
@@ -3783,9 +3903,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_noemit",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_noemit"
     },
     {
       "relation": "contains",
@@ -3794,9 +3914,9 @@
       "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_paths",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_paths"
     },
     {
       "relation": "contains",
@@ -3805,9 +3925,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_plugins",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_plugins"
     },
     {
       "relation": "contains",
@@ -3816,9 +3936,9 @@
       "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_resolvejsonmodule",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "relation": "contains",
@@ -3827,9 +3947,9 @@
       "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_skiplibcheck",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
@@ -3838,9 +3958,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_strict",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
@@ -3849,9 +3969,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_target",
-      "confidence_score": 1.0
+      "target": "tsconfig_compileroptions_target"
     },
     {
       "relation": "extends",
@@ -3861,9 +3981,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions_lib",
-      "target": "ref_dom",
-      "confidence_score": 1.0
+      "target": "ref_dom"
     },
     {
       "relation": "extends",
@@ -3873,9 +3993,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions_lib",
-      "target": "ref_dom_iterable",
-      "confidence_score": 1.0
+      "target": "ref_dom_iterable"
     },
     {
       "relation": "extends",
@@ -3885,9 +4005,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_compileroptions_lib",
-      "target": "ref_esnext",
-      "confidence_score": 1.0
+      "target": "ref_esnext"
     },
     {
       "relation": "extends",
@@ -3897,9 +4017,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_include",
-      "target": "ref_next_dev_types_ts",
-      "confidence_score": 1.0
+      "target": "ref_next_dev_types_ts"
     },
     {
       "relation": "extends",
@@ -3909,9 +4029,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_include",
-      "target": "ref_next_env_d_ts",
-      "confidence_score": 1.0
+      "target": "ref_next_env_d_ts"
     },
     {
       "relation": "extends",
@@ -3921,9 +4041,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_include",
-      "target": "ref_next_types_ts",
-      "confidence_score": 1.0
+      "target": "ref_next_types_ts"
     },
     {
       "relation": "extends",
@@ -3933,9 +4053,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_include",
-      "target": "ref_ts",
-      "confidence_score": 1.0
+      "target": "ref_ts"
     },
     {
       "relation": "extends",
@@ -3945,9 +4065,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_include",
-      "target": "ref_tsx",
-      "confidence_score": 1.0
+      "target": "ref_tsx"
     },
     {
       "relation": "extends",
@@ -3957,9 +4077,9 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "tsconfig_exclude",
-      "target": "ref_node_modules",
-      "confidence_score": 1.0
+      "target": "ref_node_modules"
     },
     {
       "relation": "contains",
@@ -3968,9 +4088,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_crons",
-      "confidence_score": 1.0
+      "target": "vercel_crons"
     },
     {
       "relation": "contains",
@@ -3979,9 +4099,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "vercel",
-      "target": "vercel_functions",
-      "confidence_score": 1.0
+      "target": "vercel_functions"
     },
     {
       "relation": "contains",
@@ -3990,9 +4110,9 @@
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "vercel_functions",
-      "target": "vercel_functions_src_app_api_blog_generate_route_ts",
-      "confidence_score": 1.0
+      "target": "vercel_functions_src_app_api_blog_generate_route_ts"
     },
     {
       "relation": "contains",
@@ -4001,9 +4121,9 @@
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "vercel_functions_src_app_api_blog_generate_route_ts",
-      "target": "vercel_src_app_api_blog_generate_route_ts_maxduration",
-      "confidence_score": 1.0
+      "target": "vercel_src_app_api_blog_generate_route_ts_maxduration"
     },
     {
       "relation": "contains",
@@ -4012,9 +4132,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "vercel_functions_src_app_api_blog_generate_route_ts",
-      "target": "vercel_src_app_api_blog_generate_route_ts_memory",
-      "confidence_score": 1.0
+      "target": "vercel_src_app_api_blog_generate_route_ts_memory"
     },
     {
       "relation": "conceptually_related_to",
@@ -4023,6 +4143,7 @@
       "source_file": ".github/ISSUE_TEMPLATE/bug_report.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "github_issue_template_bug_report_bugreportform",
       "target": "security_security_policy"
     },
@@ -4033,6 +4154,7 @@
       "source_file": ".github/ISSUE_TEMPLATE/feature_request.yml",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "github_issue_template_feature_request_featurerequestform",
       "target": "security_security_policy"
     },
@@ -4043,6 +4165,7 @@
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "contributing_contributing_guidelines",
       "target": "github_pull_request_template_prtemplate"
     },
@@ -4053,6 +4176,7 @@
       "source_file": ".github/pull_request_template.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "github_pull_request_template_prtemplate",
       "target": "readme_integracoes_e_custos"
     },
@@ -4063,6 +4187,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_1_0",
       "target": "github_workflows_ci_ciworkflow"
     },
@@ -4073,6 +4198,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_2_0",
       "target": "github_workflows_ci_ciworkflow"
     },
@@ -4083,6 +4209,7 @@
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "contributing_contributing_guidelines",
       "target": "github_workflows_ci_ciworkflow"
     },
@@ -4093,6 +4220,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_readme",
       "target": "github_workflows_ci_ciworkflow"
     },
@@ -4103,6 +4231,7 @@
       "source_file": "SETUP.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "setup_setup_guide",
       "target": "github_workflows_ci_ciworkflow"
     },
@@ -4113,6 +4242,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_2_0",
       "target": "changelog_ghsa_2v37_7h3g_55p8"
     },
@@ -4123,6 +4253,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_2_0",
       "target": "changelog_seo_onpage_checklist_concept"
     },
@@ -4133,6 +4264,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_1_0",
       "target": "security_security_policy"
     },
@@ -4143,16 +4275,18 @@
       "source_file": "CHANGELOG.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "changelog_v0_1_0",
       "target": "setup_setup_guide"
     },
     {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
-      "confidence_score": 0.85,
+      "confidence_score": 0.95,
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_qualidade_do_conteudo_gerado",
       "target": "changelog_seo_onpage_checklist_concept"
     },
@@ -4163,6 +4297,7 @@
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "contributing_contributing_guidelines",
       "target": "readme_integracoes_e_custos"
     },
@@ -4173,6 +4308,7 @@
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "contributing_contributing_guidelines",
       "target": "security_security_policy"
     },
@@ -4183,6 +4319,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_readme",
       "target": "contributing_contributing_guidelines"
     },
@@ -4193,6 +4330,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_readme",
       "target": "assets_autoblog_hero_heroimage"
     },
@@ -4203,6 +4341,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_readme",
       "target": "security_security_policy"
     },
@@ -4213,6 +4352,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_readme",
       "target": "setup_setup_guide"
     },
@@ -4223,6 +4363,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_o_ciclo_de_um_artigo",
       "target": "assets_pipeline_map_diagram"
     },
@@ -4233,6 +4374,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_o_que_voce_controla",
       "target": "setup_setup_guide"
     },
@@ -4243,6 +4385,7 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "readme_seguranca_operacional",
       "target": "security_security_policy"
     },
@@ -4253,6 +4396,7 @@
       "source_file": "SETUP.md",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "setup_setup_guide",
       "target": "security_security_policy"
     },
@@ -4263,6 +4407,7 @@
       "source_file": "assets/autoblog-hero.png",
       "source_location": null,
       "weight": 1.0,
+      "_origin": "semantic",
       "source": "assets_autoblog_hero_heroimage",
       "target": "assets_pipeline_map_diagram"
     }
@@ -4311,5 +4456,5 @@
       "source_file": ".github/workflows/ci.yml"
     }
   ],
-  "built_at_commit": "6f0fed88291eaeb19a1cf999111cb8b80a07b0c1"
+  "built_at_commit": "5d3e11c92fb38cb29b083a79c2e1771652a9adf3"
 }
