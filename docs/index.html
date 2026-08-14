@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f0e8">
+  <meta name="description" content="A self-hosted, open-source publishing system for turning editorial ideas into searchable articles on your own domain.">
+  <meta property="og:title" content="Auto-blog Template — Own your publishing system">
+  <meta property="og:description" content="Next.js, Supabase and an optional AI pipeline. Your brand, infrastructure and editorial decisions remain yours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luisroquette.github.io/autoblog-template/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/luisroquette/autoblog-template/main/assets/autoblog-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Auto-blog Template — Own your publishing system</title>
+  <link rel="canonical" href="https://luisroquette.github.io/autoblog-template/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Auto-blog Template home">
+        <span class="brand-mark" aria-hidden="true">A·</span>
+        <span>Auto-blog</span>
+      </a>
+      <div class="nav-links">
+        <a href="#system">The system</a>
+        <a href="#controls">Your controls</a>
+        <a class="button button-small" href="https://github.com/luisroquette/autoblog-template">View source <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="eyebrow"><span class="status-dot"></span> Open source · MIT licensed</div>
+      <h1>Your ideas.<br>Your SEO.<br><em>Your publishing system.</em></h1>
+      <p class="hero-copy">A self-hosted foundation that turns editorial direction into searchable articles on your own domain—with Next.js, Supabase and optional AI.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://github.com/luisroquette/autoblog-template">Fork on GitHub <span aria-hidden="true">↗</span></a>
+        <button class="text-button" type="button" data-copy="git clone https://github.com/luisroquette/autoblog-template.git">Copy clone command</button>
+      </div>
+      <p class="cost-note">The source is free. Hosting, databases and optional providers may have their own costs.</p>
+
+      <div class="editorial-demo" aria-label="Conceptual preview of the publishing workflow">
+        <div class="demo-rail">
+          <span class="rail-logo">A·</span>
+          <span>01</span><span>02</span><span>03</span>
+        </div>
+        <article class="article-preview">
+          <div class="article-meta"><span>FIELD NOTES / 014</span><span>6 MIN READ</span></div>
+          <h2>Why useful content compounds after you publish it</h2>
+          <p>A focused editorial system connects what your audience asks, what your product knows and what search engines can understand.</p>
+          <div class="article-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+        </article>
+        <aside class="pipeline-card">
+          <p>PIPELINE STATUS</p>
+          <ol>
+            <li><span>01</span> Editorial profile <b>ready</b></li>
+            <li><span>02</span> Daily claim <b>reserved</b></li>
+            <li><span>03</span> Review gate <b>yours</b></li>
+            <li><span>04</span> Published <b>indexed</b></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Technology stack">
+      <div><span>Next.js 16</span><span>Supabase + RLS</span><span>Schema.org</span><span>Idempotent cron</span><span>Own domain</span></div>
+    </section>
+
+    <section class="section system" id="system">
+      <div class="section-label">01 / THE SYSTEM</div>
+      <div class="section-intro">
+        <h2>From direction to publication,<br>without surrendering control.</h2>
+        <p>The template brings the moving parts into one repository. You choose the editorial rules and integrations; the system handles the repeatable plumbing.</p>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Define</h3><p>Set your brand, audience, tone, seed topics, internal links and CTA in one typed profile.</p></article>
+        <article><span>02</span><h3>Generate</h3><p>Use local topics or connect a text provider only after you define credentials and budget.</p></article>
+        <article><span>03</span><h3>Store</h3><p>Supabase keeps articles and execution state. RLS exposes only published content.</p></article>
+        <article><span>04</span><h3>Publish</h3><p>Next.js renders article pages, metadata and structured data directly on your domain.</p></article>
+      </div>
+    </section>
+
+    <section class="section controls" id="controls">
+      <div class="section-label">02 / YOUR CONTROLS</div>
+      <div class="controls-grid">
+        <div>
+          <h2>Infrastructure you can inspect.<br>Decisions only you can make.</h2>
+          <p>No closed dashboard sits between you and your publishing workflow. Every important setting lives in code you own.</p>
+          <a class="inline-link" href="https://github.com/luisroquette/autoblog-template/blob/main/SETUP.md">Read the setup guide <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="control-list">
+          <article><span>Brand</span><p>Name, domain, narrative and conversion path.</p></article>
+          <article><span>Editorial</span><p>Audience, tone, keywords and internal links.</p></article>
+          <article><span>Operations</span><p>Schedule, credentials and provider limits.</p></article>
+          <article><span>Approval</span><p>Keep review human-controlled where your context requires it.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof">
+      <div class="section-label">03 / BUILT-IN GUARDRAILS</div>
+      <div class="proof-grid">
+        <article><strong>1×</strong><h3>Daily claim</h3><p>Idempotent execution prevents the same schedule from publishing twice.</p></article>
+        <article><strong>RLS</strong><h3>Published only</h3><p>Public database reads are restricted to articles already marked as published.</p></article>
+        <article><strong>0</strong><h3>Credentials included</h3><p>The repository ships without provider keys or production data.</p></article>
+      </div>
+    </section>
+
+    <section class="section honest">
+      <div class="honest-copy">
+        <div class="section-label">04 / HONEST BY DESIGN</div>
+        <h2>Free source does not mean invisible infrastructure.</h2>
+        <p>Cloning is free and triggers no provider. A complete installation still needs your own deployment, Supabase project and—only if enabled—AI or Search Console credentials.</p>
+      </div>
+      <div class="cost-card">
+        <div><span>Source code</span><strong>Free</strong></div>
+        <div><span>License</span><strong>MIT</strong></div>
+        <div><span>Hosting & database</span><strong>Your account</strong></div>
+        <div><span>AI integrations</span><strong>Optional</strong></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <p>THE REPOSITORY IS THE PRODUCT.</p>
+      <h2>Build a publishing system<br>that belongs to you.</h2>
+      <div class="hero-actions">
+        <a class="button button-light" href="https://github.com/luisroquette/autoblog-template">Explore the repository <span aria-hidden="true">↗</span></a>
+        <a class="text-link-light" href="https://github.com/luisroquette/autoblog-template/releases/latest">Latest release</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span class="brand-mark">A·</span><span>Auto-blog Template</span></a>
+    <p>Open-source publishing infrastructure by <a href="https://github.com/luisroquette">Luis Roquette</a>.</p>
+    <p>MIT · 2026</p>
+  </footer>
+</body>
+</html>

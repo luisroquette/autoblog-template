@@ -10,6 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://luisroquette.github.io/autoblog-template/"><img src="https://img.shields.io/badge/product%20site-live-225CFF" alt="Product site" /></a>
   <a href="https://github.com/luisroquette/RocketLabs"><img src="https://img.shields.io/badge/RocketLabs-open%20system-7C5CFC" alt="Parte do RocketLabs" /></a>
   <a href="https://github.com/luisroquette/autoblog-template/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/autoblog-template?color=F3B85A" alt="Última release" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/licença-MIT-F3B85A" alt="Licença MIT" /></a>
