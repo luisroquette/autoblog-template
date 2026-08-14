@@ -1,4 +1,4 @@
-# Coloque o Auto-blog no ar
+# Coloque o My_Blog_Makes_Neil_Proud no ar
 
 Este guia parte de uma cópia nova do template. Cada instalação deve ter seu
 próprio projeto Supabase, domínio e variáveis de ambiente.

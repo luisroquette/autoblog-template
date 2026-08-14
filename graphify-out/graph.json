@@ -1795,7 +1795,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "daily claim guardrail",
       "_origin": "semantic",
       "id": "docs_index_daily_claim_guardrail"
@@ -1810,7 +1810,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "define generate store publish",
       "_origin": "semantic",
       "id": "docs_index_define_generate_store_publish"
@@ -1825,7 +1825,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "editorial direction pipeline",
       "_origin": "semantic",
       "id": "docs_index_editorial_direction_pipeline"
@@ -1840,7 +1840,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "optional ai pipeline",
       "_origin": "semantic",
       "id": "docs_index_optional_ai_pipeline"
@@ -1855,7 +1855,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "owned publishing system",
       "_origin": "semantic",
       "id": "docs_index_owned_publishing_system"
@@ -1870,7 +1870,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "rls published-only reads",
       "_origin": "semantic",
       "id": "docs_index_rls_published_only"
@@ -1885,7 +1885,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "article publication cycle",
       "_origin": "semantic",
       "id": "readme_article_publication_cycle"
@@ -1900,7 +1900,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "central editorial profile",
       "_origin": "semantic",
       "id": "readme_central_editorial_profile"
@@ -1915,7 +1915,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "clean installation sequence",
       "_origin": "semantic",
       "id": "readme_clean_installation_sequence"
@@ -1930,7 +1930,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "daily execution claim",
       "_origin": "semantic",
       "id": "readme_daily_execution_claim"
@@ -1945,7 +1945,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "operational security controls",
       "_origin": "semantic",
       "id": "readme_operational_security"
@@ -1960,7 +1960,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "self-hosted publishing system",
       "_origin": "semantic",
       "id": "readme_self_hosted_publishing_system"
@@ -1975,7 +1975,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "seo content quality",
       "_origin": "semantic",
       "id": "readme_seo_content_quality"
@@ -1990,13 +1990,13 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "supabase persistence and rls",
       "_origin": "semantic",
       "id": "readme_supabase_persistence_rls"
     },
     {
-      "label": "Auto-blog Product Site",
+      "label": "My_Blog_Makes_Neil_Proud Product Site",
       "file_type": "document",
       "source_file": "docs/index.html",
       "source_location": null,
@@ -2005,13 +2005,13 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
-      "norm_label": "auto-blog product site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
+      "norm_label": "my_blog_makes_neil_proud product site",
       "_origin": "semantic",
       "id": "docs_index_product_site"
     },
     {
-      "label": "Auto-blog Template",
+      "label": "My_Blog_Makes_Neil_Proud",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": null,
@@ -2020,8 +2020,8 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
-      "norm_label": "auto-blog template",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
+      "norm_label": "my_blog_makes_neil_proud",
       "_origin": "semantic",
       "id": "readme_autoblog_template"
     },
@@ -2035,7 +2035,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "code-owned editorial controls",
       "_origin": "semantic",
       "id": "docs_index_code_owned_controls"
@@ -2050,7 +2050,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "explicit infrastructure costs",
       "_origin": "semantic",
       "id": "docs_index_explicit_infrastructure_costs"
@@ -2065,7 +2065,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "zero bundled credentials",
       "_origin": "semantic",
       "id": "docs_index_zero_bundled_credentials"
@@ -2080,7 +2080,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "human editorial approval",
       "_origin": "semantic",
       "id": "readme_human_editorial_approval"
@@ -2095,7 +2095,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "optional provider integrations",
       "_origin": "semantic",
       "id": "readme_optional_integrations"
@@ -2110,7 +2110,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "published articles only",
       "_origin": "semantic",
       "id": "readme_public_published_articles_only"
@@ -2125,7 +2125,7 @@
       "author": "Luis Roquette",
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "user-owned publishing operation",
       "_origin": "semantic",
       "id": "readme_user_owned_operation"
@@ -2140,7 +2140,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "private vulnerability reporting",
       "_origin": "semantic",
       "id": "security_private_vulnerability_reporting"
@@ -2155,7 +2155,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "authenticated daily cron",
       "_origin": "semantic",
       "id": "setup_authenticated_daily_cron"
@@ -2170,7 +2170,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "first publication checklist",
       "_origin": "semantic",
       "id": "setup_first_publication_checklist"
@@ -2185,7 +2185,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "fork and clone installation",
       "_origin": "semantic",
       "id": "setup_fork_and_clone"
@@ -2200,7 +2200,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "manual pipeline test",
       "_origin": "semantic",
       "id": "setup_manual_pipeline_test"
@@ -2215,7 +2215,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "opt-in provider variables",
       "_origin": "semantic",
       "id": "setup_opt_in_provider_variables"
@@ -2230,7 +2230,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "pre-deploy validation",
       "_origin": "semantic",
       "id": "setup_predeploy_validation"
@@ -2245,13 +2245,13 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "security policy",
       "_origin": "semantic",
       "id": "security_security_policy"
     },
     {
-      "label": "Auto-blog Deployment Guide",
+      "label": "My_Blog_Makes_Neil_Proud Deployment Guide",
       "file_type": "document",
       "source_file": "SETUP.md",
       "source_location": null,
@@ -2260,8 +2260,8 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
-      "norm_label": "auto-blog deployment guide",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
+      "norm_label": "my_blog_makes_neil_proud deployment guide",
       "_origin": "semantic",
       "id": "setup_autoblog_deployment_guide"
     },
@@ -2275,7 +2275,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "exposed credential rotation",
       "_origin": "semantic",
       "id": "security_exposed_credential_rotation"
@@ -2290,7 +2290,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "sensitive data exclusion",
       "_origin": "semantic",
       "id": "security_sensitive_data_exclusion"
@@ -2305,7 +2305,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "company profile before automation",
       "_origin": "semantic",
       "id": "setup_company_profile_first"
@@ -2320,7 +2320,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "dedicated supabase project",
       "_origin": "semantic",
       "id": "setup_dedicated_supabase_project"
@@ -2335,7 +2335,7 @@
       "author": null,
       "contributor": null,
       "community": 0,
-      "community_name": "Auto-blog Product Site",
+      "community_name": "My_Blog_Makes_Neil_Proud Product Site",
       "norm_label": "server-only secrets",
       "_origin": "semantic",
       "id": "setup_server_only_secrets"
@@ -2446,7 +2446,7 @@
       "id": "github_pull_request_template_build_validation"
     },
     {
-      "label": "Auto-blog contribution policy",
+      "label": "My_Blog_Makes_Neil_Proud contribution policy",
       "file_type": "document",
       "source_file": "CONTRIBUTING.md",
       "source_location": null,
@@ -2456,12 +2456,12 @@
       "contributor": null,
       "community": 1,
       "community_name": "White-label Next.js and Supabase publishing template",
-      "norm_label": "auto-blog contribution policy",
+      "norm_label": "my_blog_makes_neil_proud contribution policy",
       "_origin": "semantic",
       "id": "contributing_contribution_policy"
     },
     {
-      "label": "Auto-blog bug report",
+      "label": "My_Blog_Makes_Neil_Proud bug report",
       "file_type": "document",
       "source_file": ".github/ISSUE_TEMPLATE/bug_report.yml",
       "source_location": null,
@@ -2471,7 +2471,7 @@
       "contributor": null,
       "community": 1,
       "community_name": "White-label Next.js and Supabase publishing template",
-      "norm_label": "auto-blog bug report",
+      "norm_label": "my_blog_makes_neil_proud bug report",
       "_origin": "semantic",
       "id": "github_issue_template_bug_report_bug_report"
     },
@@ -2746,7 +2746,7 @@
       "id": "assets_pipeline_walkthrough_production_stage"
     },
     {
-      "label": "Animated Auto-blog article lifecycle walkthrough",
+      "label": "Animated My_Blog_Makes_Neil_Proud article lifecycle walkthrough",
       "file_type": "image",
       "source_file": "assets/pipeline-walkthrough.gif",
       "source_location": null,
@@ -2756,7 +2756,7 @@
       "contributor": null,
       "community": 10,
       "community_name": "Control stage with daily claim, RLS, and publication status",
-      "norm_label": "animated auto-blog article lifecycle walkthrough",
+      "norm_label": "animated my_blog_makes_neil_proud article lifecycle walkthrough",
       "_origin": "semantic",
       "id": "assets_pipeline_walkthrough_animated_article_cycle"
     },
@@ -2896,7 +2896,7 @@
       "id": "docs_favicon_a_dot_monogram"
     },
     {
-      "label": "Auto-blog circular favicon",
+      "label": "My_Blog_Makes_Neil_Proud circular favicon",
       "file_type": "image",
       "source_file": "docs/favicon.svg",
       "source_location": null,
@@ -2906,12 +2906,12 @@
       "contributor": null,
       "community": 16,
       "community_name": "Lime A-dot monogram on a dark background",
-      "norm_label": "auto-blog circular favicon",
+      "norm_label": "my_blog_makes_neil_proud circular favicon",
       "_origin": "semantic",
       "id": "docs_favicon_autoblog_favicon"
     },
     {
-      "label": "Auto-blog Public Sitemap",
+      "label": "My_Blog_Makes_Neil_Proud Public Sitemap",
       "file_type": "concept",
       "source_file": "docs/robots.txt",
       "source_location": null,
@@ -2921,7 +2921,7 @@
       "contributor": null,
       "community": 17,
       "community_name": "Public Crawl Policy",
-      "norm_label": "auto-blog public sitemap",
+      "norm_label": "my_blog_makes_neil_proud public sitemap",
       "_origin": "semantic",
       "id": "docs_robots_public_sitemap"
     },
@@ -2956,7 +2956,7 @@
       "id": "readme_o_ciclo_de_um_artigo"
     },
     {
-      "label": "Auto-blog continuous integration workflow",
+      "label": "My_Blog_Makes_Neil_Proud continuous integration workflow",
       "file_type": "code",
       "source_file": ".github/workflows/ci.yml",
       "source_location": null,
@@ -2966,7 +2966,7 @@
       "contributor": null,
       "community": 23,
       "community_name": "On-page SEO article-generation checklist",
-      "norm_label": "auto-blog continuous integration workflow",
+      "norm_label": "my_blog_makes_neil_proud continuous integration workflow",
       "_origin": "semantic",
       "id": "github_workflows_ci_ci_workflow"
     },
@@ -3031,7 +3031,7 @@
       "id": "changelog_semantic_versioning"
     },
     {
-      "label": "Auto-blog Template 0.1.0",
+      "label": "My_Blog_Makes_Neil_Proud 0.1.0",
       "file_type": "concept",
       "source_file": "CHANGELOG.md",
       "source_location": null,
@@ -3041,12 +3041,12 @@
       "contributor": null,
       "community": 23,
       "community_name": "On-page SEO article-generation checklist",
-      "norm_label": "auto-blog template 0.1.0",
+      "norm_label": "my_blog_makes_neil_proud 0.1.0",
       "_origin": "semantic",
       "id": "changelog_version_0_1_0"
     },
     {
-      "label": "Auto-blog Template 0.2.0",
+      "label": "My_Blog_Makes_Neil_Proud 0.2.0",
       "file_type": "concept",
       "source_file": "CHANGELOG.md",
       "source_location": null,
@@ -3056,7 +3056,7 @@
       "contributor": null,
       "community": 23,
       "community_name": "On-page SEO article-generation checklist",
-      "norm_label": "auto-blog template 0.2.0",
+      "norm_label": "my_blog_makes_neil_proud 0.2.0",
       "_origin": "semantic",
       "id": "changelog_version_0_2_0"
     },
@@ -3106,7 +3106,7 @@
       "id": "github_workflows_ci_runtime_dependency_audit"
     },
     {
-      "label": "Auto-blog Template changelog",
+      "label": "My_Blog_Makes_Neil_Proud changelog",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
       "source_location": null,
@@ -3116,7 +3116,7 @@
       "contributor": null,
       "community": 23,
       "community_name": "On-page SEO article-generation checklist",
-      "norm_label": "auto-blog template changelog",
+      "norm_label": "my_blog_makes_neil_proud changelog",
       "_origin": "semantic",
       "id": "changelog_autoblog_changelog"
     },
@@ -3241,7 +3241,7 @@
       "id": "assets_pipeline_map_publishing_control"
     },
     {
-      "label": "Auto-blog article lifecycle map",
+      "label": "My_Blog_Makes_Neil_Proud article lifecycle map",
       "file_type": "image",
       "source_file": "assets/pipeline-map.svg",
       "source_location": null,
@@ -3251,7 +3251,7 @@
       "contributor": null,
       "community": 9,
       "community_name": "Optional text, SEO, and cover production",
-      "norm_label": "auto-blog article lifecycle map",
+      "norm_label": "my_blog_makes_neil_proud article lifecycle map",
       "_origin": "semantic",
       "id": "assets_pipeline_map_autoblog_article_cycle"
     },

@@ -2,7 +2,7 @@
   <img src="./assets/autoblog-hero.png" alt="Pipeline editorial: pautas, produção, artigo publicado e métricas" width="100%" />
 </p>
 
-<h1 align="center">Auto-blog Template</h1>
+<h1 align="center">My_Blog_Makes_Neil_Proud</h1>
 
 <p align="center">
   Infraestrutura open source para transformar pauta em artigo publicado no seu domínio.
@@ -32,7 +32,7 @@ Um blog exige mais do que um editor de texto. Tem pauta, contexto da empresa,
 links internos, banco, SEO, publicação e uma rotina que não pode disparar duas
 vezes no mesmo dia.
 
-O Auto-blog reúne essa parte em um repositório que você controla. A empresa
+O My_Blog_Makes_Neil_Proud reúne essa parte em um repositório que você controla. A empresa
 aparece em um único perfil; o pipeline roda no seu Next.js e grava no seu
 Supabase. As contas de IA, Search Console e Vercel continuam sendo suas.
 
@@ -225,6 +225,6 @@ segurança, siga [SECURITY.md](./SECURITY.md) e não publique credenciais.
 ---
 
 <p align="center">
-  <strong>Auto-blog Template faz parte do <a href="https://github.com/luisroquette/RocketLabs">RocketLabs</a>.</strong><br />
+  <strong>My_Blog_Makes_Neil_Proud faz parte do <a href="https://github.com/luisroquette/RocketLabs">RocketLabs</a>.</strong><br />
   <sub>Explore outros sistemas de IA aplicada e playbooks open source reutilizáveis.</sub>
 </p>

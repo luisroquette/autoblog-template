@@ -15,7 +15,7 @@
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Auto-blog Product Site
+- My_Blog_Makes_Neil_Proud Product Site
 - White-label Next.js and Supabase publishing template
 - supabase-blog.ts
 - compilerOptions
@@ -46,9 +46,9 @@
 3. `AUTOBLOG_PROFILE` - 8 edges
 4. `getClient()` - 8 edges
 5. `Article` - 8 edges
-6. `Auto-blog Product Site` - 8 edges
-7. `Auto-blog Template` - 8 edges
-8. `Auto-blog Deployment Guide` - 8 edges
+6. `My_Blog_Makes_Neil_Proud Product Site` - 8 edges
+7. `My_Blog_Makes_Neil_Proud` - 8 edges
+8. `My_Blog_Makes_Neil_Proud Deployment Guide` - 8 edges
 9. `scripts` - 6 edges
 10. `include` - 6 edges
 
@@ -74,9 +74,9 @@
 
 ## Communities (26 total, 6 thin omitted)
 
-### Community 0 - "Auto-blog Product Site"
+### Community 0 - "My_Blog_Makes_Neil_Proud Product Site"
 Cohesion: 0.06
-Nodes (37): Code-Owned Editorial Controls, Daily Claim Guardrail, Define Generate Store Publish, Editorial Direction Pipeline, Explicit Infrastructure Costs, Optional AI Pipeline, Owned Publishing System, Auto-blog Product Site (+29 more)
+Nodes (37): Code-Owned Editorial Controls, Daily Claim Guardrail, Define Generate Store Publish, Editorial Direction Pipeline, Explicit Infrastructure Costs, Optional AI Pipeline, Owned Publishing System, My_Blog_Makes_Neil_Proud Product Site (+29 more)
 
 ### Community 1 - "White-label Next.js and Supabase publishing template"
 Cohesion: 0.10
@@ -112,11 +112,11 @@ Nodes (7): ArticlePage(), generateMetadata(), Props, revalidate, ArticleBody(), 
 
 ### Community 9 - "Optional text, SEO, and cover production"
 Cohesion: 0.38
-Nodes (7): Auto-blog article lifecycle map, Editorial brief with keywords, tone, and internal links, Integrations are opt-in, Optional text, SEO, and cover production, SEO and schema page on the owner's Next.js blog, Daily claim, row-level security, and published status control, Owner controls domain, database, credentials, frequency, and publishing
+Nodes (7): My_Blog_Makes_Neil_Proud article lifecycle map, Editorial brief with keywords, tone, and internal links, Integrations are opt-in, Optional text, SEO, and cover production, SEO and schema page on the owner's Next.js blog, Daily claim, row-level security, and published status control, Owner controls domain, database, credentials, frequency, and publishing
 
 ### Community 10 - "Control stage with daily claim, RLS, and publication status"
 Cohesion: 0.38
-Nodes (7): Animated Auto-blog article lifecycle walkthrough, Blog stage with SEO, schema, and Next.js, Brief stage with keywords, tone, and internal links, Control stage with daily claim, RLS, and publication status, Owner controls domain, database, credentials, frequency, and publication, Production stage with optional text, SEO, and cover, Sequential highlighting of article pipeline stages
+Nodes (7): Animated My_Blog_Makes_Neil_Proud article lifecycle walkthrough, Blog stage with SEO, schema, and Next.js, Brief stage with keywords, tone, and internal links, Control stage with daily claim, RLS, and publication status, Owner controls domain, database, credentials, frequency, and publication, Production stage with optional text, SEO, and cover, Sequential highlighting of article pipeline stages
 
 ### Community 11 - "Illustrated automated blog content pipeline"
 Cohesion: 0.33
@@ -140,7 +140,7 @@ Nodes (10): BlogPage(), metadata, revalidate, ArticleCard(), ArticleCardProps, B
 
 ### Community 23 - "On-page SEO article-generation checklist"
 Cohesion: 0.17
-Nodes (13): Auto-blog Template changelog, nanoid transitive vulnerability remediation, Neil Patel blogpost guide, On-page SEO article-generation checklist, Real relevant external links without invented URLs, Real DeepSeek article-generation validation, Semantic Versioning, Auto-blog Template 0.1.0 (+5 more)
+Nodes (13): My_Blog_Makes_Neil_Proud changelog, nanoid transitive vulnerability remediation, Neil Patel blogpost guide, On-page SEO article-generation checklist, Real relevant external links without invented URLs, Real DeepSeek article-generation validation, Semantic Versioning, My_Blog_Makes_Neil_Proud 0.1.0 (+5 more)
 
 ### Community 24 - "include"
 Cohesion: 0.22
@@ -162,7 +162,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **What connects `copyButton`, `claimLab`, `claimTabs` to the rest of the system?**
   _98 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Auto-blog Product Site` be split into smaller, more focused modules?**
+- **Should `My_Blog_Makes_Neil_Proud Product Site` be split into smaller, more focused modules?**
   _Cohesion score 0.06156156156156156 - nodes in this community are weakly interconnected._
 - **Should `White-label Next.js and Supabase publishing template` be split into smaller, more focused modules?**
   _Cohesion score 0.09881422924901186 - nodes in this community are weakly interconnected._

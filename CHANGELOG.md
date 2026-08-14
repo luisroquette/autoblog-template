@@ -1,6 +1,6 @@
 # Changelog
 
-Todas as mudanças relevantes do Auto-blog Template são registradas aqui.
+Todas as mudanças relevantes do My_Blog_Makes_Neil_Proud são registradas aqui.
 
 O projeto segue [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 

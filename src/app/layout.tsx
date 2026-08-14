@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Auto-blog template',
+  title: 'My_Blog_Makes_Neil_Proud',
   description: 'Template configurável de blog automatizado.',
 };
 
