@@ -18,7 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="sota-claim.css">
   <script defer src="site.js"></script>
+  <script defer src="sota-claim.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -107,6 +109,28 @@
 
     <section class="section proof">
       <div class="section-label">03 / BUILT-IN GUARDRAILS</div>
+      <div class="claim-lab" data-claim-lab>
+        <div class="claim-top"><span><i></i> DAILY PUBLICATION CLAIM</span><b>INTERACTIVE SIMULATION · NO JOB IS RUN</b></div>
+        <div class="claim-tabs" role="tablist" aria-label="Simulated publication guardrail states">
+          <button id="claim-tab-first" type="button" role="tab" aria-selected="true" aria-controls="claim-panel" tabindex="0" data-claim-view="first"><span>01</span> First call</button>
+          <button id="claim-tab-retry" type="button" role="tab" aria-selected="false" aria-controls="claim-panel" tabindex="-1" data-claim-view="retry"><span>02</span> Same-day retry</button>
+          <button id="claim-tab-public" type="button" role="tab" aria-selected="false" aria-controls="claim-panel" tabindex="-1" data-claim-view="public"><span>03</span> Public read</button>
+        </div>
+        <div class="claim-panel" id="claim-panel" role="tabpanel" aria-labelledby="claim-tab-first" aria-live="polite">
+          <div class="claim-sequence">
+            <article><span>REQUEST</span><strong data-claim-request>POST /api/blog/generate</strong><i class="complete" data-claim-step="request">✓</i></article>
+            <article><span>GUARD</span><strong data-claim-guard>Daily claim acquired</strong><i class="complete" data-claim-step="guard">✓</i></article>
+            <article><span>OUTCOME</span><strong data-claim-outcome>One article may publish</strong><i class="complete" data-claim-step="outcome">✓</i></article>
+          </div>
+          <div class="claim-result">
+            <span data-claim-code>CLAIMED</span>
+            <strong data-claim-title>First execution owns today's slot.</strong>
+            <p data-claim-summary>The workflow can continue after reserving the date. A later call cannot claim the same schedule twice.</p>
+            <div><span>DUPLICATES</span><b data-claim-duplicates>0</b></div>
+          </div>
+        </div>
+        <p class="claim-note">This browser model explains the published guardrail contract. It does not contact Supabase, a cron route or any AI provider.</p>
+      </div>
       <div class="proof-grid">
         <article><strong>1×</strong><h3>Daily claim</h3><p>Idempotent execution prevents the same schedule from publishing twice.</p></article>
         <article><strong>RLS</strong><h3>Published only</h3><p>Public database reads are restricted to articles already marked as published.</p></article>
