@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luisroquette.github.io/autoblog-template/sitemap.xml
+Sitemap: https://luisroquette.github.io/My_Blog_Makes_Neil_Proud/sitemap.xml

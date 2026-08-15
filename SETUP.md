@@ -8,8 +8,8 @@ próprio projeto Supabase, domínio e variáveis de ambiente.
 Use o botão **Fork** no GitHub e clone o repositório que ficou na sua conta:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/autoblog-template.git
-cd autoblog-template
+git clone https://github.com/SEU-USUARIO/My_Blog_Makes_Neil_Proud.git
+cd My_Blog_Makes_Neil_Proud
 npm ci
 cp .env.example .env.local
 ```

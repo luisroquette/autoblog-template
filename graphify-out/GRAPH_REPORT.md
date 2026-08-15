@@ -1,4 +1,4 @@
-# Graph Report - autoblog-template  (2026-08-14)
+# Graph Report - My_Blog_Makes_Neil_Proud  (2026-08-14)
 
 ## Corpus Check
 - 30 files · ~195,020 words

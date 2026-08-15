@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/autoblog-template/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
-  <a href="https://luisroquette.github.io/autoblog-template/"><img src="https://img.shields.io/badge/product%20site-live-225CFF" alt="Product site" /></a>
+  <a href="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://luisroquette.github.io/My_Blog_Makes_Neil_Proud/"><img src="https://img.shields.io/badge/product%20site-live-225CFF" alt="Product site" /></a>
   <a href="https://github.com/luisroquette/RocketLabs"><img src="https://img.shields.io/badge/RocketLabs-open%20system-7C5CFC" alt="Parte do RocketLabs" /></a>
-  <a href="https://github.com/luisroquette/autoblog-template/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/autoblog-template?color=F3B85A" alt="Última release" /></a>
+  <a href="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/My_Blog_Makes_Neil_Proud?color=F3B85A" alt="Última release" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/licença-MIT-F3B85A" alt="Licença MIT" /></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.2-111827" alt="Next.js 16.2" /></a>
   <a href="https://supabase.com/"><img src="https://img.shields.io/badge/banco-Supabase-3ECF8E" alt="Supabase" /></a>
@@ -125,8 +125,8 @@ checklist de SEO on-page para cada artigo:
 
 ```bash
 # 1. Faça um fork e clone a sua cópia
-git clone https://github.com/SEU-USUARIO/autoblog-template.git
-cd autoblog-template
+git clone https://github.com/SEU-USUARIO/My_Blog_Makes_Neil_Proud.git
+cd My_Blog_Makes_Neil_Proud
 
 # 2. Instale exatamente as dependências do lockfile
 npm ci

@@ -28,7 +28,7 @@ O projeto segue [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - ESLint, build de produção e auditoria de dependências de runtime sem
   vulnerabilidades.
 
-[0.2.0]: https://github.com/luisroquette/autoblog-template/releases/tag/v0.2.0
+[0.2.0]: https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/releases/tag/v0.2.0
 
 ## [0.1.0] - 2026-07-24
 
@@ -57,4 +57,4 @@ O projeto segue [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - ESLint e build de produção.
 - Auditoria de dependências de runtime sem vulnerabilidades altas ou críticas.
 
-[0.1.0]: https://github.com/luisroquette/autoblog-template/releases/tag/v0.1.0
+[0.1.0]: https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/releases/tag/v0.1.0
