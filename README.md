@@ -36,6 +36,30 @@ O My_Blog_Makes_Neil_Proud reúne essa parte em um repositório que você contro
 aparece em um único perfil; o pipeline roda no seu Next.js e grava no seu
 Supabase. As contas de IA, Search Console e Vercel continuam sendo suas.
 
+## NEW — v1.0.0
+
+O que chegou na primeira versão estável (19/08/2026):
+
+- **Conversão completa** — leads com plugs de CRM (Trello), comentários com
+  moderação, A/B de CTA com medição por variante, guest posts com byline e
+  backlink.
+- **Operação editorial** — calendário no banco (pauta planejada vence o seed),
+  divulgação pós-publish em plugs (Telegram, digest por e-mail, webhook
+  social), auditoria semanal de links quebrados, wizard `/setup`.
+- **SEO de conteúdo** — interlinkagem automática, JSON-LD rico
+  (BlogPosting + FAQPage + BreadcrumbList), categorias, `page_title`, capa
+  webp otimizada, pipeline em 2 etapas com outline validado.
+- **Qualidade** — validador pós-geração com 23 regras (estilo Yoast),
+  persona e prompt ampliados, 119 testes de regressão com pre-push hook.
+- **Leitura e visual** — texto justificado, H2 em cor mais clara, fluxogramas
+  em texto, CTA após cada imagem, infográfico opcional.
+- **Métricas** — views/engajamento próprios (tabela `blog_metrics`) + GA4
+  opcional.
+- **Segurança** — honeypots, sanitização de payload, anti-tabnabbing, filtro
+  de bots nas métricas.
+
+Histórico completo, versão a versão: [CHANGELOG.md](./CHANGELOG.md).
+
 ## Sumário
 
 - [O ciclo de um artigo](#o-ciclo-de-um-artigo)
