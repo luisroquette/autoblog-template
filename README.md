@@ -99,6 +99,8 @@ export const AUTOBLOG_PROFILE = {
   integrations: {
     googleSearchConsoleEnabled: false,
     imageGenerationEnabled: false,
+    leadCapture: { enabled: false, destination: 'trello' },
+    distribution: { enabled: false, channels: [] },
   },
 };
 ```
@@ -107,6 +109,7 @@ export const AUTOBLOG_PROFILE = {
 | --- | --- |
 | Marca, domínio, narrativa e CTA | Página de listagem, artigo e metadados SEO |
 | Keywords, pauta e links internos | Seleção de pauta e prompt editorial |
+| Leads e divulgação | Plugs de CRM (Trello) e de canal (Telegram, digest por e-mail, webhook social) |
 | Frequência do cron | Controle de idempotência da execução |
 | Provedores e limites | Persistência no Supabase e publicação em `/blog` |
 
@@ -120,6 +123,8 @@ checklist de SEO on-page para cada artigo:
 - Hierarquia real de headers (H2 por bloco de assunto, H3/H4 para subdivisões)
 - Ao menos um link externo real e relevante — nunca uma URL inventada
 - Mínimo de sinais de E-E-A-T e vocabulário de IA banido
+- Simplificação visual: bullets, listas e fluxogramas em texto (setas "→" ou tabela de fluxo)
+- Um CTA logo após cada imagem do corpo do artigo
 
 ## Faça uma instalação limpa
 
@@ -160,9 +165,12 @@ manual do cron.
 | --- | --- | --- |
 | Perfil da empresa | [`autoblog-profile.ts`](./src/lib/autoblog-profile.ts) | Centraliza marca, editorial, CTA e chaves de ativação |
 | Pipeline | [`/api/blog/generate`](./src/app/api/blog/generate/route.ts) | Autentica, reserva a execução e orquestra a publicação |
-| Banco e regras | [`001_autoblog.sql`](./supabase/migrations/001_autoblog.sql) | Cria tabelas, índices e RLS |
+| Banco e regras | [`migrations/`](./supabase/migrations/) | Cria tabelas, índices e RLS — aplicar em ordem numérica |
 | Blog público | [`src/app/blog`](./src/app/blog) | Lista artigos e gera páginas SEO com schema |
-| Automação | [`vercel.json`](./vercel.json) | Agenda a execução diária |
+| Conversão | [`/api/blog/leads`](./src/app/api/blog/leads/route.ts) e comentários | Leads via plug de CRM; comentários com moderação |
+| Divulgação e setup | [`distribution.ts`](./src/lib/blog/distribution.ts) e [`/setup`](./src/app/setup) | Plugs de canal pós-publish e checklist de conexões |
+| Guest posts | [`/api/blog/guest-posts`](./src/app/api/blog/guest-posts/route.ts) | Publica texto de convidado com byline e backlink (único caminho seguro de backlinks) |
+| Automação | [`vercel.json`](./vercel.json) | Agenda publicação em dias úteis e auditoria de links semanal |
 | Qualidade | [CI](./.github/workflows/ci.yml) | Instala, roda lint e gera build em cada push e PR |
 
 ## Integrações e custos
@@ -176,6 +184,11 @@ credencial criada na sua conta e de uma decisão explícita no perfil.
 | Geração de texto | Não configurada | Depois de revisar prompt e orçamento |
 | Google Search Console | Desligada | Quando o domínio estiver verificado e as credenciais prontas |
 | Geração de capas | Desligada | Quando houver uma conta de imagem e uma política visual |
+| Captura de leads (Trello) | Desligada | Quando houver envs do Trello e `leadCapture.enabled` |
+| Divulgação pós-publish | Desligada | Quando os canais (Telegram, digest, webhook social) tiverem envs |
+| Comentários | Ativa | Moderação manual pelo endpoint protegido por `CRON_SECRET` |
+| Métricas próprias | Ativa | Beacon no artigo grava em `blog_metrics` (migration 006) |
+| Google Analytics (GA4) | Desligada | Preencha `googleAnalyticsMeasurementId` no perfil |
 
 As variáveis possíveis estão em [`.env.example`](./.env.example). Nenhuma
 credencial de outro projeto deve ser copiada para cá.

@@ -17,6 +17,15 @@ export async function fetchTopKeyword(existingKeywords: string[]): Promise<strin
     return getNextSeedKeyword(getDayOfYear());
   }
 
+  // Flag ligada sem credenciais: falha em silêncio = debug impossível. Diagnóstico claro.
+  const missing = ['GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET', 'GOOGLE_REFRESH_TOKEN'].filter(
+    k => !process.env[k],
+  );
+  if (missing.length > 0) {
+    console.warn(`[gsc] Flag ligada mas envs ausentes: ${missing.join(', ')}. Usando seed fallback.`);
+    return getNextSeedKeyword(getDayOfYear());
+  }
+
   try {
     const auth = new google.auth.OAuth2(
       process.env.GOOGLE_CLIENT_ID,

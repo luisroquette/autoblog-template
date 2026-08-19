@@ -11,20 +11,44 @@ export interface Article {
   id: string;
   slug: string;
   title: string;
+  page_title: string | null;
   meta_desc: string | null;
   content: string;
   cover_url: string | null;
+  cover_alt: string | null;
   keyword: string | null;
+  category: string | null;
+  published_at: string;
+  // Guest post (migration 008) — opcionais porque tabelas antigas podem não ter
+  guest_author?: string | null;
+  guest_bio?: string | null;
+  guest_url?: string | null;
+}
+
+/** Campos leves para listagem — sem `content`, que pesa centenas de KB no ISR. */
+export interface ArticleSummary {
+  slug: string;
+  title: string;
+  meta_desc: string | null;
+  cover_url: string | null;
+  keyword: string | null;
+  category: string | null;
   published_at: string;
 }
 
 export interface InsertArticleInput {
   slug: string;
   title: string;
+  page_title: string | null;
   meta_desc: string | null;
   content: string;
   cover_url: string | null;
+  cover_alt: string | null;
   keyword: string | null;
+  category: string | null;
+  guest_author?: string | null;
+  guest_bio?: string | null;
+  guest_url?: string | null;
 }
 
 function getRunDate(): string {
@@ -100,14 +124,59 @@ export async function insertRunLog(params: {
   if (error) console.error('[insertRunLog] Supabase error:', error.message);
 }
 
-export async function getAllArticles(): Promise<Article[]> {
+/** Candidatos de interlinkagem: slugs/títulos publicados para alimentar o prompt. */
+export async function getLinkCandidates(): Promise<Array<{ slug: string; title: string }>> {
   const supabase = getClient();
   const { data } = await supabase
     .from('articles')
-    .select('*')
+    .select('slug, title')
+    .eq('status', 'published')
+    .order('published_at', { ascending: false })
+    .limit(30);
+  return data ?? [];
+}
+
+export async function getAllArticles(): Promise<ArticleSummary[]> {
+  const supabase = getClient();
+  const { data } = await supabase
+    .from('articles')
+    .select('slug, title, meta_desc, cover_url, keyword, category, published_at')
     .eq('status', 'published')
     .order('published_at', { ascending: false });
   return data ?? [];
+}
+
+export async function getArticlesByCategory(category: string): Promise<ArticleSummary[]> {
+  const supabase = getClient();
+  const { data } = await supabase
+    .from('articles')
+    .select('slug, title, meta_desc, cover_url, keyword, category, published_at')
+    .eq('status', 'published')
+    .eq('category', category)
+    .order('published_at', { ascending: false });
+  return data ?? [];
+}
+
+/** Slug + content de todos os publicados — usado na auditoria de links. */
+export async function getAllArticleContents(): Promise<Array<{ slug: string; content: string }>> {
+  const supabase = getClient();
+  const { data } = await supabase
+    .from('articles')
+    .select('slug, content')
+    .eq('status', 'published');
+  return data ?? [];
+}
+
+/** Checagem barata de existência (sem baixar content) — validação de comentários. */
+export async function articleSlugExists(slug: string): Promise<boolean> {
+  const supabase = getClient();
+  const { data } = await supabase
+    .from('articles')
+    .select('slug')
+    .eq('slug', slug)
+    .eq('status', 'published')
+    .maybeSingle();
+  return !!data;
 }
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
@@ -121,17 +190,18 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
   return data ?? null;
 }
 
-export async function uploadCoverImage(
-  slug: string,
-  buffer: Buffer
+/** Upload genérico no bucket blog-covers (capa e imagens do corpo). */
+export async function uploadImageToStorage(
+  path: string,
+  buffer: Buffer,
+  contentType: string,
 ): Promise<string | null> {
   const supabase = getClient();
-  const path = `${slug}.png`;
   const { error } = await supabase.storage
     .from('blog-covers')
-    .upload(path, buffer, { contentType: 'image/png', upsert: true });
+    .upload(path, buffer, { contentType, upsert: true });
   if (error) {
-    console.error('[uploadCoverImage] Storage error:', error.message);
+    console.error('[uploadImageToStorage] Storage error:', error.message);
     return null;
   }
   const { data } = supabase.storage.from('blog-covers').getPublicUrl(path);

@@ -1,4 +1,18 @@
-* { box-sizing: border-box; }
-html { font-family: Arial, sans-serif; background: #fff; color: #111; }
-body { margin: 0; }
-a { color: inherit; }
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+ * Tokens do tema vêm do AUTOBLOG_PROFILE.theme (injetados como CSS vars no <body>).
+ * Fallbacks abaixo valem para o primeiro render antes da injeção.
+ */
+@theme inline {
+  --color-background: var(--app-background, #ffffff);
+  --color-foreground: var(--app-foreground, #1a1524);
+  --color-muted-foreground: var(--app-muted, #5c5668);
+  --color-primary: var(--app-primary, #7b2fbe);
+  --color-primary-foreground: #ffffff;
+  --color-border: var(--app-border, #e7e3ee);
+  --color-card: var(--app-card, #ffffff);
+  --color-destructive: var(--app-destructive, #dc2626);
+  --font-display: var(--font-inter, ui-sans-serif, system-ui, sans-serif);
+}
