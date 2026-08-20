@@ -1,170 +1,202 @@
-# Graph Report - My_Blog_Makes_Neil_Proud  (2026-08-14)
+# Graph Report - My_Blog_Makes_Neil_Proud  (2026-08-20)
 
 ## Corpus Check
-- 30 files · ~195,020 words
+- 94 files · ~215,980 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 254 nodes · 310 edges · 26 communities (20 shown, 6 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.92)
-- Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `5bedff44`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
+- 486 nodes · 813 edges · 43 communities (31 shown, 12 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.78)
+- Token cost: 4,019 input · 1,916 output
 
 ## Community Hubs (Navigation)
-- My_Blog_Makes_Neil_Proud Product Site
-- White-label Next.js and Supabase publishing template
-- supabase-blog.ts
-- compilerOptions
-- dependencies
-- package.json
-- AUTOBLOG_PROFILE
-- devDependencies
-- [slug]/page.tsx
-- Optional text, SEO, and cover production
-- Control stage with daily claim, RLS, and publication status
-- Illustrated automated blog content pipeline
-- src/app/api/blog/generate/route.ts
-- sota-claim.js
-- validate-product-site.mjs
-- layout.tsx
-- Lime A-dot monogram on a dark background
-- Public Crawl Policy
-- site.js
-- next.config.ts
-- blog/page.tsx
-- On-page SEO article-generation checklist
-- include
-- 001_autoblog.sql
+- Perfil e Config do Blog
+- Geração e Supabase
+- Distribuição e Link Audit
+- Release e Docs
+- Build e Tooling
+- Artigo e Schema SEO
+- Config TypeScript
+- Dependências
+- Comentários
+- Docs Pipeline Map
+- ArticleBody e TOC
+- Captura de Leads
+- Métricas
+- CTA e Conversão
+- Docs Pipeline 4 Etapas
+- Validador Yoast
+- Imagens no Corpo
+- Interlinkagem
+- Vercel e Cron
+- Ilustrações Docs
+- Docs Product Site JS
+- Script Validação Site
+- Marca e Favicon
+- Migration 001
+- Docs Site JS
+- Next Config
+- PostCSS Config
+- UI Pública e Migrations
+- Calendário Editorial
+- Comentários SQL
+- Métricas SQL
+- Links Quebrados SQL
+- Template Issue
+- Tabela Articles
+- Articles Schema
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `GET()` - 9 edges
-3. `AUTOBLOG_PROFILE` - 8 edges
-4. `getClient()` - 8 edges
-5. `Article` - 8 edges
-6. `My_Blog_Makes_Neil_Proud Product Site` - 8 edges
-7. `My_Blog_Makes_Neil_Proud` - 8 edges
-8. `My_Blog_Makes_Neil_Proud Deployment Guide` - 8 edges
-9. `scripts` - 6 edges
-10. `include` - 6 edges
+1. `GET()` - 23 edges
+2. `AUTOBLOG_PROFILE` - 23 edges
+3. `compilerOptions` - 16 edges
+4. `getClient()` - 12 edges
+5. `Release 1.0.0 (2026-08-19)` - 9 edges
+6. `SETUP.md (guia de instalação)` - 8 edges
+7. `scripts` - 7 edges
+8. `POST()` - 7 edges
+9. `buildSocialPost()` - 7 edges
+10. `distributeArticle()` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `GET()` --references--> `The Article Cycle (Cron -> Editorial Profile -> Generation -> Supabase -> /blog)`  [INFERRED]
-  src/app/api/blog/generate/route.ts → README.md
-- `AUTOBLOG_PROFILE` --references--> `What You Control (AUTOBLOG_PROFILE config)`  [INFERRED]
-  src/lib/autoblog-profile.ts → README.md
-- `Secrets, real domains, customer data, and environment files excluded` --semantically_similar_to--> `Keys, private URLs, customer data, and environment files excluded`  [INFERRED] [semantically similar]
-  CONTRIBUTING.md → .github/ISSUE_TEMPLATE/bug_report.yml
-- `Secrets, real domains, customer data, and environment files excluded` --semantically_similar_to--> `Private context exclusion`  [INFERRED] [semantically similar]
-  CONTRIBUTING.md → .github/ISSUE_TEMPLATE/feature_request.yml
-- `Secrets, real domains, customer data, and environment files excluded` --semantically_similar_to--> `Secret-free and private-data-free changes`  [INFERRED] [semantically similar]
-  CONTRIBUTING.md → .github/pull_request_template.md
+- `Tabela editorial_calendar` --conceptually_related_to--> `AUTOBLOG_PROFILE`  [INFERRED]
+  SETUP.md → src/lib/autoblog-profile.ts
+- `SETUP.md (guia de instalação)` --references--> `AUTOBLOG_PROFILE`  [EXTRACTED]
+  SETUP.md → src/lib/autoblog-profile.ts
+- `validate-product-site.mjs` --references--> `Product site (docs/index.html)`  [INFERRED]
+  .github/workflows/ci.yml → docs/index.html
+- `Bug Report Template (PT-BR)` --conceptually_related_to--> `SECURITY.md (política de segurança)`  [INFERRED]
+  .github/ISSUE_TEMPLATE/bug_report.yml → SECURITY.md
+- `PR Validation Checklist` --conceptually_related_to--> `SECURITY.md (política de segurança)`  [INFERRED]
+  .github/pull_request_template.md → SECURITY.md
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Built-In Publication Guardrails** — docs_index_daily_claim_guardrail, docs_index_rls_published_only, docs_index_zero_bundled_credentials [EXTRACTED 1.00]
-- **Core Publication Architecture** — readme_central_editorial_profile, readme_daily_execution_claim, readme_supabase_persistence_rls, readme_seo_content_quality [EXTRACTED 1.00]
-- **Safe Deployment Sequence** — setup_company_profile_first, setup_dedicated_supabase_project, setup_predeploy_validation, setup_manual_pipeline_test, setup_first_publication_checklist [EXTRACTED 1.00]
+- **Plano evolutivo em ondas (guias Neil Patel e RD Station)** — changelog_wave_a_foundations, changelog_wave_b_seo_content, changelog_wave_c_conversion, changelog_wave_d_authority [EXTRACTED 1.00]
+- **Cadeia de migrations Supabase 001–008 (tabelas e RLS)** — setup_supabase_migration_chain, setup_articles_table, setup_blog_run_log_table, setup_editorial_calendar_table, setup_blog_comments_table, setup_blog_metrics_table, setup_blog_broken_links_table [EXTRACTED 1.00]
+- **Endpoints protegidos por CRON_SECRET (Bearer)** — setup_daily_generate_endpoint, setup_comments_moderate_endpoint, setup_guest_posts_endpoint, setup_cron_secret_auth [EXTRACTED 1.00]
+- **Autoblog Pipeline: Input, Processing, Output** — assets_autoblog_hero_input_panels, assets_autoblog_hero_processing_hub, assets_autoblog_hero_output_documents [EXTRACTED 1.00]
+- **O ciclo de um artigo (pipeline stages)** — assets_pipeline_map_pauta, assets_pipeline_map_producao, assets_pipeline_map_controle, assets_pipeline_map_seu_blog [EXTRACTED 1.00]
+- **Validação do banco (Controle mechanisms)** — assets_pipeline_map_claim_diario, assets_pipeline_map_rls, assets_pipeline_map_status_publicado [INFERRED 0.85]
+- **Content Pipeline Flow (Pauta → Produção → Controle → Seu Blog)** — assets_pipeline_walkthrough_pauta, assets_pipeline_walkthrough_producao, assets_pipeline_walkthrough_controle, assets_pipeline_walkthrough_seu_blog [EXTRACTED 1.00]
+- **Control Stage Publication Gates** — assets_pipeline_walkthrough_controle, assets_pipeline_walkthrough_daily_claim, assets_pipeline_walkthrough_rls_status [EXTRACTED 1.00]
+- **Blog Brand Mark** — docs_favicon_favicon, docs_favicon_mb_monogram, docs_favicon_brand_palette [INFERRED 0.85]
 
-## Communities (26 total, 6 thin omitted)
+## Communities (43 total, 12 thin omitted)
 
-### Community 0 - "My_Blog_Makes_Neil_Proud Product Site"
+### Community 0 - "Perfil e Config do Blog"
 Cohesion: 0.06
-Nodes (37): Code-Owned Editorial Controls, Daily Claim Guardrail, Define Generate Store Publish, Editorial Direction Pipeline, Explicit Infrastructure Costs, Optional AI Pipeline, Owned Publishing System, My_Blog_Makes_Neil_Proud Product Site (+29 more)
+Nodes (32): BlogPage(), metadata, revalidate, CategoryPage(), Props, revalidate, inter, metadata (+24 more)
 
-### Community 1 - "White-label Next.js and Supabase publishing template"
-Cohesion: 0.10
-Nodes (23): Idempotent daily reservation and interrupted-run recovery, Optional text, cover, and Search Console integrations, Paid integrations disabled until explicit configuration, Per-installation cron secret, Public reads limited to published articles, Sensitive credentials remain server-side, Single profile for brand, audience, tone, SEO, CTA, and integrations, White-label Next.js and Supabase publishing template (+15 more)
-
-### Community 2 - "supabase-blog.ts"
-Cohesion: 0.29
-Nodes (13): The Article Cycle (Cron -> Editorial Profile -> Generation -> Supabase -> /blog), dynamic, GET(), maxDuration, generateAndUploadCover(), claimBlogRunToday(), getClient(), getPublishedKeywords() (+5 more)
-
-### Community 3 - "compilerOptions"
+### Community 1 - "Geração e Supabase"
 Cohesion: 0.11
-Nodes (19): dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules (+11 more)
+Nodes (41): dynamic, GET(), maxDuration, ArticleContent, ArticleOutline, askDeepseek(), buildInternalLinksSection(), buildUserPrompt() (+33 more)
 
-### Community 4 - "dependencies"
+### Community 2 - "Distribuição e Link Audit"
+Cohesion: 0.09
+Nodes (37): GET(), maxDuration, POST(), buildDistributionArticle(), buildEmailDigestPayload(), buildSocialPost(), distributeArticle(), DISTRIBUTION_CHANNELS (+29 more)
+
+### Community 3 - "Release e Docs"
+Cohesion: 0.07
+Nodes (34): Bug Report Template (PT-BR), Pull Request Template, PR Validation Checklist, CI Workflow (npm ci, audit, lint, build), validate-product-site.mjs, A/B de CTA (rotação determinística por slug+semana), Guia Neil Patel (blogpost), Guia RD Station (+26 more)
+
+### Community 4 - "Build e Tooling"
+Cohesion: 0.06
+Nodes (35): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, tailwindcss, @tailwindcss/postcss, @tailwindcss/typography (+27 more)
+
+### Community 5 - "Artigo e Schema SEO"
 Cohesion: 0.12
-Nodes (17): googleapis, next, openai, dependencies, googleapis, next, openai, react (+9 more)
+Nodes (22): ArticlePage(), generateMetadata(), Props, revalidate, ArticleMetrics(), onScroll(), send(), CommentForm() (+14 more)
 
-### Community 5 - "package.json"
-Cohesion: 0.13
-Nodes (14): license, name, overrides, gaxios, postcss, sharp, private, scripts (+6 more)
+### Community 6 - "Config TypeScript"
+Cohesion: 0.07
+Nodes (27): dom, dom.iterable, esnext, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts (+19 more)
 
-### Community 6 - "AUTOBLOG_PROFILE"
-Cohesion: 0.22
-Nodes (11): What You Control (AUTOBLOG_PROFILE config), Generated Content Quality (SEO on-page checklist), AUTOBLOG_PROFILE, ArticleContent, buildUserPrompt(), generateArticle(), parseResponse(), fetchTopKeyword() (+3 more)
+### Community 7 - "Dependências"
+Cohesion: 0.09
+Nodes (23): github-slugger, googleapis, next, openai, dependencies, github-slugger, googleapis, next (+15 more)
 
-### Community 7 - "devDependencies"
-Cohesion: 0.15
-Nodes (13): eslint, eslint-config-next, devDependencies, eslint, eslint-config-next, @types/node, @types/react, @types/react-dom (+5 more)
+### Community 8 - "Comentários"
+Cohesion: 0.19
+Nodes (17): GET(), isAuthorized(), POST(), POST(), Comments(), Comment, CommentInput, CommentValidation (+9 more)
 
-### Community 8 - "[slug]/page.tsx"
+### Community 9 - "Docs Pipeline Map"
+Cohesion: 0.20
+Nodes (15): My_Blog_Makes_Neil_Proud Pipeline Map, Claim diário (deduplicação de posts), Contexto editorial (tom e links internos), Controle (validation gate), Controle total do usuário (domínio, banco, credenciais, frequência, publicação), Geração opcional de texto, Keywords, Next.js (+7 more)
+
+### Community 10 - "ArticleBody e TOC"
+Cohesion: 0.21
+Nodes (10): ArticleBody(), ArticleBodyProps, components, HastElement, isVideoOnlyParagraph(), cleanInline(), extractToc(), TocItem (+2 more)
+
+### Community 11 - "Captura de Leads"
 Cohesion: 0.31
-Nodes (7): ArticlePage(), generateMetadata(), Props, revalidate, ArticleBody(), ArticleBodyProps, getArticleBySlug()
+Nodes (9): POST(), deliverLead(), isHoneypot(), LEAD_PLUGINS, LeadDestination, LeadPayload, LeadValidation, resolveLeadPlugin() (+1 more)
 
-### Community 9 - "Optional text, SEO, and cover production"
-Cohesion: 0.38
-Nodes (7): My_Blog_Makes_Neil_Proud article lifecycle map, Editorial brief with keywords, tone, and internal links, Integrations are opt-in, Optional text, SEO, and cover production, SEO and schema page on the owner's Next.js blog, Daily claim, row-level security, and published status control, Owner controls domain, database, credentials, frequency, and publishing
+### Community 12 - "Métricas"
+Cohesion: 0.34
+Nodes (11): GET(), POST(), BOT_PATTERNS, getArticleMetrics(), getClient(), insertMetric(), isLikelyBot(), isValidMetricEvent() (+3 more)
 
-### Community 10 - "Control stage with daily claim, RLS, and publication status"
-Cohesion: 0.38
-Nodes (7): Animated My_Blog_Makes_Neil_Proud article lifecycle walkthrough, Blog stage with SEO, schema, and Next.js, Brief stage with keywords, tone, and internal links, Control stage with daily claim, RLS, and publication status, Owner controls domain, database, credentials, frequency, and publication, Production stage with optional text, SEO, and cover, Sequential highlighting of article pipeline stages
+### Community 13 - "CTA e Conversão"
+Cohesion: 0.26
+Nodes (9): CtaButton(), CtaButtonProps, EndCta(), EndCtaProps, buildShareUrls(), CtaVariant, hasPrimaryCta(), resolveCtaVariant() (+1 more)
 
-### Community 11 - "Illustrated automated blog content pipeline"
+### Community 14 - "Docs Pipeline 4 Etapas"
 Cohesion: 0.33
-Nodes (6): Content analytics dashboard, Illustrated automated blog content pipeline, Content processing and editing workspace, Published article page, Multiple source content cards, Flow from source material through article production to analytics
+Nodes (10): Pipeline Walkthrough (4-Stage Content Engine), Keywords, Tone & Internal Links (Agenda Spec), Controle (Control Stage), Daily Claim, Next.js (Blog Target), Pauta (Agenda Stage), Produção (Content Production Stage), RLS & Published Status (Publication Gate) (+2 more)
 
-### Community 12 - "src/app/api/blog/generate/route.ts"
+### Community 15 - "Validador Yoast"
 Cohesion: 0.33
-Nodes (5): crons, functions, src/app/api/blog/generate/route.ts, maxDuration, memory
+Nodes (8): normalize(), fill(), makeValidInput(), rules(), validateArticle(), ValidationInput, ValidationIssue, ValidationResult
 
-### Community 13 - "sota-claim.js"
+### Community 16 - "Imagens no Corpo"
+Cohesion: 0.31
+Nodes (5): BodyImage, injectBodyImages(), injectInfographic(), InlineCta, IMAGES
+
+### Community 17 - "Interlinkagem"
+Cohesion: 0.48
+Nodes (5): LinkCandidate, ARTICLES, scoreInternalLinks(), STOPWORDS, tokenize()
+
+### Community 18 - "Vercel e Cron"
+Cohesion: 0.29
+Nodes (6): crons, functions, src/app/api/blog/generate/route.ts, ignoreCommand, maxDuration, memory
+
+### Community 19 - "Ilustrações Docs"
+Cohesion: 0.70
+Nodes (5): Autoblog Hero Illustration, Autoblog Analytics Line Chart, Autoblog Content Input Panels, Autoblog Published Output (Documents), Autoblog Processing Hub (Laptop)
+
+### Community 20 - "Docs Product Site JS"
 Cohesion: 0.40
 Nodes (3): claimLab, claimTabs, claimViews
 
-### Community 14 - "validate-product-site.mjs"
+### Community 21 - "Script Validação Site"
 Cohesion: 0.40
 Nodes (4): docs, ids, refs, root
 
-### Community 22 - "blog/page.tsx"
-Cohesion: 0.23
-Nodes (10): BlogPage(), metadata, revalidate, ArticleCard(), ArticleCardProps, BlogPagination(), BlogPaginationProps, HomeBlogSectionProps (+2 more)
-
-### Community 23 - "On-page SEO article-generation checklist"
-Cohesion: 0.17
-Nodes (13): My_Blog_Makes_Neil_Proud changelog, nanoid transitive vulnerability remediation, Neil Patel blogpost guide, On-page SEO article-generation checklist, Real relevant external links without invented URLs, Real DeepSeek article-generation validation, Semantic Versioning, My_Blog_Makes_Neil_Proud 0.1.0 (+5 more)
-
-### Community 24 - "include"
-Cohesion: 0.22
-Nodes (8): .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules, **/*.ts, **/*.tsx, exclude, include
+### Community 22 - "Marca e Favicon"
+Cohesion: 0.67
+Nodes (3): Blog Brand Palette (dark green #17201d + lime #d9ff57), Favicon (My Blog Makes Neil Proud), MB Monogram
 
 ## Knowledge Gaps
-- **98 isolated node(s):** `copyButton`, `claimLab`, `claimTabs`, `claimViews`, `nextConfig` (+93 more)
+- **139 isolated node(s):** `copyButton`, `claimLab`, `claimTabs`, `claimViews`, `nextConfig` (+134 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `dependencies` connect `dependencies` to `package.json`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `compilerOptions` connect `compilerOptions` to `include`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `AUTOBLOG_PROFILE` connect `Perfil e Config do Blog` to `Geração e Supabase`, `Distribuição e Link Audit`, `Release e Docs`, `Artigo e Schema SEO`, `Captura de Leads`, `CTA e Conversão`?**
+  _High betweenness centrality (0.153) - this node is a cross-community bridge._
+- **Why does `SETUP.md (guia de instalação)` connect `Release e Docs` to `Perfil e Config do Blog`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **Why does `Tabela editorial_calendar` connect `Release e Docs` to `Perfil e Config do Blog`?**
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **What connects `copyButton`, `claimLab`, `claimTabs` to the rest of the system?**
-  _98 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `My_Blog_Makes_Neil_Proud Product Site` be split into smaller, more focused modules?**
-  _Cohesion score 0.06156156156156156 - nodes in this community are weakly interconnected._
-- **Should `White-label Next.js and Supabase publishing template` be split into smaller, more focused modules?**
-  _Cohesion score 0.09881422924901186 - nodes in this community are weakly interconnected._
-- **Should `compilerOptions` be split into smaller, more focused modules?**
-  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
+  _139 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Perfil e Config do Blog` be split into smaller, more focused modules?**
+  _Cohesion score 0.06352941176470588 - nodes in this community are weakly interconnected._
+- **Should `Geração e Supabase` be split into smaller, more focused modules?**
+  _Cohesion score 0.10815602836879433 - nodes in this community are weakly interconnected._
+- **Should `Distribuição e Link Audit` be split into smaller, more focused modules?**
+  _Cohesion score 0.0851063829787234 - nodes in this community are weakly interconnected._

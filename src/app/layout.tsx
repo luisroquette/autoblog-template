@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   const gaMeasurementId = AUTOBLOG_PROFILE.integrations.googleAnalyticsMeasurementId;
 
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${inter.className}`}>
+    <html lang="pt-BR" className={`${inter.variable} ${inter.className} motion-safe:scroll-smooth`}>
       <head>
         {supabaseHost && <link rel="preconnect" href={`https://${supabaseHost}`} />}
         {gaMeasurementId && (
