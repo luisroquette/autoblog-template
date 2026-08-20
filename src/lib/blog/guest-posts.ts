@@ -1,7 +1,7 @@
 // src/lib/blog/guest-posts.ts
 // Processo de guest posts (Neil: único caminho seguro de backlinks).
 // O texto é de UM humano convidado — a validação é um gate básico de qualidade,
-// a revisão editorial continua sendo do dono ANTES de publicar.
+// a revisão editorial continua sendo do maintainer ANTES de publicar.
 import { extractMarkdownLinks, isInternalLink } from '@/lib/blog/link-audit';
 
 export interface GuestPostInput {

@@ -1,7 +1,7 @@
 // src/app/api/blog/guest-posts/route.ts
 // POST protegido por CRON_SECRET: publica um guest post (texto de convidado).
 // Valida, insere com byline, revalida e dispara a divulgação configurada.
-// A revisão editorial do texto continua sendo do dono ANTES desta chamada.
+// A revisão editorial do texto continua sendo do maintainer ANTES desta chamada.
 import { NextRequest, NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { insertArticle } from '@/lib/blog/supabase-blog';

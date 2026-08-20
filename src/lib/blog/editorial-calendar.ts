@@ -52,11 +52,11 @@ export function buildEditorialBriefSection(brief: EditorialBrief | null): string
     parts.push(`Concorrentes a superar em profundidade (sem citá-los): ${brief.competitors.join(', ')}`);
   }
   if (brief.attentionPoints.trim()) {
-    parts.push(`Pontos de atenção do dono do blog: ${brief.attentionPoints.trim()}`);
+    parts.push(`Pontos de atenção do maintainer do blog: ${brief.attentionPoints.trim()}`);
   }
   if (parts.length === 0) return '';
 
-  return `## PAUTA DO CALENDÁRIO (vinda do dono do blog — priorize estes pontos)
+  return `## PAUTA DO CALENDÁRIO (vinda do maintainer do blog — priorize estes pontos)
 ${parts.join('\n')}`;
 }
 

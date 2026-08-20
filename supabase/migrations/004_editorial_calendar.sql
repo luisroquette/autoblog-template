@@ -1,4 +1,4 @@
--- Calendário editorial: pauta planejada pelo dono do blog.
+-- Calendário editorial: pauta planejada pelo maintainer do blog.
 -- Campos do guia Neil Patel: keyword, relacionadas, concorrentes, estrutura da
 -- pauta, pontos de atenção, data e link do artigo publicado.
 create table if not exists public.editorial_calendar (
