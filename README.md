@@ -1,125 +1,124 @@
 <p align="center">
-  <img src="./assets/autoblog-hero.png" alt="Pipeline editorial: pautas, produção, artigo publicado e métricas" width="100%" />
+  <img src="./assets/autoblog-hero.png" alt="Editorial pipeline: briefs, production, published article and metrics" width="100%" />
 </p>
 
 <h1 align="center">My_Blog_Makes_Neil_Proud</h1>
 
 <p align="center">
-  Infraestrutura open source para transformar pauta em artigo publicado no seu domínio.
+  Open-source infrastructure that turns an editorial brief into a published article on your domain.
 </p>
 
 <p align="center">
   <a href="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/actions/workflows/ci.yml"><img src="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <a href="https://luisroquette.github.io/My_Blog_Makes_Neil_Proud/"><img src="https://img.shields.io/badge/product%20site-live-225CFF" alt="Product site" /></a>
-  <a href="https://github.com/luisroquette/RocketLabs"><img src="https://img.shields.io/badge/RocketLabs-open%20system-7C5CFC" alt="Parte do RocketLabs" /></a>
-  <a href="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/My_Blog_Makes_Neil_Proud?color=F3B85A" alt="Última release" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/licença-MIT-F3B85A" alt="Licença MIT" /></a>
+  <a href="https://github.com/luisroquette/My_Blog_Makes_Neil_Proud/releases/latest"><img src="https://img.shields.io/github/v/release/luisroquette/My_Blog_Makes_Neil_Proud?color=F3B85A" alt="Latest release" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-F3B85A" alt="MIT license" /></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.2-111827" alt="Next.js 16.2" /></a>
-  <a href="https://supabase.com/"><img src="https://img.shields.io/badge/banco-Supabase-3ECF8E" alt="Supabase" /></a>
+  <a href="https://supabase.com/"><img src="https://img.shields.io/badge/db-Supabase-3ECF8E" alt="Supabase" /></a>
 </p>
 
 <p align="center">
-  <a href="#comece-em-10-minutos">Começar</a>
-  · <a href="#o-ciclo-de-um-artigo">Como funciona</a>
-  · <a href="#o-que-vem-no-repositório">Arquitetura</a>
-  · <a href="./SETUP.md">Setup completo</a>
-  · <a href="./SECURITY.md">Segurança</a>
+  <a href="#clean-install">Start</a>
+  · <a href="#how-an-article-moves">How it works</a>
+  · <a href="#whats-in-the-repository">Architecture</a>
+  · <a href="./SETUP.md">Full setup</a>
+  · <a href="./SECURITY.md">Security</a>
 </p>
 
 ---
 
-Um blog exige mais do que um editor de texto. Tem pauta, contexto da empresa,
-links internos, banco, SEO, publicação e uma rotina que não pode disparar duas
-vezes no mesmo dia.
+A blog demands more than a text editor. There is the brief, the company
+context, internal links, the database, SEO, publication, and a routine that
+must not fire twice on the same day.
 
-O My_Blog_Makes_Neil_Proud reúne essa parte em um repositório que você controla. A empresa
-aparece em um único perfil; o pipeline roda no seu Next.js e grava no seu
-Supabase. As contas de IA, Search Console e Vercel continuam sendo suas.
+My_Blog_Makes_Neil_Proud gathers all of that into a repository you control.
+The company appears under a single profile; the pipeline runs on your Next.js
+and writes to your Supabase. The AI accounts, Search Console, and Vercel stay
+yours.
 
 ## NEW — v1.0.0
 
-O que chegou na primeira versão estável (19/08/2026):
+What shipped in the first stable version (2026-08-19):
 
-- **Conversão completa** — leads com plugs de CRM (Trello), comentários com
-  moderação, A/B de CTA com medição por variante, guest posts com byline e
-  backlink.
-- **Operação editorial** — calendário no banco (pauta planejada vence o seed),
-  divulgação pós-publish em plugs (Telegram, digest por e-mail, webhook
-  social), auditoria semanal de links quebrados, wizard `/setup`.
-- **SEO de conteúdo** — interlinkagem automática, JSON-LD rico
-  (BlogPosting + FAQPage + BreadcrumbList), categorias, `page_title`, capa
-  webp otimizada, pipeline em 2 etapas com outline validado.
-- **Qualidade** — validador pós-geração com 23 regras (estilo Yoast),
-  persona e prompt ampliados, 119 testes de regressão com pre-push hook.
-- **Leitura e visual** — texto justificado, H2 em cor mais clara, fluxogramas
-  em texto, CTA após cada imagem, infográfico opcional.
-- **Métricas** — views/engajamento próprios (tabela `blog_metrics`) + GA4
-  opcional.
-- **Segurança** — honeypots, sanitização de payload, anti-tabnabbing, filtro
-  de bots nas métricas.
+- **Full conversion** — leads with CRM plugs (Trello), moderated comments,
+  A/B CTA with per-variant measurement, guest posts with byline and backlink.
+- **Editorial operations** — calendar in the database (a planned brief wins
+  over the seed), post-publish distribution plugs (Telegram, email digest,
+  social webhook), weekly broken-link audit, `/setup` wizard.
+- **Content SEO** — automatic interlinking, rich JSON-LD
+  (BlogPosting + FAQPage + BreadcrumbList), categories, `page_title`,
+  optimized webp cover, 2-stage pipeline with a validated outline.
+- **Quality** — post-generation validator with 23 rules (Yoast-style),
+  expanded persona and prompt, 119 regression tests with a pre-push hook.
+- **Reading and visual** — justified text, lighter H2 color, text flowcharts,
+  a CTA after every image, optional infographic.
+- **Metrics** — first-party views/engagement (`blog_metrics` table) + optional
+  GA4.
+- **Security** — honeypots, payload sanitization, anti-tabnabbing, bot filter
+  on metrics.
 
-Histórico completo, versão a versão: [CHANGELOG.md](./CHANGELOG.md).
+Full version-by-version history: [CHANGELOG.md](./CHANGELOG.md).
 
-## Sumário
+## Contents
 
-- [O ciclo de um artigo](#o-ciclo-de-um-artigo)
-- [Demonstração do fluxo](#demonstração-do-fluxo)
-- [O que você controla](#o-que-você-controla)
-- [Faça uma instalação limpa](#faça-uma-instalação-limpa)
-- [O que vem no repositório](#o-que-vem-no-repositório)
-- [Integrações e custos](#integrações-e-custos)
-- [Segurança operacional](#segurança-operacional)
-- [Onde ele encaixa](#onde-ele-encaixa)
-- [Limites honestos](#limites-honestos)
-- [Contribuir](#contribuir)
+- [How an article moves](#how-an-article-moves)
+- [Pipeline demo](#pipeline-demo)
+- [What you control](#what-you-control)
+- [Clean install](#clean-install)
+- [What's in the repository](#whats-in-the-repository)
+- [Integrations and costs](#integrations-and-costs)
+- [Operational security](#operational-security)
+- [Where it fits](#where-it-fits)
+- [Honest limits](#honest-limits)
+- [Contributing](#contributing)
 
-## O ciclo de um artigo
+## How an article moves
 
 <p align="center">
-  <img src="./assets/pipeline-map.svg" alt="Mapa do pipeline: pauta, produção, controle e blog" width="100%" />
+  <img src="./assets/pipeline-map.svg" alt="Pipeline map: brief, production, control and blog" width="100%" />
 </p>
 
 ```mermaid
 sequenceDiagram
   participant C as Vercel Cron
-  participant P as Perfil editorial
-  participant G as Geração opcional
+  participant P as Editorial profile
+  participant G as Optional generation
   participant S as Supabase
   participant B as /blog
 
-  C->>S: reserva a execução do dia
-  P->>G: pauta, tom, links e CTA
-  G->>S: artigo, metadados e capa opcional
-  S->>B: entrega somente status publicado
+  C->>S: reserves the day's run
+  P->>G: brief, tone, links and CTA
+  G->>S: article, metadata and optional cover
+  S->>B: serves only published status
 ```
 
-O cron só avança após reservar a execução do dia. Isso evita duas publicações
-quando uma chamada manual e o agendamento chegam juntas. Se uma execução ficar
-presa, ela pode ser recuperada. O acesso público lê apenas conteúdo publicado.
+The cron only moves forward after reserving the day's run. That prevents two
+publications when a manual call and the schedule arrive together. A stuck run
+can be recovered. Public access reads published content only.
 
-### Demonstração do fluxo
+### Pipeline demo
 
 <p align="center">
-  <img src="./assets/pipeline-walkthrough.gif" alt="Animação conceitual destacando pauta, produção, controle e publicação" width="100%" />
+  <img src="./assets/pipeline-walkthrough.gif" alt="Conceptual animation highlighting brief, production, control and publication" width="100%" />
 </p>
 
-<p align="center"><sub>Fluxo conceitual baseado nos componentes reais deste repositório.</sub></p>
+<p align="center"><sub>Conceptual flow based on this repository's real components.</sub></p>
 
-## O que você controla
+## What you control
 
-Tudo que precisa ter a cara da empresa está concentrado em
+Everything that needs the company's look is concentrated in
 [`src/lib/autoblog-profile.ts`](./src/lib/autoblog-profile.ts):
 
 ```ts
 export const AUTOBLOG_PROFILE = {
-  brand: { name: 'Sua Empresa', siteUrl: 'https://seudominio.com.br' },
+  brand: { name: 'Your Company', siteUrl: 'https://yourdomain.com' },
   editorial: {
-    audience: 'quem você quer alcançar',
-    tone: 'como a empresa fala',
-    seedKeywords: ['assunto 1', 'assunto 2'],
+    audience: 'who you want to reach',
+    tone: 'how the company speaks',
+    seedKeywords: ['topic 1', 'topic 2'],
     internalLinks: [],
   },
-  cta: { buttonLabel: 'Falar com a equipe', url: 'https://...' },
+  cta: { buttonLabel: 'Talk to the team', url: 'https://...' },
   integrations: {
     googleSearchConsoleEnabled: false,
     imageGenerationEnabled: false,
@@ -129,139 +128,136 @@ export const AUTOBLOG_PROFILE = {
 };
 ```
 
-| Você define | O template executa |
+| You define | The template executes |
 | --- | --- |
-| Marca, domínio, narrativa e CTA | Página de listagem, artigo e metadados SEO |
-| Keywords, pauta e links internos | Seleção de pauta e prompt editorial |
-| Leads e divulgação | Plugs de CRM (Trello) e de canal (Telegram, digest por e-mail, webhook social) |
-| Frequência do cron | Controle de idempotência da execução |
-| Provedores e limites | Persistência no Supabase e publicação em `/blog` |
+| Brand, domain, narrative and CTA | Listing page, article and SEO metadata |
+| Keywords, briefs and internal links | Brief selection and editorial prompt |
+| Leads and distribution | CRM plugs (Trello) and channel plugs (Telegram, email digest, social webhook) |
+| Cron frequency | Run idempotency control |
+| Providers and limits | Supabase persistence and publication to `/blog` |
 
-### Qualidade do conteúdo gerado
+### Generated content quality
 
-O prompt padrão ([`deepseek.ts`](./src/lib/blog/deepseek.ts)) já aplica um
-checklist de SEO on-page para cada artigo:
+The default prompt ([`deepseek.ts`](./src/lib/blog/deepseek.ts)) already
+applies an on-page SEO checklist to every article:
 
-- Keyword nas primeiras palavras do título, na URL e já na primeira frase
-- Título com promessa concreta, não rótulo genérico
-- Hierarquia real de headers (H2 por bloco de assunto, H3/H4 para subdivisões)
-- Ao menos um link externo real e relevante — nunca uma URL inventada
-- Mínimo de sinais de E-E-A-T e vocabulário de IA banido
-- Simplificação visual: bullets, listas e fluxogramas em texto (setas "→" ou tabela de fluxo)
-- Um CTA logo após cada imagem do corpo do artigo
+- Keyword in the first words of the title, in the URL, and in the first sentence
+- Title with a concrete promise, not a generic label
+- Real header hierarchy (H2 per topic block, H3/H4 for subdivisions)
+- At least one real, relevant external link — never an invented URL
+- Minimum E-E-A-T signals and banned AI vocabulary
+- Visual simplification: bullets, lists and text flowcharts ("→" arrows or flow tables)
+- One CTA right after each in-body image
 
-## Faça uma instalação limpa
+## Clean install
 
 ```bash
-# 1. Faça um fork e clone a sua cópia
-git clone https://github.com/SEU-USUARIO/My_Blog_Makes_Neil_Proud.git
+# 1. Fork and clone your copy
+git clone https://github.com/YOUR-USER/My_Blog_Makes_Neil_Proud.git
 cd My_Blog_Makes_Neil_Proud
 
-# 2. Instale exatamente as dependências do lockfile
+# 2. Install exactly the lockfile dependencies
 npm ci
 cp .env.example .env.local
 
-# 3. Confirme que a base está saudável
+# 3. Confirm the base is healthy
 npm run lint
 npm run build
 npm run audit:runtime
 ```
 
-Uma instalação completa também pede um projeto Supabase e um deploy. A ordem
-segura é esta:
+A complete installation also requires a Supabase project and a deploy. The
+safe order is:
 
-1. Edite o [perfil editorial](./src/lib/autoblog-profile.ts).
-2. Crie um projeto Supabase seu e aplique a
+1. Edit the [editorial profile](./src/lib/autoblog-profile.ts).
+2. Create your own Supabase project and apply the
    [migration](./supabase/migrations/001_autoblog.sql).
-3. Preencha as variáveis de `.env.local` com credenciais criadas para essa
-   instalação.
-4. Faça o primeiro deploy sem GSC nem geração de imagem.
-5. Valide leitura pública, cron autenticado e banco.
-6. Habilite texto, imagem ou GSC somente quando as credenciais e o orçamento
-   estiverem definidos.
+3. Fill `.env.local` with credentials created for this installation.
+4. Make the first deploy without GSC or image generation.
+5. Validate public reads, the authenticated cron and the database.
+6. Enable text, image or GSC only once the credentials and budget are defined.
 
-O [guia de setup](./SETUP.md) detalha variáveis, Supabase, Vercel e o teste
-manual do cron.
+The [setup guide](./SETUP.md) details the variables, Supabase, Vercel and the
+manual cron test.
 
-## O que vem no repositório
+## What's in the repository
 
-| Área | Arquivo | Para que serve |
+| Area | File | What it does |
 | --- | --- | --- |
-| Perfil da empresa | [`autoblog-profile.ts`](./src/lib/autoblog-profile.ts) | Centraliza marca, editorial, CTA e chaves de ativação |
-| Pipeline | [`/api/blog/generate`](./src/app/api/blog/generate/route.ts) | Autentica, reserva a execução e orquestra a publicação |
-| Banco e regras | [`migrations/`](./supabase/migrations/) | Cria tabelas, índices e RLS — aplicar em ordem numérica |
-| Blog público | [`src/app/blog`](./src/app/blog) | Lista artigos e gera páginas SEO com schema |
-| Conversão | [`/api/blog/leads`](./src/app/api/blog/leads/route.ts) e comentários | Leads via plug de CRM; comentários com moderação |
-| Divulgação e setup | [`distribution.ts`](./src/lib/blog/distribution.ts) e [`/setup`](./src/app/setup) | Plugs de canal pós-publish e checklist de conexões |
-| Guest posts | [`/api/blog/guest-posts`](./src/app/api/blog/guest-posts/route.ts) | Publica texto de convidado com byline e backlink (único caminho seguro de backlinks) |
-| Automação | [`vercel.json`](./vercel.json) | Agenda publicação em dias úteis e auditoria de links semanal |
-| Qualidade | [CI](./.github/workflows/ci.yml) | Instala, roda lint e gera build em cada push e PR |
+| Company profile | [`autoblog-profile.ts`](./src/lib/autoblog-profile.ts) | Centralizes brand, editorial, CTA and activation keys |
+| Pipeline | [`/api/blog/generate`](./src/app/api/blog/generate/route.ts) | Authenticates, reserves the run and orchestrates publication |
+| Database and rules | [`migrations/`](./supabase/migrations/) | Creates tables, indexes and RLS — apply in numeric order |
+| Public blog | [`src/app/blog`](./src/app/blog) | Lists articles and generates SEO pages with schema |
+| Conversion | [`/api/blog/leads`](./src/app/api/blog/leads/route.ts) and comments | Leads via CRM plug; moderated comments |
+| Distribution and setup | [`distribution.ts`](./src/lib/blog/distribution.ts) and [`/setup`](./src/app/setup) | Post-publish channel plugs and a connections checklist |
+| Guest posts | [`/api/blog/guest-posts`](./src/app/api/blog/guest-posts/route.ts) | Publishes guest text with byline and backlink (the only safe backlink path) |
+| Automation | [`vercel.json`](./vercel.json) | Schedules publication on weekdays and the weekly link audit |
+| Quality | [CI](./.github/workflows/ci.yml) | Installs, lints and builds on every push and PR |
 
-## Integrações e custos
+## Integrations and costs
 
-Clonar o repositório não aciona provedores. Cada integração depende de uma
-credencial criada na sua conta e de uma decisão explícita no perfil.
+Cloning the repository triggers no provider. Each integration depends on a
+credential created in your account and an explicit decision in the profile.
 
-| Integração | Estado inicial | Quando habilitar |
+| Integration | Initial state | When to enable |
 | --- | --- | --- |
-| Pautas por keywords locais | Ativa | Já funciona com o perfil editorial |
-| Geração de texto | Não configurada | Depois de revisar prompt e orçamento |
-| Google Search Console | Desligada | Quando o domínio estiver verificado e as credenciais prontas |
-| Geração de capas | Desligada | Quando houver uma conta de imagem e uma política visual |
-| Captura de leads (Trello) | Desligada | Quando houver envs do Trello e `leadCapture.enabled` |
-| Divulgação pós-publish | Desligada | Quando os canais (Telegram, digest, webhook social) tiverem envs |
-| Comentários | Ativa | Moderação manual pelo endpoint protegido por `CRON_SECRET` |
-| Métricas próprias | Ativa | Beacon no artigo grava em `blog_metrics` (migration 006) |
-| Google Analytics (GA4) | Desligada | Preencha `googleAnalyticsMeasurementId` no perfil |
+| Local-keyword briefs | On | Works out of the box with the editorial profile |
+| Text generation | Not configured | After reviewing the prompt and budget |
+| Google Search Console | Off | Once the domain is verified and credentials are ready |
+| Cover generation | Off | Once an image account and a visual policy exist |
+| Lead capture (Trello) | Off | Once Trello envs and `leadCapture.enabled` exist |
+| Post-publish distribution | Off | Once the channels (Telegram, digest, social webhook) have envs |
+| Comments | On | Manual moderation through the `CRON_SECRET`-protected endpoint |
+| First-party metrics | On | The article beacon writes to `blog_metrics` (migration 006) |
+| Google Analytics (GA4) | Off | Fill `googleAnalyticsMeasurementId` in the profile |
 
-As variáveis possíveis estão em [`.env.example`](./.env.example). Nenhuma
-credencial de outro projeto deve ser copiada para cá.
+Available variables live in [`.env.example`](./.env.example). Never copy
+another project's credentials here.
 
-## Segurança operacional
+## Operational security
 
-| Proteção | Como funciona |
+| Protection | How it works |
 | --- | --- |
-| Cron autenticado | O endpoint exige `Authorization: Bearer $CRON_SECRET` |
-| Chaves sensíveis | Service role e credenciais ficam no servidor, fora do Git |
-| Leitura pública | RLS permite somente artigos com status `published` |
-| Logs internos | Não recebem política de leitura pública |
-| Execução duplicada | Claim diário bloqueia concorrência e recupera execução parada |
-| Dependências | A CI instala, roda lint e gera build; rode `npm audit` antes de atualizar pacotes |
+| Authenticated cron | The endpoint requires `Authorization: Bearer $CRON_SECRET` |
+| Sensitive keys | Service role and credentials live on the server, outside Git |
+| Public reads | RLS allows only articles with `published` status |
+| Internal logs | No public-read policy |
+| Duplicate runs | Daily claim blocks concurrency and recovers stuck runs |
+| Dependencies | CI installs, lints and builds; run `npm audit` before upgrading packages |
 
-Leia a [política de segurança](./SECURITY.md) antes de abrir issue sobre
-vulnerabilidade.
+Read the [security policy](./SECURITY.md) before opening an issue about a
+vulnerability.
 
-## Onde ele encaixa
+## Where it fits
 
-Funciona bem para SaaS B2B, consultorias, serviços técnicos, agências e
-empresas locais que precisam explicar um produto antes da venda.
+Works well for B2B SaaS, consultancies, technical services, agencies and local
+businesses that need to explain a product before the sale.
 
-Também serve como base para um time editorial que quer manter a publicação no
-próprio repositório, em vez de depender de um CMS fechado.
+It also works as a base for an editorial team that wants to keep publication
+in their own repository instead of a closed CMS.
 
-## Limites honestos
+## Honest limits
 
-- O template não substitui revisão editorial, conhecimento de mercado ou
+- The template does not replace editorial review, market knowledge or
   compliance.
-- Saúde, jurídico, finanças, seguros, apostas e outros contextos sensíveis
-  precisam de regras próprias de aprovação antes de qualquer automação.
-- O conteúdo gerado depende do prompt, das pautas e do provedor escolhido.
-- A operação é sua: domínio, banco, chaves, custos e decisões de publicação
-  continuam sob seu controle.
+- Health, legal, finance, insurance, gambling and other sensitive contexts
+  need their own approval rules before any automation.
+- Generated content depends on the prompt, the briefs and the chosen provider.
+- The operation is yours: domain, database, keys, costs and publication
+  decisions stay under your control.
 
-## Contribuir
+## Contributing
 
-Issues e PRs que deixem o template mais portátil, seguro ou simples de adotar
-são bem-vindos. Veja [CONTRIBUTING.md](./CONTRIBUTING.md). Para falhas de
-segurança, siga [SECURITY.md](./SECURITY.md) e não publique credenciais.
+Issues and PRs that make the template more portable, secure or simpler to
+adopt are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md). For security
+issues, follow [SECURITY.md](./SECURITY.md) and do not publish credentials.
 
-## Licença
+## License
 
-[MIT](./LICENSE) © 2026 Luis Roquette.
+[MIT](./LICENSE) © 2026 The maintainers.
 
 ---
 
 <p align="center">
-  <strong>My_Blog_Makes_Neil_Proud faz parte do <a href="https://github.com/luisroquette/RocketLabs">RocketLabs</a>.</strong><br />
-  <sub>Explore outros sistemas de IA aplicada e playbooks open source reutilizáveis.</sub>
+  <sub>Explore other applied-AI systems and reusable open-source playbooks.</sub>
 </p>
