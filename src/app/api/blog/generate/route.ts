@@ -10,6 +10,7 @@ import {
   generateArticle,
   generateArticleFromOutline,
   generateArticleOutline,
+  regenerateWithFeedback,
   type ArticleContent,
   type ArticleOutline,
   type InternalLink,
@@ -17,6 +18,7 @@ import {
 import { generateAndUploadCover, generateAndUploadBodyImages, generateAndUploadInfographic } from '@/lib/blog/image-gen';
 import { injectBodyImages, injectInfographic, injectInlineCtas } from '@/lib/blog/image-body';
 import { validateArticle } from '@/lib/blog/validate';
+import { runQualityGate } from '@/lib/blog/quality-gate';
 import { scoreInternalLinks } from '@/lib/blog/internal-links';
 import { distributeArticle, buildDistributionArticle } from '@/lib/blog/distribution';
 import { AUTOBLOG_PROFILE } from '@/lib/autoblog-profile';
@@ -114,6 +116,25 @@ export async function GET(request: NextRequest) {
     }
     const warnings = report.ok ? [] : report.issues;
 
+    // 2.5. Gate de qualidade por LLM-judge (score 0-100, 5 categorias) — roda DEPOIS
+    //    da validação Yoast-style acima (que já regenerou 1x) e ANTES da geração de
+    //    imagens (evita gastar imagem em conteúdo ainda regenerável). Fail-open:
+    //    sem DEEPSEEK_API_KEY ou judge indisponível, segue publicando como hoje.
+    let qualityAttempts = 0;
+    let judged = await runQualityGate(article);
+    while (!judged.skipped && judged.total_score !== null && judged.total_score < 90 && qualityAttempts < 2) {
+      qualityAttempts++;
+      console.warn(
+        `[blog/generate] Quality gate score ${judged.total_score} — regenerando (tentativa ${qualityAttempts}):`,
+        judged.issues,
+      );
+      article = await regenerateWithFeedback(kw, judged.issues, internalLinks, brief);
+      judged = await runQualityGate(article);
+    }
+    if (!judged.skipped) {
+      console.warn(`[blog/generate] Quality gate final: score ${judged.total_score}, tentativas ${qualityAttempts}.`);
+    }
+
     // 3. Gerar imagem de capa (falha silenciosa — não bloqueia publicação)
     const coverUrl = await generateAndUploadCover(article.image_prompt, article.slug);
 
@@ -195,7 +216,14 @@ export async function GET(request: NextRequest) {
       console.warn('[blog/generate] Publicado com ressalvas do checklist:', warnings);
     }
 
-    return NextResponse.json({ success: true, slug: finalSlug, warnings });
+    return NextResponse.json({
+      success: true,
+      slug: finalSlug,
+      warnings,
+      qualityGate: judged.skipped
+        ? { skipped: true }
+        : { score: judged.total_score, attempts: qualityAttempts },
+    });
 
   } catch (err) {
     const errorMsg = err instanceof Error ? err.message : String(err);

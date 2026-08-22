@@ -289,6 +289,49 @@ Retorne somente o JSON.`;
   throw new Error('deepseek_outline_failed');
 }
 
+// ---- Regeneração por feedback do gate de qualidade (quality-gate.ts) ----
+// Reenvia o artigo completo com as issues do LLM-judge como instrução extra
+// de correção — mesmo padrão da regeneração Yoast-style já existente acima.
+
+export interface RegenerationIssue {
+  severity?: string;
+  category?: string;
+  section?: string;
+  problem?: string;
+  fix_instruction: string;
+}
+
+function buildFeedbackSection(issues: RegenerationIssue[]): string {
+  if (issues.length === 0) return 'Nenhum problema específico listado — revise a qualidade geral do artigo.';
+  return issues
+    .map(i => `- [${i.severity ?? '—'}] ${i.category ?? ''} (${i.section ?? ''}): ${i.problem ?? ''} → ${i.fix_instruction}`)
+    .join('\n');
+}
+
+export async function regenerateWithFeedback(
+  keyword: string,
+  issues: RegenerationIssue[],
+  internalLinks: InternalLink[] = [],
+  brief: EditorialBrief | null = null,
+): Promise<ArticleContent> {
+  const user = `${buildUserPrompt(keyword, internalLinks, brief)}
+
+## CORREÇÕES OBRIGATÓRIAS (avaliação de qualidade anterior apontou estes problemas — corrija TODOS antes de retornar)
+${buildFeedbackSection(issues)}
+
+Gere o artigo COMPLETO novamente já com essas correções aplicadas.`;
+
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const text = await askDeepseek(SYSTEM_PROMPT, user);
+    const parsed = parseResponse(text);
+    if (parsed) return parsed;
+    if (attempt === 2) break;
+    console.warn(`[deepseek] Tentativa ${attempt} de regenerateWithFeedback retornou JSON inválido. Retentando...`);
+  }
+
+  throw new Error('deepseek_json_parse_failed');
+}
+
 export async function generateArticleFromOutline(
   keyword: string,
   outline: ArticleOutline,

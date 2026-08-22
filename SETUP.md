@@ -61,7 +61,7 @@ As outras variáveis são opt-in:
 
 | Variável | Necessária quando |
 | --- | --- |
-| `DEEPSEEK_API_KEY` | Você quiser gerar artigos pelo endpoint diário |
+| `DEEPSEEK_API_KEY` | Você quiser gerar artigos pelo endpoint diário — também alimenta o gate de qualidade por LLM-judge antes de publicar (sem ela, geração e gate são pulados) |
 | `OPENAI_API_KEY` | `imageGenerationEnabled` estiver como `true` |
 | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` | `googleSearchConsoleEnabled` estiver como `true` |
 | `TRELLO_API_KEY`, `TRELLO_TOKEN`, `TRELLO_LIST_ID` | `leadCapture.enabled` estiver como `true` |
