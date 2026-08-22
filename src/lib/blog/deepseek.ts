@@ -167,6 +167,16 @@ CHECKLIST interno antes de gerar (valide cada item):
 - [ ] ZERO markdown de imagem no content (sem ![]() )`;
 }
 
+/** Campos de ArticleContent sem `?` no tipo E usados downstream (route.ts, validate.ts,
+ * quality-gate.ts, image-gen.ts) sem `?? fallback`/optional chaining — ausência deles
+ * não pode passar pelo cast abaixo. Campo obrigatório NOVO no tipo `ArticleContent`?
+ * Adicionar aqui também, senão o parse aceita undefined e o bug só aparece em runtime:
+ * já aconteceu no coesasolar-site com `meta_desc` (TypeError cru em validate.ts,
+ * `metaDesc.length`) e `image_prompt` (chamada paga a gpt-image-1 com prompt
+ * "undefined, wide establishing shot..."). page_title, cover_alt e category ficam
+ * de fora de propósito: são opcionais no tipo e todo uso downstream já tem `?? null`. */
+const REQUIRED_FIELDS: (keyof ArticleContent)[] = ['title', 'slug', 'meta_desc', 'image_prompt', 'content'];
+
 function parseResponse(text: string): ArticleContent | null {
   try {
     const cleaned = text
@@ -174,11 +184,29 @@ function parseResponse(text: string): ArticleContent | null {
       .replace(/\n?```$/m, '')
       .trim();
     const parsed = JSON.parse(cleaned);
-    if (!parsed.title || !parsed.slug || !parsed.content) return null;
+    for (const field of REQUIRED_FIELDS) {
+      const value = (parsed as Record<string, unknown>)[field];
+      if (typeof value !== 'string' || !value.trim()) return null;
+    }
     return parsed as ArticleContent;
   } catch {
     return null;
   }
+}
+
+/** Erros permanentes (não se resolvem numa segunda tentativa idêntica) — só
+ * timeout/rede/5xx/429 valem retry. Códigos 400/401/402/422 conforme a própria
+ * documentação da DeepSeek (api-docs.deepseek.com/quick_start/error_codes):
+ * 400 formato inválido, 401 credencial inválida, 402 saldo insuficiente,
+ * 422 parâmetros inválidos; 403 mantido por compatibilidade com o SDK genérico
+ * da OpenAI. Sem este filtro, uma DEEPSEEK_API_KEY revogada ou saldo zerado
+ * dobra chamadas (custo e latência) em toda falha, sem nunca ter chance de
+ * suceder na 2ª tentativa. */
+const NON_RETRYABLE_DEEPSEEK_STATUSES = new Set([400, 401, 402, 403, 422]);
+
+function isRetryableDeepseekError(err: unknown): boolean {
+  const status = (err as { status?: unknown } | null)?.status;
+  return !NON_RETRYABLE_DEEPSEEK_STATUSES.has(status as number);
 }
 
 export async function generateArticle(
@@ -186,22 +214,23 @@ export async function generateArticle(
   internalLinks: InternalLink[] = [],
   brief: EditorialBrief | null = null,
 ): Promise<ArticleContent> {
-  const client = new OpenAI({
-    apiKey: process.env.DEEPSEEK_API_KEY,
-    baseURL: 'https://api.deepseek.com/v1',
-  });
+  const user = buildUserPrompt(keyword, internalLinks, brief);
 
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const response = await client.chat.completions.create({
-      model: 'deepseek-chat',
-      messages: [
-        { role: 'system', content: SYSTEM_PROMPT },
-        { role: 'user', content: buildUserPrompt(keyword, internalLinks, brief) },
-      ],
-      temperature: 0.7,
-    });
-
-    const text = response.choices[0]?.message?.content ?? '';
+    let text: string;
+    try {
+      // askDeepseek (timeout 60s) em vez de client próprio: este é o caminho
+      // padrão quando twoStageGenerationEnabled é false (default do perfil) —
+      // sem isto ficava sem timeout (default do SDK é 10min, > maxDuration de
+      // 300s da function) e sem retentativa em erro de rede, ao contrário dos
+      // outros 3 loops (outline/regenerateWithFeedback/generateArticleFromOutline).
+      text = await askDeepseek(SYSTEM_PROMPT, user);
+    } catch (err) {
+      if (attempt === 2 || !isRetryableDeepseekError(err)) throw err;
+      const errorMsg = err instanceof Error ? err.message : String(err);
+      console.warn(`[deepseek] Tentativa ${attempt} falhou (${errorMsg}). Retentando...`);
+      continue;
+    }
     const parsed = parseResponse(text);
     if (parsed) return parsed;
 
@@ -228,7 +257,11 @@ export function parseOutline(text: string): ArticleOutline | null {
       .replace(/\n?```$/m, '')
       .trim();
     const parsed = JSON.parse(cleaned);
-    if (!parsed.title || !Array.isArray(parsed.h2s) || parsed.h2s.length === 0) return null;
+    // typeof (não truthy check): um title numérico/objeto passa em `!parsed.title`
+    // (é truthy) e só quebra depois, dentro de isValidOutline (`.toLowerCase()`
+    // não existe em number) — TypeError cru fora do try/catch do loop de retry.
+    if (typeof parsed.title !== 'string' || !parsed.title.trim()) return null;
+    if (!Array.isArray(parsed.h2s) || parsed.h2s.length === 0) return null;
     return parsed as ArticleOutline;
   } catch {
     return null;
@@ -250,9 +283,15 @@ async function askDeepseek(system: string, user: string): Promise<string> {
   const client = new OpenAI({
     apiKey: process.env.DEEPSEEK_API_KEY,
     baseURL: 'https://api.deepseek.com/v1',
+    // Sem timeout, uma chamada travada trava o pipeline inteiro até o
+    // maxDuration da function (regenerateWithFeedback é chamado em loop
+    // pelo quality-gate, até 2x por publicação).
+    timeout: 60_000,
   });
   const response = await client.chat.completions.create({
-    model: 'deepseek-chat',
+    // 'deepseek-chat' foi desativado pela DeepSeek em 2026-07-24 — deepseek-v4-flash
+    // é o substituto de custo equivalente (não-thinking), não deepseek-v4-pro (3x).
+    model: 'deepseek-v4-flash',
     messages: [
       { role: 'system', content: system },
       { role: 'user', content: user },
@@ -279,7 +318,19 @@ Use H2s em forma de pergunta quando a keyword for uma pergunta (formato FAQ).
 Retorne somente o JSON.`;
 
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const text = await askDeepseek(OUTLINE_SYSTEM, user);
+    let text: string;
+    try {
+      text = await askDeepseek(OUTLINE_SYSTEM, user);
+    } catch (err) {
+      // askDeepseek tem timeout de 60s (round 2): sem este catch, um timeout
+      // na 1ª tentativa propagava direto, pulando a retentativa que já existe
+      // para JSON inválido — tratar timeout/erro de rede como falha de tentativa.
+      // 401/403/400 (credencial inválida etc.) não é retentável — ver isRetryableDeepseekError.
+      if (attempt === 2 || !isRetryableDeepseekError(err)) throw err;
+      const errorMsg = err instanceof Error ? err.message : String(err);
+      console.warn(`[deepseek] Tentativa ${attempt} do outline falhou (${errorMsg}). Retentando...`);
+      continue;
+    }
     const outline = parseOutline(text);
     if (outline && isValidOutline(outline, keyword)) return outline;
     if (attempt === 2) break;
@@ -304,7 +355,7 @@ export interface RegenerationIssue {
 function buildFeedbackSection(issues: RegenerationIssue[]): string {
   if (issues.length === 0) return 'Nenhum problema específico listado — revise a qualidade geral do artigo.';
   return issues
-    .map(i => `- [${i.severity ?? '—'}] ${i.category ?? ''} (${i.section ?? ''}): ${i.problem ?? ''} → ${i.fix_instruction}`)
+    .map(i => `- [${i.severity ?? '—'}] ${i.category ?? ''} (${i.section ?? ''}): ${i.problem ?? ''} → ${i.fix_instruction ?? ''}`)
     .join('\n');
 }
 
@@ -322,7 +373,17 @@ ${buildFeedbackSection(issues)}
 Gere o artigo COMPLETO novamente já com essas correções aplicadas.`;
 
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const text = await askDeepseek(SYSTEM_PROMPT, user);
+    let text: string;
+    try {
+      text = await askDeepseek(SYSTEM_PROMPT, user);
+    } catch (err) {
+      // Mesmo motivo do outline: timeout de 60s não pode pular a retentativa.
+      // 401/403/400 (credencial inválida etc.) não é retentável — ver isRetryableDeepseekError.
+      if (attempt === 2 || !isRetryableDeepseekError(err)) throw err;
+      const errorMsg = err instanceof Error ? err.message : String(err);
+      console.warn(`[deepseek] Tentativa ${attempt} de regenerateWithFeedback falhou (${errorMsg}). Retentando...`);
+      continue;
+    }
     const parsed = parseResponse(text);
     if (parsed) return parsed;
     if (attempt === 2) break;
@@ -355,7 +416,17 @@ ${outlineText}
 (regra do system prompt — o outline não lista esse H2, mas ele é obrigatório).`;
 
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const text = await askDeepseek(SYSTEM_PROMPT, user);
+    let text: string;
+    try {
+      text = await askDeepseek(SYSTEM_PROMPT, user);
+    } catch (err) {
+      // Mesmo motivo do outline: timeout de 60s não pode pular a retentativa.
+      // 401/403/400 (credencial inválida etc.) não é retentável — ver isRetryableDeepseekError.
+      if (attempt === 2 || !isRetryableDeepseekError(err)) throw err;
+      const errorMsg = err instanceof Error ? err.message : String(err);
+      console.warn(`[deepseek] Tentativa ${attempt} de generateArticleFromOutline falhou (${errorMsg}). Retentando...`);
+      continue;
+    }
     const parsed = parseResponse(text);
     if (parsed) return parsed;
     if (attempt === 2) break;

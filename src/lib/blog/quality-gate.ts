@@ -47,6 +47,54 @@ const SKIPPED_RESULT: QualityGateResult = {
   issues: [],
 };
 
+/** Timeout por chamada ao judge — sem isso, uma chamada travada trava o pipeline
+ * inteiro (o gate roda em loop, até 3x por publicação) até o maxDuration da function. */
+const REQUEST_TIMEOUT_MS = 60_000;
+
+/** Pontuação máxima de cada categoria — usada para rejeitar (fail-open) scores
+ * fora do range plausível, caso o judge hallucine um valor absurdo. */
+const CATEGORY_MAX: Record<keyof JudgeCategories, number> = {
+  content_quality: 30,
+  seo: 25,
+  eeat: 15,
+  technical: 15,
+  geo: 15,
+};
+
+/** Máximo de issues repassadas adiante — o system prompt pede "liste TODOS os
+ * problemas", sem limite; isso evita um array anormalmente grande inflar o
+ * prompt (e o custo) da regeneração seguinte. */
+const MAX_ISSUES = 30;
+const MAX_ISSUE_FIELD_LENGTH = 1000;
+
+const VALID_SEVERITIES = new Set(['P0', 'P1', 'P2']);
+
+function truncate(value: unknown): string {
+  if (typeof value !== 'string') return '';
+  return value.length > MAX_ISSUE_FIELD_LENGTH ? value.slice(0, MAX_ISSUE_FIELD_LENGTH) : value;
+}
+
+/** Descarta issues sem fix_instruction (o único campo obrigatório consumido
+ * depois por regenerateWithFeedback) e limita tamanho/quantidade de cada campo
+ * — o resto do shape do judge (severity/category/section/problem) não é
+ * validado por outra validação, então é tratado como dado não confiável aqui. */
+function sanitizeIssues(issues: unknown[]): JudgeIssue[] {
+  return issues
+    .filter((issue): issue is Record<string, unknown> => {
+      if (typeof issue !== 'object' || issue === null) return false;
+      const fix = (issue as Record<string, unknown>).fix_instruction;
+      return typeof fix === 'string' && fix.trim() !== '';
+    })
+    .slice(0, MAX_ISSUES)
+    .map(issue => ({
+      severity: (VALID_SEVERITIES.has(issue.severity as string) ? issue.severity : 'P2') as JudgeIssue['severity'],
+      category: truncate(issue.category),
+      section: truncate(issue.section),
+      problem: truncate(issue.problem),
+      fix_instruction: truncate(issue.fix_instruction),
+    }));
+}
+
 const { brand } = AUTOBLOG_PROFILE;
 
 const JUDGE_SYSTEM_PROMPT = `Você é um editor sênior de SEO e conteúdo que avalia artigos de blog em
@@ -129,14 +177,20 @@ function parseJudgeResponse(text: string): JudgeResult | null {
     const parsed = JSON.parse(cleaned);
 
     if (typeof parsed.total_score !== 'number') return null;
+    if (!(parsed.total_score >= 0 && parsed.total_score <= 100)) return null;
     if (typeof parsed.categories !== 'object' || parsed.categories === null) return null;
     const requiredCategories = ['content_quality', 'seo', 'eeat', 'technical', 'geo'] as const;
     for (const key of requiredCategories) {
-      if (typeof parsed.categories[key] !== 'number') return null;
+      const value = parsed.categories[key];
+      if (typeof value !== 'number') return null;
+      if (!(value >= 0 && value <= CATEGORY_MAX[key])) return null;
     }
     if (!Array.isArray(parsed.issues)) return null;
 
-    return parsed as JudgeResult;
+    return {
+      ...parsed,
+      issues: sanitizeIssues(parsed.issues),
+    } as JudgeResult;
   } catch {
     return null;
   }
@@ -155,14 +209,21 @@ export async function runQualityGate(article: ArticleContent): Promise<QualityGa
   }
 
   try {
-    const client = new OpenAI({ apiKey, baseURL: 'https://api.deepseek.com/v1' });
+    const client = new OpenAI({
+      apiKey,
+      baseURL: 'https://api.deepseek.com/v1',
+      timeout: REQUEST_TIMEOUT_MS,
+    });
     const response = await client.chat.completions.create({
       model: MODEL,
       messages: [
         { role: 'system', content: JUDGE_SYSTEM_PROMPT },
         { role: 'user', content: buildJudgeUserMessage(article) },
       ],
-      max_tokens: 2000,
+      // 2000 tokens era insuficiente: o system prompt pede "liste TODOS os
+      // problemas" — um artigo ruim com muitas issues truncava o JSON no meio
+      // e o parse falhava (fail-open), justo no caso em que o gate mais importa.
+      max_tokens: 4000,
     });
 
     const text = response.choices[0]?.message?.content ?? '';
@@ -180,7 +241,10 @@ export async function runQualityGate(article: ArticleContent): Promise<QualityGa
       issues: parsed.issues,
     };
   } catch (err) {
-    console.warn('[quality-gate] Chamada ao judge falhou — gate pulado (fail-open):', err);
+    // Loga só a mensagem, nunca o objeto de erro bruto (pode carregar headers/
+    // corpo de resposta da API em erros de autenticação).
+    const errorMsg = err instanceof Error ? err.message : String(err);
+    console.warn('[quality-gate] Chamada ao judge falhou — gate pulado (fail-open):', errorMsg);
     return SKIPPED_RESULT;
   }
 }
